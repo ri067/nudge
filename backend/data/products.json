@@ -1,1 +1,555 @@
-[]
+[
+  {
+    "id": 1,
+    "name": "Wildcraft Trekking Backpack 55L",
+    "category": "outdoor",
+    "brand": "Wildcraft",
+    "price": 1199,
+    "tags": ["trekking","hiking","camping","travel","backpacking","mountains"],
+    "description": "Large trekking backpack for multi-day hikes, camping trips and outdoor adventures."
+  },
+  {
+    "id": 2,
+    "name": "Quechua Sleeping Bag",
+    "category": "outdoor",
+    "brand": "Quechua",
+    "price": 2499,
+    "tags": ["camping","sleeping","trekking","travel","mountains"],
+    "description": "Lightweight sleeping bag designed for overnight camping and trekking."
+  },
+  {
+    "id": 3,
+    "name": "Forclaz Trekking Hat",
+    "category": "outdoor",
+    "brand": "Forclaz",
+    "price": 599,
+    "tags": ["sun","summer","trekking","hiking","heat"],
+    "description": "Sun protection hat ideal for trekking and outdoor activities in hot weather."
+  },
+  {
+    "id": 4,
+    "name": "LED Camping Lantern",
+    "category": "outdoor",
+    "brand": "Decathlon",
+    "price": 899,
+    "tags": ["camping","light","night","travel","outdoor"],
+    "description": "Rechargeable lantern for camping and emergency situations."
+  },
+  {
+    "id": 5,
+    "name": "Portable First Aid Kit",
+    "category": "outdoor",
+    "brand": "AdventurePro",
+    "price": 499,
+    "tags": ["safety","travel","trekking","camping","emergency"],
+    "description": "Essential first aid supplies for trekking, hiking and travel."
+  },
+
+  {
+    "id": 6,
+    "name": "Puma Running Shoes",
+    "category": "fitness",
+    "brand": "Puma",
+    "price": 2499,
+    "tags": ["running","gym","fitness","exercise","sports"],
+    "description": "Comfortable running shoes suitable for gym workouts and daily exercise."
+  },
+  {
+    "id": 7,
+    "name": "Nike Training T-Shirt",
+    "category": "fitness",
+    "brand": "Nike",
+    "price": 799,
+    "tags": ["gym","workout","fitness","sports","exercise"],
+    "description": "Breathable workout t-shirt for gym sessions and sports."
+  },
+  {
+    "id": 8,
+    "name": "Amazon Basics Yoga Mat",
+    "category": "fitness",
+    "brand": "Amazon Basics",
+    "price": 799,
+    "tags": ["yoga","fitness","exercise","home workout"],
+    "description": "Comfortable yoga mat for stretching, exercise and home workouts."
+  },
+  {
+    "id": 9,
+    "name": "MuscleBlaze Whey Protein",
+    "category": "fitness",
+    "brand": "MuscleBlaze",
+    "price": 2499,
+    "tags": ["protein","gym","muscle","fitness","nutrition"],
+    "description": "Protein supplement for muscle recovery and strength training."
+  },
+  {
+    "id": 10,
+    "name": "Boldfit Resistance Bands",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 499,
+    "tags": ["home workout","fitness","exercise","strength training"],
+    "description": "Resistance bands for strength training and home workouts."
+  },
+
+  {
+    "id": 11,
+    "name": "Neutrogena Ultra Sheer SPF 50",
+    "category": "skincare",
+    "brand": "Neutrogena",
+    "price": 399,
+    "tags": ["sunscreen","summer","uv protection","travel","outdoor"],
+    "description": "SPF 50 sunscreen offering strong UV protection during outdoor activities."
+  },
+  {
+    "id": 12,
+    "name": "Mamaearth Vitamin C Serum",
+    "category": "skincare",
+    "brand": "Mamaearth",
+    "price": 499,
+    "tags": ["skincare","face","glow","vitamin c"],
+    "description": "Vitamin C serum for brighter and healthier looking skin."
+  },
+  {
+    "id": 13,
+    "name": "Cetaphil Moisturizer",
+    "category": "skincare",
+    "brand": "Cetaphil",
+    "price": 599,
+    "tags": ["moisturizer","dry skin","skincare"],
+    "description": "Daily moisturizer suitable for dry and sensitive skin."
+  },
+  {
+    "id": 14,
+    "name": "Nivea Face Wash",
+    "category": "skincare",
+    "brand": "Nivea",
+    "price": 249,
+    "tags": ["face wash","skincare","cleaning"],
+    "description": "Gentle face wash for everyday skincare routine."
+  },
+  {
+    "id": 15,
+    "name": "Lip Balm SPF 15",
+    "category": "skincare",
+    "brand": "Nivea",
+    "price": 149,
+    "tags": ["summer","sun protection","lips","skincare"],
+    "description": "Lip balm with SPF protection for sunny weather."
+  },
+
+  {
+    "id": 16,
+    "name": "boAt Airdopes 311 Pro",
+    "category": "electronics",
+    "brand": "boAt",
+    "price": 1499,
+    "tags": ["earbuds","music","bluetooth","audio","travel"],
+    "description": "Wireless earbuds for music, calls and commuting."
+  },
+  {
+    "id": 17,
+    "name": "Noise Smart Watch",
+    "category": "electronics",
+    "brand": "Noise",
+    "price": 1799,
+    "tags": ["fitness tracking","smartwatch","health"],
+    "description": "Smartwatch with fitness tracking and notification support."
+  },
+  {
+    "id": 18,
+    "name": "Samsung Power Bank",
+    "category": "electronics",
+    "brand": "Samsung",
+    "price": 1699,
+    "tags": ["charging","travel","phone","battery"],
+    "description": "Portable power bank for charging devices on the go."
+  },
+  {
+    "id": 19,
+    "name": "Logitech Wireless Mouse",
+    "category": "electronics",
+    "brand": "Logitech",
+    "price": 699,
+    "tags": ["productivity","work","study","laptop"],
+    "description": "Wireless mouse for work, studying and productivity."
+  },
+  {
+    "id": 20,
+    "name": "JBL Bluetooth Speaker",
+    "category": "electronics",
+    "brand": "JBL",
+    "price": 1799,
+    "tags": ["music","party","speaker","audio"],
+    "description": "Portable Bluetooth speaker for music and entertainment."
+  },
+
+  {
+    "id": 21,
+    "name": "Nescafe Instant Coffee",
+    "category": "grocery",
+    "brand": "Nescafe",
+    "price": 249,
+    "tags": ["coffee","study","late night","caffeine"],
+    "description": "Instant coffee for students, professionals and coffee lovers."
+  },
+  {
+    "id": 22,
+    "name": "Yoga Bar Protein Bars",
+    "category": "grocery",
+    "brand": "Yoga Bar",
+    "price": 549,
+    "tags": ["snack","protein","fitness","healthy"],
+    "description": "Healthy protein bars suitable for travel and fitness goals."
+  },
+  {
+    "id": 23,
+    "name": "Trail Mix Pack",
+    "category": "grocery",
+    "brand": "NutriMix",
+    "price": 399,
+    "tags": ["travel","snack","healthy","trekking"],
+    "description": "Mixed nuts and dried fruits for healthy snacking."
+  },
+  {
+    "id": 24,
+    "name": "Green Tea Pack",
+    "category": "grocery",
+    "brand": "Tata",
+    "price": 199,
+    "tags": ["health","tea","fitness","wellness"],
+    "description": "Green tea for daily wellness and healthy habits."
+  },
+  {
+    "id": 25,
+    "name": "Energy Drink Can",
+    "category": "grocery",
+    "brand": "Red Bull",
+    "price": 125,
+    "tags": ["energy","study","sports","late night"],
+    "description": "Energy drink for busy days and long study sessions."
+  },
+
+  {
+    "id": 26,
+    "name": "Milton Water Bottle",
+    "category": "home",
+    "brand": "Milton",
+    "price": 349,
+    "tags": ["hydration","summer","travel","office"],
+    "description": "Reusable water bottle for staying hydrated throughout the day."
+  },
+  {
+    "id": 27,
+    "name": "Prestige Electric Kettle",
+    "category": "home",
+    "brand": "Prestige",
+    "price": 799,
+    "tags": ["hostel","college","tea","coffee"],
+    "description": "Electric kettle useful for hostel rooms and quick beverages."
+  },
+  {
+    "id": 28,
+    "name": "Cello Lunch Box",
+    "category": "home",
+    "brand": "Cello",
+    "price": 399,
+    "tags": ["office","college","food","meal prep"],
+    "description": "Lunch box for carrying meals to college or office."
+  },
+  {
+    "id": 29,
+    "name": "Study Desk Lamp",
+    "category": "home",
+    "brand": "Philips",
+    "price": 899,
+    "tags": ["study","exam","student","desk"],
+    "description": "LED desk lamp for studying and reading."
+  },
+  {
+    "id": 30,
+    "name": "Storage Organizer",
+    "category": "home",
+    "brand": "Ikea",
+    "price": 599,
+    "tags": ["hostel","room setup","organization"],
+    "description": "Storage organizer for keeping rooms neat and tidy."
+  },
+
+  {
+    "id": 31,
+    "name": "Levis Slim Fit Jeans",
+    "category": "fashion",
+    "brand": "Levis",
+    "price": 1999,
+    "tags": ["casual","college","fashion"],
+    "description": "Comfortable slim fit jeans for everyday wear."
+  },
+  {
+    "id": 32,
+    "name": "Allen Solly Polo T-Shirt",
+    "category": "fashion",
+    "brand": "Allen Solly",
+    "price": 999,
+    "tags": ["casual","fashion","college"],
+    "description": "Classic polo t-shirt suitable for casual outings."
+  },
+  {
+    "id": 33,
+    "name": "Titan Analog Watch",
+    "category": "fashion",
+    "brand": "Titan",
+    "price": 2999,
+    "tags": ["accessory","fashion","formal"],
+    "description": "Elegant analog watch for everyday use."
+  },
+  {
+    "id": 34,
+    "name": "Fastrack Sunglasses",
+    "category": "fashion",
+    "brand": "Fastrack",
+    "price": 899,
+    "tags": ["summer","travel","sun protection"],
+    "description": "Stylish sunglasses for sunny days and travel."
+  },
+  {
+    "id": 35,
+    "name": "Casual Sneakers",
+    "category": "fashion",
+    "brand": "Puma",
+    "price": 1799,
+    "tags": ["walking","college","casual"],
+    "description": "Comfortable sneakers for daily use."
+  },
+
+  {
+    "id": 36,
+    "name": "Pedigree Adult Dog Food",
+    "category": "pets",
+    "brand": "Pedigree",
+    "price": 699,
+    "tags": ["dog","pet care","food"],
+    "description": "Nutritious food formulated for adult dogs."
+  },
+  {
+    "id": 37,
+    "name": "Whiskas Cat Food",
+    "category": "pets",
+    "brand": "Whiskas",
+    "price": 499,
+    "tags": ["cat","pet care","food"],
+    "description": "Balanced nutrition for cats."
+  },
+
+  {
+    "id": 38,
+    "name": "Classmate Notebook Pack",
+    "category": "study",
+    "brand": "Classmate",
+    "price": 299,
+    "tags": ["student","college","notes","exam"],
+    "description": "Notebook pack for lectures and exam preparation."
+  },
+  {
+    "id": 39,
+    "name": "Parker Ball Pen",
+    "category": "study",
+    "brand": "Parker",
+    "price": 249,
+    "tags": ["writing","student","notes"],
+    "description": "Smooth writing pen for students and professionals."
+  },
+  {
+    "id": 40,
+    "name": "Whiteboard Marker Set",
+    "category": "study",
+    "brand": "Camlin",
+    "price": 199,
+    "tags": ["teaching","study","planning"],
+    "description": "Marker set useful for whiteboards and planning."
+  },
+
+  {
+    "id": 41,
+    "name": "Travel Neck Pillow",
+    "category": "travel",
+    "brand": "Amazon Basics",
+    "price": 499,
+    "tags": ["travel","flight","comfort"],
+    "description": "Neck pillow for comfortable travel."
+  },
+  {
+    "id": 42,
+    "name": "Travel Adapter",
+    "category": "travel",
+    "brand": "Portronics",
+    "price": 699,
+    "tags": ["travel","electronics","charging"],
+    "description": "Universal travel adapter for multiple devices."
+  },
+  {
+    "id": 43,
+    "name": "Passport Holder",
+    "category": "travel",
+    "brand": "Wildcraft",
+    "price": 399,
+    "tags": ["travel","documents","organization"],
+    "description": "Passport holder for organizing travel documents."
+  },
+
+  {
+    "id": 44,
+    "name": "Rain Jacket",
+    "category": "seasonal",
+    "brand": "Decathlon",
+    "price": 1499,
+    "tags": ["rain","monsoon","travel","outdoor"],
+    "description": "Water resistant jacket for rainy weather."
+  },
+  {
+    "id": 45,
+    "name": "Umbrella",
+    "category": "seasonal",
+    "brand": "Cello",
+    "price": 399,
+    "tags": ["rain","monsoon","weather"],
+    "description": "Compact umbrella suitable for daily commuting."
+  },
+
+  {
+    "id": 46,
+    "name": "Mosquito Repellent",
+    "category": "seasonal",
+    "brand": "GoodKnight",
+    "price": 249,
+    "tags": ["summer","health","home"],
+    "description": "Mosquito protection for homes and travel."
+  },
+  {
+    "id": 47,
+    "name": "ORS Hydration Pack",
+    "category": "health",
+    "brand": "Electral",
+    "price": 99,
+    "tags": ["summer","hydration","travel"],
+    "description": "Electrolyte solution for hydration during hot weather."
+  },
+  {
+    "id": 48,
+    "name": "Digital Thermometer",
+    "category": "health",
+    "brand": "Dr Trust",
+    "price": 299,
+    "tags": ["health","medical","home"],
+    "description": "Digital thermometer for basic health monitoring."
+  },
+  {
+    "id": 49,
+    "name": "Vitamin Tablets",
+    "category": "health",
+    "brand": "HK Vitals",
+    "price": 399,
+    "tags": ["health","nutrition","wellness"],
+    "description": "Daily vitamin supplement for general wellness."
+  },
+  {
+    "id": 50,
+    "name": "Foam Roller",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 699,
+    "tags": ["recovery","gym","fitness"],
+    "description": "Foam roller for muscle recovery after workouts."
+  },
+
+  {
+    "id": 51,
+    "name": "Laptop Sleeve",
+    "category": "electronics",
+    "brand": "HP",
+    "price": 499,
+    "tags": ["laptop","college","student","work"],
+    "description": "Protective laptop sleeve for students and professionals."
+  },
+  {
+    "id": 52,
+    "name": "Mechanical Keyboard",
+    "category": "electronics",
+    "brand": "Redragon",
+    "price": 2499,
+    "tags": ["coding","gaming","productivity"],
+    "description": "Mechanical keyboard suitable for coding and gaming."
+  },
+  {
+    "id": 53,
+    "name": "Webcam",
+    "category": "electronics",
+    "brand": "Logitech",
+    "price": 1999,
+    "tags": ["meetings","remote work","study"],
+    "description": "HD webcam for meetings and online classes."
+  },
+  {
+    "id": 54,
+    "name": "Portable SSD",
+    "category": "electronics",
+    "brand": "Samsung",
+    "price": 4999,
+    "tags": ["storage","coding","creator"],
+    "description": "Fast portable storage for files and projects."
+  },
+  {
+    "id": 55,
+    "name": "Monitor Light Bar",
+    "category": "electronics",
+    "brand": "Xiaomi",
+    "price": 1999,
+    "tags": ["study","desk setup","productivity"],
+    "description": "Desk lighting accessory for comfortable studying."
+  },
+
+  {
+    "id": 56,
+    "name": "Exam Preparation Planner",
+    "category": "study",
+    "brand": "Classmate",
+    "price": 199,
+    "tags": ["exam","planning","student"],
+    "description": "Planner for organizing study schedules."
+  },
+  {
+    "id": 57,
+    "name": "Blue Light Glasses",
+    "category": "health",
+    "brand": "Lenskart",
+    "price": 999,
+    "tags": ["screen","study","work"],
+    "description": "Glasses designed to reduce eye strain."
+  },
+  {
+    "id": 58,
+    "name": "Reusable Coffee Mug",
+    "category": "home",
+    "brand": "Borosil",
+    "price": 349,
+    "tags": ["coffee","travel","study"],
+    "description": "Insulated mug for coffee and tea lovers."
+  },
+  {
+    "id": 59,
+    "name": "Protein Shaker",
+    "category": "fitness",
+    "brand": "MuscleBlaze",
+    "price": 249,
+    "tags": ["gym","protein","fitness"],
+    "description": "Shaker bottle for protein drinks and hydration."
+  },
+  {
+    "id": 60,
+    "name": "Hiking Socks Pack",
+    "category": "outdoor",
+    "brand": "Forclaz",
+    "price": 399,
+    "tags": ["trekking","hiking","travel","comfort"],
+    "description": "Comfortable socks designed for long hikes and trekking."
+  }
+]
