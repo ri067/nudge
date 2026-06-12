@@ -55,29 +55,6 @@ def health_check():
     }
 
 @app.post("/search")
-def active_search(req: SearchRequest):
-    """The core RAG retrieval endpoint."""
-    # 1. Embed the user's natural language goal
-    query_vector = model.encode([req.query]).astype("float32")
-    
-    # 2. Perform the cosine similarity search in FAISS
-    distances, indices = index.search(query_vector, req.top_k)
-    
-    # 3. Map vector indices back to actual product JSON data
-    results = []
-    for i in range(req.top_k):
-        idx = int(indices[0][i])
-        if idx != -1 and idx < len(products):
-            # Attach the semantic distance score just so we can see the math working
-            product_data = products[idx].copy()
-            product_data["match_score"] = float(distances[0][i])
-            results.append(product_data)
-            
-    return {"results": results}
-
-
-
-@app.post("/search")
 async def active_search(req: SearchRequest):
     """The core RAG retrieval endpoint, now with concurrent LLM reasoning."""
     query_vector = model.encode([req.query]).astype("float32")
