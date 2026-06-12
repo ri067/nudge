@@ -72,9 +72,11 @@ async def search(req: SearchRequest):
     User query: "{req.query}"
     1. Predict 5 product keywords. 
     2. Extract max budget (number). Default: 99999.
-    3. Extract max delivery days if urgency is mentioned (number). Default: 30.
+    3. Extract max delivery days if urgency is mentioned (number). 
+       - IMPORTANT: Translate time words into integers! "Tomorrow" = 1, "next week" = 7, "this weekend" = 3, "today" = 0.
+       - If no time urgency is mentioned, use Default: 30.
     
-    Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 14}}
+    Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 30}}
     """
     try:
         res = groq_client.chat.completions.create(
