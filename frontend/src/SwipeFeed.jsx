@@ -114,7 +114,7 @@ const SwipeFeed = () => {
             {cartItems.map((item, index) => (
               <div key={index} className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
                 <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center text-3xl">
-                  📦
+                  🔥
                 </div>
                 <div className="flex-1">
                   <p className="text-xs font-bold text-gray-400 uppercase">{item.brand}</p>
