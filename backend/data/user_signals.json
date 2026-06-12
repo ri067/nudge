@@ -1,0 +1,34 @@
+{
+  "user_id": "u_001",
+
+  "wishlist_products": [2, 17, 52, 86, 94],
+
+  "abandoned_cart_products": [
+    {
+      "product_id": 1,
+      "days_since_cart": 18
+    },
+    {
+      "product_id": 82,
+      "days_since_cart": 23
+    }
+  ],
+
+  "previously_bought_products": [
+    {
+      "product_id": 21,
+      "purchase_count": 4,
+      "last_purchase_days_ago": 34
+    },
+    {
+      "product_id": 26,
+      "purchase_count": 6,
+      "last_purchase_days_ago": 29
+    },
+    {
+      "product_id": 59,
+      "purchase_count": 3,
+      "last_purchase_days_ago": 41
+    }
+  ]
+}

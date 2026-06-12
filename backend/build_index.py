@@ -10,7 +10,7 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 2. Build absolute paths relative to the script's location
-DATA_PATH = os.path.join(SCRIPT_DIR, "data", "products.json")
+DATA_PATH = os.path.join(SCRIPT_DIR, "data", "semantic_products.json")
 INDEX_PATH = os.path.join(SCRIPT_DIR, "data", "products.index")
 METADATA_PATH = os.path.join(SCRIPT_DIR, "data", "product_metadata.pkl")
 
@@ -18,7 +18,7 @@ def build_faiss_index():
     print(f"Loading product data from: {DATA_PATH}")
     
     if not os.path.exists(DATA_PATH):
-        print(f"Error: Could not find products.json at {DATA_PATH}.")
+        print(f"Error: Could not find semantic_products.json at {DATA_PATH}.")
         return
 
     with open(DATA_PATH, 'r') as f:
