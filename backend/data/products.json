@@ -1099,5 +1099,285 @@
       "aesthetic"
     ],
     "description": "Decorative figurines for shelves, desks and study tables."
+  },
+  {
+    "id": 81,
+    "name": "Quechua Trekking Poles",
+    "category": "outdoor",
+    "brand": "Quechua",
+    "price": 999,
+    "tags": [
+      "trekking",
+      "hiking",
+      "mountains",
+      "support"
+    ],
+    "description": "Adjustable trekking poles for stability on hiking trails."
+  },
+  {
+    "id": 82,
+    "name": "Compact Camping Stove",
+    "category": "outdoor",
+    "brand": "Decathlon",
+    "price": 1399,
+    "tags": [
+      "camping",
+      "cooking",
+      "trekking",
+      "outdoor"
+    ],
+    "description": "Portable gas stove for cooking during camping trips."
+  },
+  {
+    "id": 83,
+    "name": "Adidas Gym Shorts",
+    "category": "fitness",
+    "brand": "Adidas",
+    "price": 899,
+    "tags": [
+      "gym",
+      "workout",
+      "shorts",
+      "sports"
+    ],
+    "description": "Lightweight shorts for gym workouts and training sessions."
+  },
+  {
+    "id": 84,
+    "name": "Dumbbell Set 10kg",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 1999,
+    "tags": [
+      "strength training",
+      "home workout",
+      "gym",
+      "muscle"
+    ],
+    "description": "Pair of dumbbells for strength training and home workouts."
+  },
+  {
+    "id": 85,
+    "name": "Aloe Vera Gel",
+    "category": "skincare",
+    "brand": "Patanjali",
+    "price": 149,
+    "tags": [
+      "skincare",
+      "soothing",
+      "summer",
+      "face"
+    ],
+    "description": "Soothing aloe vera gel for skin hydration and sunburn relief."
+  },
+  {
+    "id": 86,
+    "name": "Sunscreen Stick SPF 50",
+    "category": "skincare",
+    "brand": "Neutrogena",
+    "price": 449,
+    "tags": [
+      "sunscreen",
+      "summer",
+      "travel",
+      "sun protection"
+    ],
+    "description": "Easy-to-apply sunscreen stick for on-the-go sun protection."
+  },
+  {
+    "id": 87,
+    "name": "Anker Charging Cable",
+    "category": "electronics",
+    "brand": "Anker",
+    "price": 499,
+    "tags": [
+      "charging",
+      "travel",
+      "phone",
+      "cable"
+    ],
+    "description": "Durable charging cable compatible with most smartphones."
+  },
+  {
+    "id": 88,
+    "name": "Wireless Earphones Neckband",
+    "category": "electronics",
+    "brand": "boAt",
+    "price": 1299,
+    "tags": [
+      "earphones",
+      "music",
+      "bluetooth",
+      "travel"
+    ],
+    "description": "Neckband-style wireless earphones for music and calls."
+  },
+  {
+    "id": 89,
+    "name": "Oats Breakfast Pack",
+    "category": "grocery",
+    "brand": "Saffola",
+    "price": 249,
+    "tags": [
+      "breakfast",
+      "healthy",
+      "fitness",
+      "snack"
+    ],
+    "description": "Healthy oats pack for a quick and nutritious breakfast."
+  },
+  {
+    "id": 90,
+    "name": "Peanut Butter Jar",
+    "category": "grocery",
+    "brand": "MyFitness",
+    "price": 399,
+    "tags": [
+      "protein",
+      "fitness",
+      "snack",
+      "healthy"
+    ],
+    "description": "Creamy peanut butter packed with protein and energy."
+  },
+  {
+    "id": 91,
+    "name": "Bedside Storage Caddy",
+    "category": "home",
+    "brand": "Ikea",
+    "price": 449,
+    "tags": [
+      "hostel",
+      "room setup",
+      "organization",
+      "storage"
+    ],
+    "description": "Hanging storage caddy for bedside essentials."
+  },
+  {
+    "id": 92,
+    "name": "Table Fan",
+    "category": "home",
+    "brand": "Bajaj",
+    "price": 1299,
+    "tags": [
+      "summer",
+      "cooling",
+      "hostel",
+      "room"
+    ],
+    "description": "Compact table fan for personal cooling in small spaces."
+  },
+  {
+    "id": 93,
+    "name": "Hooded Sweatshirt",
+    "category": "fashion",
+    "brand": "H&M",
+    "price": 1499,
+    "tags": [
+      "winter",
+      "casual",
+      "college",
+      "fashion"
+    ],
+    "description": "Comfortable hooded sweatshirt for casual and college wear."
+  },
+  {
+    "id": 94,
+    "name": "Leather Wallet",
+    "category": "fashion",
+    "brand": "WildHorn",
+    "price": 799,
+    "tags": [
+      "accessory",
+      "fashion",
+      "formal",
+      "gift"
+    ],
+    "description": "Sleek leather wallet for everyday carry."
+  },
+  {
+    "id": 95,
+    "name": "Pet Grooming Brush",
+    "category": "pets",
+    "brand": "Trixie",
+    "price": 349,
+    "tags": [
+      "dog",
+      "cat",
+      "pet care",
+      "grooming"
+    ],
+    "description": "Grooming brush for removing loose fur from pets."
+  },
+  {
+    "id": 96,
+    "name": "Highlighter Set",
+    "category": "study",
+    "brand": "Camlin",
+    "price": 149,
+    "tags": [
+      "student",
+      "notes",
+      "exam",
+      "writing"
+    ],
+    "description": "Set of colorful highlighters for marking important notes."
+  },
+  {
+    "id": 97,
+    "name": "Travel Duffel Bag",
+    "category": "travel",
+    "brand": "American Tourister",
+    "price": 1799,
+    "tags": [
+      "travel",
+      "luggage",
+      "weekend",
+      "bag"
+    ],
+    "description": "Spacious duffel bag for weekend trips and short travel."
+  },
+  {
+    "id": 98,
+    "name": "Winter Gloves",
+    "category": "seasonal",
+    "brand": "Decathlon",
+    "price": 399,
+    "tags": [
+      "winter",
+      "cold",
+      "outdoor",
+      "accessory"
+    ],
+    "description": "Warm gloves for cold weather and winter outings."
+  },
+  {
+    "id": 99,
+    "name": "Hand Sanitizer Pack",
+    "category": "health",
+    "brand": "Dettol",
+    "price": 149,
+    "tags": [
+      "health",
+      "hygiene",
+      "travel",
+      "safety"
+    ],
+    "description": "Pack of hand sanitizers for hygiene on the go."
+  },
+  {
+    "id": 100,
+    "name": "Action Figure Set",
+    "category": "toys",
+    "brand": "Marvel",
+    "price": 1199,
+    "tags": [
+      "action figures",
+      "kids",
+      "collectible",
+      "gift"
+    ],
+    "description": "Set of collectible action figures for kids and fans."
   }
 ]
