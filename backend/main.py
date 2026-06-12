@@ -105,16 +105,15 @@ async def search(req: SearchRequest):
         ops = operational_db.get(item["id"], {})
         item_price=ops.get("price",99999)
         item_delivery=ops.get("delivery_days",30)
-        if ops.get("price", 99999) <= budget and item_delivery<= delivery_limit:
+        if item_price <= budget and item_delivery<= delivery_limit:
             item["price"] = ops.get("price")
-            item["delivery_days"] = ops.get("delivery_days", "Standard")
+            item["delivery_days"] = ops.get("delivery_days")
             item["user_context"] = get_user_context(item["id"], user_signals)
             retrieved.append(item)
             if len(retrieved) >= req.top_k: break
     print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index:")
     for item in retrieved:
-        print(f"   -> ID: {item.get('id')} | Name: {item.get('name')} | Price: ₹{item.get('price')}")
-
+        print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget: ₹{budget} | Max Delivery: {delivery_limit} days")
     # 3. Reasoning
     try:
         final_payload = await enrich_products_with_reasons(retrieved, req.query)
