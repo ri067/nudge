@@ -11,7 +11,7 @@ async def enrich_products_with_reasons(products, user_query):
 
     # 1. Include name and the specific behavioral context (wishlist/abandoned cart)
     items_to_evaluate = [
-        {"id": p.get("id"), "name": p.get("name"), "context": p.get("user_context", "")} 
+        {"id": p.get("id"), "name": p.get("name"),"delivery_days": p.get("delivery_days"), "context": p.get("user_context", "")} 
         for p in products
     ]
 

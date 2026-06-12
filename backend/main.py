@@ -70,8 +70,11 @@ async def search(req: SearchRequest):
     # 1. Query Expansion & Budget Extraction
     expansion_prompt = f"""
     User query: "{req.query}"
-    1. Predict 5 product keywords. 2. Extract max budget (number). Default budget: 99999.
-    Return JSON: {{"keywords": "...", "max_budget": 0}}
+    1. Predict 5 product keywords. 
+    2. Extract max budget (number). Default: 99999.
+    3. Extract max delivery days if urgency is mentioned (number). Default: 30.
+    
+    Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 14}}
     """
     try:
         res = groq_client.chat.completions.create(
@@ -86,20 +89,25 @@ async def search(req: SearchRequest):
             budget = raw_budget.get("number", 99999) # Extract if it's a dict
         else:
             budget = int(raw_budget) # Cast to int if it's a string or number
+        raw_delivery = data.get("max_delivery_days", 30)
+        delivery_limit = raw_delivery.get("number", 30) if isinstance(raw_delivery, dict) else int(raw_delivery)
+        
     except:
         print(f"Extraction Error: {e}")
-        query_enriched, budget = req.query, 99999
-    print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget Limit: ₹{budget}")
-    # 2. Vector Retrieve & Filter
+        query_enriched, budget, delivery_limit = req.query, 99999, 30
+    print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget: ₹{budget} | Max Delivery: {delivery_limit} days")    # 2. Vector Retrieve & Filter
     vec = np.array(model.encode([query_enriched])).astype('float32')
-    _, indices = index.search(vec, 15)
+    _, indices = index.search(vec, 20)
     
     retrieved = []
     for idx in indices[0]:
         item = products[idx].copy()
         ops = operational_db.get(item["id"], {})
-        if ops.get("price", 99999) <= budget:
+        item_price=ops.get("price",99999)
+        item_delivery=ops.get("delivery_days",30)
+        if ops.get("price", 99999) <= budget and item_delivery<= delivery_limit:
             item["price"] = ops.get("price")
+            item["delivery_days"] = ops.get("delivery_days", "Standard")
             item["user_context"] = get_user_context(item["id"], user_signals)
             retrieved.append(item)
             if len(retrieved) >= req.top_k: break
