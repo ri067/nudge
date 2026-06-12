@@ -8,7 +8,8 @@ from sentence_transformers import SentenceTransformer
 import os
 
 # Import your Groq reasoning utility and the client instance
-from backend.groq_client import enrich_products_with_reasons, groq_client
+from backend.groq_client import enrich_products_with_reasons
+from groq import Groq
 
 app = FastAPI(title="Nudge API")
 
@@ -25,6 +26,7 @@ app.add_middleware(
 products = []
 index = None
 model = None
+groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 @app.on_event("startup")
 def load_resources():
