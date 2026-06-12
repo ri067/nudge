@@ -78,8 +78,13 @@ async def search(req: SearchRequest):
         )
         data = json.loads(res.choices[0].message.content)
         query_enriched = f"{req.query}. Keywords: {data.get('keywords')}"
-        budget = data.get("max_budget", 99999)
+        raw_budget = data.get("max_budget", 99999)
+        if isinstance(raw_budget, dict):
+            budget = raw_budget.get("number", 99999) # Extract if it's a dict
+        else:
+            budget = int(raw_budget) # Cast to int if it's a string or number
     except:
+        print(f"Extraction Error: {e}")
         query_enriched, budget = req.query, 99999
     print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget Limit: ₹{budget}")
     # 2. Vector Retrieve & Filter
