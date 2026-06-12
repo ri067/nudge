@@ -8,6 +8,8 @@ from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 from groq import Groq
 from backend.groq_client import enrich_products_with_reasons
+from fastapi.staticfiles import StaticFiles
+
 
 app = FastAPI(title="Nudge API")
 
@@ -26,7 +28,8 @@ model = None
 operational_db = {}
 user_signals = {}
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
-
+app = FastAPI(title="Nudge API")
+app.mount("/images", StaticFiles(directory="backend/data/images"), name="images")
 @app.on_event("startup")
 def load_resources():
     global products, index, model, operational_db, user_signals

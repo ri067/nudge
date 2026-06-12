@@ -113,9 +113,16 @@ const SwipeFeed = () => {
           <div className="flex-1 flex flex-col gap-4">
             {cartItems.map((item, index) => (
               <div key={index} className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-4">
-                <div className="w-16 h-16 bg-gray-50 rounded-xl flex items-center justify-center text-3xl">
-                  📦
-                </div>
+                <div className="h-3/5 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center p-6 relative pointer-events-none border-b border-gray-100">
+  <img 
+    src={`/api/images/product_${activeProduct.id}.jpg`} 
+    alt={activeProduct.name}
+    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+    onError={(e) => { e.target.src = 'https://via.placeholder.com/300?text=No+Image'; }}
+  />
+  
+  {/* Keep your existing 'Add to Cart' and 'Skip' badges here... */}
+</div>
                 <div className="flex-1">
                   <p className="text-xs font-bold text-gray-400 uppercase">{item.brand}</p>
                   <h3 className="font-bold text-gray-900 leading-tight">{item.name}</h3>
