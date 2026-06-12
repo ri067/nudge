@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* A little hackathon reset to keep the swipe area clean */
+body {
+  overflow: hidden;
+  background-color: #f3f4f6; /* A soft gray for the background */
+  margin: 0;
+  padding: 0;
+}
