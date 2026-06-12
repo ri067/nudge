@@ -39,7 +39,7 @@ def load_resources():
         raw_ops = json.load(f)
         operational_db = {item["id"]: item for item in raw_ops}
         
-    with open(os.path.join(script_dir, "data/user_signal.json"), "r") as f:
+    with open(os.path.join(script_dir, "data/user_signals.json"), "r") as f:
         user_signals = json.load(f)
         
     index = faiss.read_index(os.path.join(script_dir, "data/products.index"))
