@@ -62,7 +62,7 @@ def get_user_context(pid, signals):
 @app.post("/search")
 async def search(req: SearchRequest):
     global products, index, model, operational_db, user_signals
-    
+    print(f"\n🚀 [INPUT] Received: '{req.query}' (top_k: {req.top_k})")
     # 1. Query Expansion & Budget Extraction
     expansion_prompt = f"""
     User query: "{req.query}"
@@ -80,7 +80,7 @@ async def search(req: SearchRequest):
         budget = data.get("max_budget", 99999)
     except:
         query_enriched, budget = req.query, 99999
-
+    print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget Limit: ₹{budget}")
     # 2. Vector Retrieve & Filter
     vec = np.array(model.encode([query_enriched])).astype('float32')
     _, indices = index.search(vec, 15)
@@ -94,7 +94,19 @@ async def search(req: SearchRequest):
             item["user_context"] = get_user_context(item["id"], user_signals)
             retrieved.append(item)
             if len(retrieved) >= req.top_k: break
-                
+    print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index:")
+    for item in retrieved:
+        print(f"   -> ID: {item.get('id')} | Name: {item.get('name')} | Price: ₹{item.get('price')}")
+
     # 3. Reasoning
-    final = await enrich_products_with_reasons(retrieved, req.query)
-    return {"results": final}
+    try:
+        final_payload = await enrich_products_with_reasons(retrieved, req.query)
+        print(f"✨ [OUTPUT] Generated {len(final_payload)} reasoned recommendations.")
+        # Optional: Print the first reason to check the 'vibe'
+        if final_payload:
+            print(f"   -> Reasoning Example: {final_payload[0].get('why_reason')}")
+    except Exception as e:
+        print(f"❌ [ERROR] Reasoning Generation Failed: {e}")
+        final_payload = retrieved
+        
+    return {"results": final_payload}
