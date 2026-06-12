@@ -1,55 +1,61 @@
 import json
 import faiss
 import pickle
-import os
 import numpy as np
 from sentence_transformers import SentenceTransformer
+import os
 
-# 1. Load your mock data (assuming you saved the JSON array in 'products.json')
-def load_data(filepath):
-    with open(filepath, 'r') as file:
-        return json.load(file)
+# --- THE BULLETPROOF PATHS ---
+# 1. Find exactly where this Python script lives on the server
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def build_vector_db():
-    print("Loading product catalog...")
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(script_dir, 'data', 'products.json')
-    products = load_data('products.json')
+# 2. Build absolute paths relative to the script's location
+DATA_PATH = os.path.join(SCRIPT_DIR, "data", "products.json")
+INDEX_PATH = os.path.join(SCRIPT_DIR, "data", "products.index")
+METADATA_PATH = os.path.join(SCRIPT_DIR, "data", "product_metadata.pkl")
+
+def build_faiss_index():
+    print(f"Loading product data from: {DATA_PATH}")
     
-    # 2. Create "Rich Text" representations for the Embedding Model
-    # We stitch the fields together so the vector math catches synonyms in tags, brands, and descriptions.
-    documents = []
-    for p in products:
-        tags_str = ", ".join(p.get("tags", []))
-        # This string is what the AI actually "reads" to understand the product
-        rich_text = f"{p['name']}. Brand: {p['brand']}. Category: {p['category']}. Keywords: {tags_str}. Description: {p['description']}"
-        documents.append(rich_text)
-        
-    print(f"Prepared {len(documents)} products for vectorization.")
+    if not os.path.exists(DATA_PATH):
+        print(f"Error: Could not find products.json at {DATA_PATH}.")
+        return
 
-    # 3. Initialize the Embedding Model
-    print("Loading SentenceTransformer model (this might take a few seconds)...")
+    with open(DATA_PATH, 'r') as f:
+        products = json.load(f)
+
+    # 1. Construct the rich text representation for each product
+    print(f"Loaded {len(products)} products. Constructing semantic texts...")
+    texts_to_embed = []
+    
+    for item in products:
+        tags_str = ", ".join(item.get('tags', []))
+        rich_text = f"{item.get('name', '')} by {item.get('brand', '')}. Category: {item.get('category', '')}. Description: {item.get('description', '')} Tags: {tags_str}"
+        texts_to_embed.append(rich_text)
+
+    # 2. Load the embedding model
+    print("Loading sentence-transformers model 'all-MiniLM-L6-v2'...")
     model = SentenceTransformer('all-MiniLM-L6-v2')
-    
-    # 4. Generate Embeddings
-    print("Encoding product data into vectors...")
-    embeddings = model.encode(documents, convert_to_numpy=True)
-    
-    # 5. Build the FAISS Index
-    dimension = embeddings.shape[1]
+
+    # 3. Generate embeddings
+    print("Generating vector embeddings (this will take a moment)...")
+    embeddings = model.encode(texts_to_embed, show_progress_bar=True)
+    embeddings = np.array(embeddings).astype('float32')
+
+    # 4. Build the FAISS index
+    dimension = embeddings.shape[1] 
+    print(f"Building FAISS index with dimension {dimension}...")
     index = faiss.IndexFlatL2(dimension)
     index.add(embeddings)
-    
-    # 6. Save the Index and the Metadata to disk
-    print("Saving FAISS index to 'faiss_index.bin'...")
-    faiss.write_index(index, 'faiss_index.bin')
-    
-    print("Saving product metadata to 'product_metadata.pkl'...")
-    # We save the original JSON dictionaries so your search API can return them instantly
-    with open('product_metadata.pkl', 'wb') as f:
+
+    # 5. Save the vector index to disk
+    faiss.write_index(index, INDEX_PATH)
+    print(f"✅ Success! FAISS index saved to {INDEX_PATH}")
+
+    # 6. Save the raw JSON metadata to disk (CRUCIAL FOR THE FRONTEND!)
+    with open(METADATA_PATH, 'wb') as f:
         pickle.dump(products, f)
-        
-    print("✅ Build complete! Database is ready for the Nudge API.")
+    print(f"✅ Success! Metadata saved to {METADATA_PATH}")
 
 if __name__ == "__main__":
-    build_vector_db()
+    build_faiss_index()
