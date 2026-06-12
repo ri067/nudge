@@ -113,7 +113,8 @@ async def search(req: SearchRequest):
             if len(retrieved) >= req.top_k: break
     print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index:")
     for item in retrieved:
-        print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget: ₹{budget} | Max Delivery: {delivery_limit} days")
+        print(f"   -> ID: {item.get('id')} | Name: {item.get('name')} | Price: ₹{item.get('price')} | Delivery: {item.get('delivery_days')} days | User Context: {item.get('user_context')}")
+
     # 3. Reasoning
     try:
         final_payload = await enrich_products_with_reasons(retrieved, req.query)
