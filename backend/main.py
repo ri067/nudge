@@ -27,6 +27,8 @@ products = []
 index = None
 model = None
 groq_client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
+operational_db = {}
+
 
 @app.on_event("startup")
 def load_resources():
@@ -73,26 +75,37 @@ async def search(req: SearchRequest):
     # STAGE 1: QUERY EXPANSION (The New Brain)
     # ==========================================
     expansion_prompt = f"""
-    You are an e-commerce search assistant. 
-    The user is asking for: "{user_query}"
-    Predict 5 specific types of products, items, or ingredients they will need for this. 
-    Respond ONLY with a comma-separated list of items. No pleasantries or extra text.
+    You are an e-commerce AI. The user is asking: "{user_query}"
+    
+    1. Predict 10 specific products they need (comma-separated).
+    2. Extract their maximum budget in numbers if they mention one. If no budget is mentioned, use 999999.
+    
+    Respond ONLY with valid JSON exactly like this:
+    {{
+        "keywords": "item1, item2, item3",
+        "max_budget": 5000
+    }}
     """
     
     try:
-        # Call Groq to expand the query
         expansion_response = groq_client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": expansion_prompt}],
-            temperature=0.3
+            temperature=0.1,
+            response_format={"type": "json_object"} # Force strict JSON
         )
-        expanded_keywords = expansion_response.choices[0].message.content.strip()
+        
+        llm_data = json.loads(expansion_response.choices[0].message.content)
+        expanded_keywords = llm_data.get("keywords", "")
+        budget_limit = llm_data.get("max_budget", 99999)
+        
         enriched_query = f"{user_query}. Keywords: {expanded_keywords}"
     except Exception as e:
-        print(f"Groq Expansion Failed: {e}. Falling back to standard query.")
+        print(f"Groq Extraction Failed: {e}")
         enriched_query = user_query
+        budget_limit = 99999
 
-    print(f"Original: {user_query} | Enriched: {enriched_query}")
+    print(f"Enriched: {enriched_query} | Budget Limit: ₹{budget_limit}")
 
     # ==========================================
     # STAGE 2: VECTOR SEARCH
@@ -101,24 +114,34 @@ async def search(req: SearchRequest):
     query_vector = model.encode([enriched_query], convert_to_numpy=True)
     query_vector = np.array(query_vector).astype('float32')
     
-    distances, indices = index.search(query_vector, top_k)
+    # OVER-FETCH: Grab 15 items from FAISS in case the top ones are too expensive
+    distances, indices = index.search(query_vector, 15)
     
-    # Extract matched products based on vector index positions
     retrieved_products = []
+    
     for idx in indices[0]:
         if 0 <= idx < len(products):
-            # Deep copy or slice to prevent modifying the base list items
-            retrieved_products.append(products[idx].copy())
+            base_item = products[idx].copy()
+            ops_data = operational_db.get(base_item["id"], {})
+            item_price = ops_data.get("price", 99999)
+            
+            # THE FILTER: Only accept items that fit the user's budget
+            if item_price <= budget_limit:
+                # Merge the operational price into the payload for the frontend
+                base_item["price"] = item_price 
+                retrieved_products.append(base_item)
+                
+                # Stop looking once we have enough items for the UI
+                if len(retrieved_products) == top_k:
+                    break
 
     # ==========================================
     # STAGE 3: REASONING GENERATION
     # ==========================================
-    # Pass the matched products and original query to your custom Groq reasoner
     try:
         final_payload = await enrich_products_with_reasons(retrieved_products, user_query)
     except Exception as e:
         print(f"Reasoning Generation Failed: {e}")
-        # Fallback if your Groq reasoning block has a syntax error during the heat of the hackathon
         final_payload = retrieved_products
         for p in final_payload:
             p["why_reason"] = "Highly relevant match based on your current search intent."
