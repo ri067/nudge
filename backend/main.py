@@ -7,6 +7,8 @@ import numpy as np
 from sentence_transformers import SentenceTransformer
 import os
 
+from backend.groq_client import enrich_products_with_reasons
+
 app = FastAPI(title="Nudge API")
 
 # Essential for allowing your React frontend to talk to this server later
@@ -72,3 +74,24 @@ def active_search(req: SearchRequest):
             results.append(product_data)
             
     return {"results": results}
+
+
+
+@app.post("/search")
+async def active_search(req: SearchRequest):
+    """The core RAG retrieval endpoint, now with concurrent LLM reasoning."""
+    query_vector = model.encode([req.query]).astype("float32")
+    distances, indices = index.search(query_vector, req.top_k)
+    
+    raw_results = []
+    for i in range(req.top_k):
+        idx = int(indices[0][i])
+        if idx != -1 and idx < len(products):
+            product_data = products[idx].copy()
+            product_data["match_score"] = float(distances[0][i])
+            raw_results.append(product_data)
+            
+    # Enrich the raw FAISS results with Groq-generated UI text concurrently
+    enriched_results = await enrich_products_with_reasons(req.query, raw_results)
+            
+    return {"results": enriched_results}
