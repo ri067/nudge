@@ -119,14 +119,24 @@ async def search(req: SearchRequest):
         # 1. Query Expansion & Budget Extraction
         import re # Ensure regex is available
         expansion_prompt = f"""
-        User query: "{req.query}"
-        1. Predict 5 product keywords. 
-        2. Extract max budget (number). Default: 99999.
-        3. Extract max delivery days if urgency is mentioned (number). 
-        - IMPORTANT: Translate time words into integers! "Tomorrow" = 1, "next week" = 7, "this weekend" = 3, "today" = 0.
-        - If no time urgency is mentioned, use Default: 30.
+        Analyze the user query: "{req.query}"
         
-        Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 30}}
+        Extract the following into strict JSON:
+        1. "keywords": 15 specific product types (comma-separated).
+        2. "max_budget": Integer only. If no budget is mentioned, use 99999.
+        3. "max_delivery_days": Integer only. 
+           - IF AN EXACT NUMBER IS GIVEN (e.g., "in 2 days", "5 days"), output that exact number!
+           - IF WORDS ARE GIVEN: "today" = 0, "tomorrow" = 1, "this weekend" = 3, "next week" = 7.
+           - If no urgency is mentioned, use 14.
+
+        EXAMPLE INPUT 1: "going to the beach tomorrow under 500"
+        EXAMPLE OUTPUT 1: {{"keywords": "sunscreen, towel, flip flops", "max_budget": 500, "max_delivery_days": 1}}
+        
+        EXAMPLE INPUT 2: "need a tent in 2 days"
+        EXAMPLE OUTPUT 2: {{"keywords": "camping tent, sleeping bag, lantern", "max_budget": 99999, "max_delivery_days": 2}}
+        
+        REAL INPUT: "{req.query}"
+        REAL OUTPUT:
         """
         try:
             res = groq_client.chat.completions.create(
