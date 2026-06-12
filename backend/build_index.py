@@ -1,6 +1,7 @@
 import json
 import faiss
 import pickle
+import os
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
@@ -11,6 +12,8 @@ def load_data(filepath):
 
 def build_vector_db():
     print("Loading product catalog...")
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(script_dir, 'data', 'products.json')
     products = load_data('products.json')
     
     # 2. Create "Rich Text" representations for the Embedding Model
