@@ -57,6 +57,7 @@ def get_user_context(pid, signals):
     abandoned = next((i for i in signals.get("abandoned_cart_products", []) if i["product_id"] == pid), None)
     if abandoned:
         context.append(f"Abandoned in cart {abandoned['days_since_cart']} days ago.")
+    print(f"👤 [SIGNAL] Found {len(context)} historical signals for ID {pid}")
     return " ".join(context)
 
 @app.post("/search")
