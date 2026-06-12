@@ -8,17 +8,28 @@ const SwipeFeed = () => {
   const [cartItems, setCartItems] = useState([]);
   const [inputValue, setInputValue] = useState('');
   
-  // New State for the AI Intelligence Chip
+  // State for the AI Intelligence Chip
   const [aiContext, setAiContext] = useState(null);
+  const [showAiChip, setShowAiChip] = useState(false);
   
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
 
+  // --- THE 5-SECOND FADE TIMER ---
+  useEffect(() => {
+    let timer;
+    if (showAiChip) {
+      timer = setTimeout(() => {
+        setShowAiChip(false);
+      }, 5000);
+    }
+    return () => clearTimeout(timer);
+  }, [showAiChip]);
+
   // 1. Initial load & Infinite Scroll trigger
   useEffect(() => {
     const fetchRefill = async () => {
-      // Fetch if we are running out of cards
       if (products.length < 2 && !loading) {
         setLoading(true);
         try {
@@ -28,9 +39,9 @@ const SwipeFeed = () => {
           });
           setProducts((prev) => [...prev, ...response.data.results]);
           
-          // Only set AI context to "feed" if the user hasn't explicitly searched yet
           if (!aiContext || aiContext.is_feed) {
              setAiContext(response.data.ai_context);
+             // We don't trigger the chip for the silent background feed
           }
         } catch (error) {
           console.error("Error fetching feed:", error);
@@ -42,12 +53,14 @@ const SwipeFeed = () => {
     fetchRefill();
   }, [products.length]); 
 
-  // 2. Explicit Search Override (ONLY DECLARED ONCE!)
+  // 2. Explicit Search Override
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
     if (inputValue.trim()) {
       setLoading(true);
       setCurrentView('feed');
+      // Hide chip immediately while loading new search
+      setShowAiChip(false); 
       
       try {
         const response = await axios.post(`/api/search`, {
@@ -55,9 +68,11 @@ const SwipeFeed = () => {
           top_k: 5
         });
         
-        // Put new search items at the TOP of the deck
         setProducts((prev) => [...response.data.results, ...prev]);
         setAiContext(response.data.ai_context);
+        
+        // Trigger the chip to appear
+        setShowAiChip(true);
         
       } catch (error) {
         console.error("Error with specific search:", error);
@@ -143,6 +158,8 @@ const SwipeFeed = () => {
   // VIEW: SWIPE FEED
   // ==========================================
   const activeProduct = products[0];
+  const nextProduct = products[1]; // GRAB THE SECOND PRODUCT
+
   const cardStyle = isDragging
     ? { transform: `translate(${dragOffset.x}px, ${dragOffset.y * 0.2}px) rotate(${dragOffset.x * 0.05}deg)`, transition: 'none' }
     : { transform: 'translate(0px, 0px) rotate(0deg)', transition: 'transform 0.3s ease-out' };
@@ -150,8 +167,7 @@ const SwipeFeed = () => {
   return (
     <div className="relative w-full h-full p-4 flex flex-col pt-8 bg-gray-50 overflow-hidden">
       
-      {/* Cart Badge */}
-      <div onClick={() => setCurrentView('cart')} className="absolute top-6 right-6 z-50 bg-white p-3 rounded-full shadow-md cursor-pointer flex items-center gap-2">
+      <div onClick={() => setCurrentView('cart')} className="absolute top-6 right-6 z-50 bg-white p-3 rounded-full shadow-md cursor-pointer flex items-center gap-2 transition-transform hover:scale-105 active:scale-95">
         <span>🛒</span> <span className="font-black">{cartItems.length}</span>
       </div>
 
@@ -159,24 +175,24 @@ const SwipeFeed = () => {
       
       <form onSubmit={handleSearchSubmit} className="flex gap-2 mb-4 px-2 z-20">
         <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="What's on your mind?" className="flex-1 rounded-full px-5 py-3 shadow-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-        <button type="submit" className="bg-gray-900 text-white rounded-full px-5 py-3 font-bold shadow-md">Go</button>
+        <button type="submit" className="bg-gray-900 text-white rounded-full px-5 py-3 font-bold shadow-md active:scale-95 transition-transform">Go</button>
       </form>
 
-      {/* --- THE AI INTELLIGENCE CHIP --- */}
-      {aiContext && !aiContext.is_feed && !loading && products.length > 0 && (
-        <div className="w-full max-w-sm mx-auto mb-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-3 shadow-sm z-20 relative">
+      {/* --- THE AI INTELLIGENCE CHIP (WITH FADE ANIMATION) --- */}
+      <div className={`w-full max-w-sm mx-auto absolute top-40 left-0 right-0 z-20 px-6 transition-all duration-700 ease-in-out ${showAiChip && aiContext && !aiContext.is_feed && !loading ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-3 shadow-md">
           <div className="flex items-start gap-3">
             <div className="bg-white p-2 rounded-full shadow-sm text-lg">✨</div>
             <div className="flex-1 pt-0.5">
               <p className="text-xs font-black text-blue-600 uppercase tracking-wider mb-0.5">AI Understood</p>
               <p className="text-sm text-gray-700 leading-snug">
-                Finding items for <span className="font-bold">"{aiContext.query}"</span>
-                {aiContext.budget !== 99999 && (
+                Finding items for <span className="font-bold">"{aiContext?.query}"</span>
+                {aiContext?.budget !== 99999 && (
                   <span className="bg-green-100 text-green-800 px-1.5 py-0.5 rounded ml-1 font-semibold text-xs whitespace-nowrap">
                     ≤ ₹{aiContext.budget}
                   </span>
                 )}
-                {aiContext.delivery !== 30 && (
+                {aiContext?.delivery !== 30 && (
                   <span className="bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded ml-1 font-semibold text-xs whitespace-nowrap">
                     Fast (≤ {aiContext.delivery} days)
                   </span>
@@ -185,10 +201,10 @@ const SwipeFeed = () => {
             </div>
           </div>
         </div>
-      )}
+      </div>
 
       {/* Card Deck */}
-      <div className="relative flex-1 w-full flex justify-center items-center">
+      <div className="relative flex-1 w-full flex justify-center items-center mt-2">
         {loading && products.length === 0 ? (
           <div className="font-bold text-gray-400 animate-pulse text-center">
             <span className="text-3xl block mb-2">🧠</span> Analyzing...
@@ -197,11 +213,24 @@ const SwipeFeed = () => {
           <div className="text-center font-bold text-gray-400">🎉 All caught up!</div>
         ) : (
           <>
-            {/* Background Card for depth */}
-            {products.length > 1 && <div className="absolute w-80 h-[28rem] bg-white rounded-3xl border border-gray-200 scale-95 translate-y-4 opacity-50" />}
+            {/* --- REAL NEXT CARD (BACKGROUND) --- */}
+            {nextProduct && (
+              <div className="absolute w-80 h-[28rem] bg-white rounded-3xl border border-gray-200 scale-95 translate-y-5 opacity-70 z-0 flex flex-col overflow-hidden shadow-sm">
+                <div className="h-3/5 relative border-b border-gray-100 bg-gray-100">
+                  {/* Image is slightly blurred/grayscale to push it to the background visually */}
+                  <img src={`/api/images/product_${nextProduct.id}.jpg`} className="w-full h-full object-cover grayscale-[30%] blur-[1px] pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <div>
+                    <h2 className="text-xl font-bold leading-tight text-gray-500 line-clamp-1">{nextProduct.name}</h2>
+                    <p className="text-2xl font-black mt-1 text-gray-400">₹{nextProduct.price}</p>
+                  </div>
+                </div>
+              </div>
+            )}
 
-            {/* Active Top Card */}
-            <div onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={(e) => handlePointerUp(e, activeProduct)} style={cardStyle} className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col">
+            {/* --- ACTIVE TOP CARD (FOREGROUND) --- */}
+            <div onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={(e) => handlePointerUp(e, activeProduct)} style={cardStyle} className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10">
               
               <div className="h-3/5 relative border-b border-gray-100 bg-gray-100">
                 <img src={`/api/images/product_${activeProduct.id}.jpg`} className="w-full h-full object-cover pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
@@ -211,7 +240,7 @@ const SwipeFeed = () => {
                 {dragOffset.x < -40 && <div className="absolute top-6 right-6 bg-red-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[12deg] uppercase shadow-lg">Skip</div>}
               </div>
 
-              <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none">
+              <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none bg-white">
                 <div>
                   <h2 className="text-xl font-bold leading-tight text-gray-900 line-clamp-1">{activeProduct.name}</h2>
                   <p className="text-2xl font-black mt-1 text-gray-900">₹{activeProduct.price}</p>
