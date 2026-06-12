@@ -1,0 +1,1846 @@
+[
+  {
+    "id": 1,
+    "name": "Wildcraft Trekking Backpack 55L",
+    "category": "outdoor",
+    "brand": "Wildcraft",
+    "price": 1199,
+    "tags": [
+      "camping",
+      "mountains",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "travel",
+      "backpacking"
+    ],
+    "description": "Large trekking backpack for multi-day hikes, camping trips and outdoor adventures. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 2,
+    "name": "Quechua Sleeping Bag",
+    "category": "outdoor",
+    "brand": "Quechua",
+    "price": 2499,
+    "tags": [
+      "camping",
+      "mountains",
+      "sleeping",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "travel",
+      "backpacking"
+    ],
+    "description": "Lightweight sleeping bag designed for overnight camping and trekking. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 3,
+    "name": "Forclaz Trekking Hat",
+    "category": "outdoor",
+    "brand": "Forclaz",
+    "price": 599,
+    "tags": [
+      "camping",
+      "summer",
+      "mountains",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "heat",
+      "travel",
+      "backpacking",
+      "sun"
+    ],
+    "description": "Sun protection hat ideal for trekking and outdoor activities in hot weather. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 4,
+    "name": "LED Camping Lantern",
+    "category": "outdoor",
+    "brand": "Decathlon",
+    "price": 899,
+    "tags": [
+      "camping",
+      "mountains",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "light",
+      "outdoor",
+      "backpacking",
+      "travel",
+      "night"
+    ],
+    "description": "Rechargeable lantern for camping and emergency situations. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 5,
+    "name": "Portable First Aid Kit",
+    "category": "outdoor",
+    "brand": "AdventurePro",
+    "price": 499,
+    "tags": [
+      "camping",
+      "emergency",
+      "mountains",
+      "outdoor activity",
+      "safety",
+      "trekking",
+      "hiking",
+      "adventure",
+      "travel",
+      "backpacking"
+    ],
+    "description": "Essential first aid supplies for trekking, hiking and travel. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 6,
+    "name": "Puma Running Shoes",
+    "category": "fitness",
+    "brand": "Puma",
+    "price": 2499,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "sports",
+      "workout",
+      "running",
+      "strength training",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Comfortable running shoes suitable for gym workouts and daily exercise. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 7,
+    "name": "Nike Training T-Shirt",
+    "category": "fitness",
+    "brand": "Nike",
+    "price": 799,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "sports",
+      "workout",
+      "strength training",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Breathable workout t-shirt for gym sessions and sports. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 8,
+    "name": "Amazon Basics Yoga Mat",
+    "category": "fitness",
+    "brand": "Amazon Basics",
+    "price": 799,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "workout",
+      "strength training",
+      "yoga",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Comfortable yoga mat for stretching, exercise and home workouts. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 9,
+    "name": "MuscleBlaze Whey Protein",
+    "category": "fitness",
+    "brand": "MuscleBlaze",
+    "price": 2499,
+    "tags": [
+      "nutrition",
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "protein",
+      "workout",
+      "strength training",
+      "muscle",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Protein supplement for muscle recovery and strength training. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 10,
+    "name": "Boldfit Resistance Bands",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 499,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "workout",
+      "strength training",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Resistance bands for strength training and home workouts. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 11,
+    "name": "Neutrogena Ultra Sheer SPF 50",
+    "category": "skincare",
+    "brand": "Neutrogena",
+    "price": 399,
+    "tags": [
+      "summer",
+      "uv protection",
+      "sun protection",
+      "beach vacation",
+      "outdoor",
+      "travel",
+      "sunscreen",
+      "hydration",
+      "skincare"
+    ],
+    "description": "SPF 50 sunscreen offering strong UV protection during outdoor activities. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 12,
+    "name": "Mamaearth Vitamin C Serum",
+    "category": "skincare",
+    "brand": "Mamaearth",
+    "price": 499,
+    "tags": [
+      "summer",
+      "uv protection",
+      "face",
+      "glow",
+      "sun protection",
+      "beach vacation",
+      "travel",
+      "vitamin c",
+      "skincare",
+      "hydration"
+    ],
+    "description": "Vitamin C serum for brighter and healthier looking skin. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 13,
+    "name": "Cetaphil Moisturizer",
+    "category": "skincare",
+    "brand": "Cetaphil",
+    "price": 599,
+    "tags": [
+      "summer",
+      "uv protection",
+      "moisturizer",
+      "sun protection",
+      "beach vacation",
+      "travel",
+      "hydration",
+      "skincare",
+      "dry skin"
+    ],
+    "description": "Daily moisturizer suitable for dry and sensitive skin. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 14,
+    "name": "Nivea Face Wash",
+    "category": "skincare",
+    "brand": "Nivea",
+    "price": 249,
+    "tags": [
+      "summer",
+      "face wash",
+      "uv protection",
+      "cleaning",
+      "sun protection",
+      "beach vacation",
+      "travel",
+      "hydration",
+      "skincare"
+    ],
+    "description": "Gentle face wash for everyday skincare routine. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 15,
+    "name": "Lip Balm SPF 15",
+    "category": "skincare",
+    "brand": "Nivea",
+    "price": 149,
+    "tags": [
+      "summer",
+      "uv protection",
+      "sun protection",
+      "beach vacation",
+      "lips",
+      "travel",
+      "hydration",
+      "skincare"
+    ],
+    "description": "Lip balm with SPF protection for sunny weather. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 16,
+    "name": "boAt Airdopes 311 Pro",
+    "category": "electronics",
+    "brand": "boAt",
+    "price": 1499,
+    "tags": [
+      "gaming",
+      "study",
+      "coding",
+      "productivity",
+      "work from home",
+      "audio",
+      "music",
+      "desk setup",
+      "bluetooth",
+      "electronics",
+      "travel",
+      "earbuds"
+    ],
+    "description": "Wireless earbuds for music, calls and commuting. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 17,
+    "name": "Noise Smart Watch",
+    "category": "electronics",
+    "brand": "Noise",
+    "price": 1799,
+    "tags": [
+      "health",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "fitness tracking",
+      "coding",
+      "smartwatch"
+    ],
+    "description": "Smartwatch with fitness tracking and notification support. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 18,
+    "name": "Samsung Power Bank",
+    "category": "electronics",
+    "brand": "Samsung",
+    "price": 1699,
+    "tags": [
+      "battery",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "charging",
+      "desk setup",
+      "electronics",
+      "travel",
+      "coding",
+      "phone"
+    ],
+    "description": "Portable power bank for charging devices on the go. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 19,
+    "name": "Logitech Wireless Mouse",
+    "category": "electronics",
+    "brand": "Logitech",
+    "price": 699,
+    "tags": [
+      "work",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "laptop",
+      "coding"
+    ],
+    "description": "Wireless mouse for work, studying and productivity. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 20,
+    "name": "JBL Bluetooth Speaker",
+    "category": "electronics",
+    "brand": "JBL",
+    "price": 1799,
+    "tags": [
+      "speaker",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "audio",
+      "music",
+      "desk setup",
+      "electronics",
+      "party",
+      "coding"
+    ],
+    "description": "Portable Bluetooth speaker for music and entertainment. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 21,
+    "name": "Nescafe Instant Coffee",
+    "category": "grocery",
+    "brand": "Nescafe",
+    "price": 249,
+    "tags": [
+      "nutrition",
+      "study",
+      "energy",
+      "healthy snack",
+      "caffeine",
+      "travel",
+      "fitness",
+      "coffee",
+      "late night"
+    ],
+    "description": "Instant coffee for students, professionals and coffee lovers. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 22,
+    "name": "Yoga Bar Protein Bars",
+    "category": "grocery",
+    "brand": "Yoga Bar",
+    "price": 549,
+    "tags": [
+      "snack",
+      "nutrition",
+      "energy",
+      "study",
+      "healthy",
+      "healthy snack",
+      "protein",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Healthy protein bars suitable for travel and fitness goals. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 23,
+    "name": "Trail Mix Pack",
+    "category": "grocery",
+    "brand": "NutriMix",
+    "price": 399,
+    "tags": [
+      "snack",
+      "nutrition",
+      "energy",
+      "trekking",
+      "healthy",
+      "study",
+      "healthy snack",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Mixed nuts and dried fruits for healthy snacking. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 24,
+    "name": "Green Tea Pack",
+    "category": "grocery",
+    "brand": "Tata",
+    "price": 199,
+    "tags": [
+      "nutrition",
+      "tea",
+      "health",
+      "energy",
+      "study",
+      "healthy snack",
+      "wellness",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Green tea for daily wellness and healthy habits. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 25,
+    "name": "Energy Drink Can",
+    "category": "grocery",
+    "brand": "Red Bull",
+    "price": 125,
+    "tags": [
+      "nutrition",
+      "energy",
+      "sports",
+      "study",
+      "healthy snack",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Energy drink for busy days and long study sessions. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 26,
+    "name": "Milton Water Bottle",
+    "category": "home",
+    "brand": "Milton",
+    "price": 349,
+    "tags": [
+      "summer",
+      "office",
+      "organization",
+      "college",
+      "room setup",
+      "home utility",
+      "hostel",
+      "desk setup",
+      "travel",
+      "hydration"
+    ],
+    "description": "Reusable water bottle for staying hydrated throughout the day. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 27,
+    "name": "Prestige Electric Kettle",
+    "category": "home",
+    "brand": "Prestige",
+    "price": 799,
+    "tags": [
+      "organization",
+      "college",
+      "tea",
+      "room setup",
+      "home utility",
+      "desk setup",
+      "hostel",
+      "coffee"
+    ],
+    "description": "Electric kettle useful for hostel rooms and quick beverages. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 28,
+    "name": "Cello Lunch Box",
+    "category": "home",
+    "brand": "Cello",
+    "price": 399,
+    "tags": [
+      "organization",
+      "office",
+      "college",
+      "food",
+      "room setup",
+      "home utility",
+      "desk setup",
+      "meal prep",
+      "hostel"
+    ],
+    "description": "Lunch box for carrying meals to college or office. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 29,
+    "name": "Study Desk Lamp",
+    "category": "home",
+    "brand": "Philips",
+    "price": 899,
+    "tags": [
+      "organization",
+      "college",
+      "room setup",
+      "study",
+      "home utility",
+      "exam",
+      "desk setup",
+      "desk",
+      "student",
+      "hostel"
+    ],
+    "description": "LED desk lamp for studying and reading. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 30,
+    "name": "Storage Organizer",
+    "category": "home",
+    "brand": "Ikea",
+    "price": 599,
+    "tags": [
+      "organization",
+      "college",
+      "room setup",
+      "home utility",
+      "desk setup",
+      "hostel"
+    ],
+    "description": "Storage organizer for keeping rooms neat and tidy. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 31,
+    "name": "Levis Slim Fit Jeans",
+    "category": "fashion",
+    "brand": "Levis",
+    "price": 1999,
+    "tags": [
+      "college fashion",
+      "fashion",
+      "college",
+      "casual",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Comfortable slim fit jeans for everyday wear. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 32,
+    "name": "Allen Solly Polo T-Shirt",
+    "category": "fashion",
+    "brand": "Allen Solly",
+    "price": 999,
+    "tags": [
+      "college fashion",
+      "college",
+      "fashion",
+      "casual",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Classic polo t-shirt suitable for casual outings. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 33,
+    "name": "Titan Analog Watch",
+    "category": "fashion",
+    "brand": "Titan",
+    "price": 2999,
+    "tags": [
+      "formal",
+      "college fashion",
+      "fashion",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Elegant analog watch for everyday use. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 34,
+    "name": "Fastrack Sunglasses",
+    "category": "fashion",
+    "brand": "Fastrack",
+    "price": 899,
+    "tags": [
+      "summer",
+      "college fashion",
+      "sun protection",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Stylish sunglasses for sunny days and travel. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 35,
+    "name": "Casual Sneakers",
+    "category": "fashion",
+    "brand": "Puma",
+    "price": 1799,
+    "tags": [
+      "college fashion",
+      "college",
+      "casual",
+      "walking",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Comfortable sneakers for daily use. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 36,
+    "name": "Pedigree Adult Dog Food",
+    "category": "pets",
+    "brand": "Pedigree",
+    "price": 699,
+    "tags": [
+      "dog",
+      "food",
+      "gift",
+      "pet care",
+      "lifestyle",
+      "pets",
+      "entertainment"
+    ],
+    "description": "Nutritious food formulated for adult dogs. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 37,
+    "name": "Whiskas Cat Food",
+    "category": "pets",
+    "brand": "Whiskas",
+    "price": 499,
+    "tags": [
+      "food",
+      "gift",
+      "pet care",
+      "lifestyle",
+      "pets",
+      "entertainment",
+      "cat"
+    ],
+    "description": "Balanced nutrition for cats. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 38,
+    "name": "Classmate Notebook Pack",
+    "category": "study",
+    "brand": "Classmate",
+    "price": 299,
+    "tags": [
+      "college",
+      "exam",
+      "notes",
+      "writing",
+      "exam preparation",
+      "desk setup",
+      "student",
+      "planning"
+    ],
+    "description": "Notebook pack for lectures and exam preparation. Essential resource for college students, exam preparation, writing lecture notes, and desk organization. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 39,
+    "name": "Parker Ball Pen",
+    "category": "study",
+    "brand": "Parker",
+    "price": 249,
+    "tags": [
+      "notes",
+      "writing",
+      "exam preparation",
+      "desk setup",
+      "student",
+      "planning"
+    ],
+    "description": "Smooth writing pen for students and professionals. Essential resource for college students, exam preparation, writing lecture notes, and desk organization. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 40,
+    "name": "Whiteboard Marker Set",
+    "category": "study",
+    "brand": "Camlin",
+    "price": 199,
+    "tags": [
+      "teaching",
+      "study",
+      "notes",
+      "writing",
+      "exam preparation",
+      "desk setup",
+      "student",
+      "planning"
+    ],
+    "description": "Marker set useful for whiteboards and planning. Essential resource for college students, exam preparation, writing lecture notes, and desk organization. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 41,
+    "name": "Travel Neck Pillow",
+    "category": "travel",
+    "brand": "Amazon Basics",
+    "price": 499,
+    "tags": [
+      "travel packing",
+      "comfort",
+      "document organization",
+      "flight",
+      "weekend trip",
+      "beach vacation",
+      "travel",
+      "luggage"
+    ],
+    "description": "Neck pillow for comfortable travel. Designed for smooth travel packing, weekend trips, holiday luggage organization, or a sunny beach vacation. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 42,
+    "name": "Travel Adapter",
+    "category": "travel",
+    "brand": "Portronics",
+    "price": 699,
+    "tags": [
+      "travel packing",
+      "document organization",
+      "weekend trip",
+      "charging",
+      "beach vacation",
+      "electronics",
+      "travel",
+      "luggage"
+    ],
+    "description": "Universal travel adapter for multiple devices. Designed for smooth travel packing, weekend trips, holiday luggage organization, or a sunny beach vacation. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 43,
+    "name": "Passport Holder",
+    "category": "travel",
+    "brand": "Wildcraft",
+    "price": 399,
+    "tags": [
+      "organization",
+      "travel packing",
+      "document organization",
+      "documents",
+      "weekend trip",
+      "beach vacation",
+      "travel",
+      "luggage"
+    ],
+    "description": "Passport holder for organizing travel documents. Designed for smooth travel packing, weekend trips, holiday luggage organization, or a sunny beach vacation. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 44,
+    "name": "Rain Jacket",
+    "category": "seasonal",
+    "brand": "Decathlon",
+    "price": 1499,
+    "tags": [
+      "weather",
+      "monsoon commuting",
+      "rain",
+      "outdoor comfort",
+      "winter cold",
+      "outdoor",
+      "travel",
+      "rain protection",
+      "monsoon"
+    ],
+    "description": "Water resistant jacket for rainy weather. Protective seasonal gear optimized for wet monsoon commuting, rainy weather, or cold winter outdoor conditions. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 45,
+    "name": "Umbrella",
+    "category": "seasonal",
+    "brand": "Cello",
+    "price": 399,
+    "tags": [
+      "rain",
+      "outdoor comfort",
+      "winter cold",
+      "monsoon",
+      "monsoon commuting",
+      "rain protection",
+      "weather"
+    ],
+    "description": "Compact umbrella suitable for daily commuting. Protective seasonal gear optimized for wet monsoon commuting, rainy weather, or cold winter outdoor conditions. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 46,
+    "name": "Mosquito Repellent",
+    "category": "seasonal",
+    "brand": "GoodKnight",
+    "price": 249,
+    "tags": [
+      "summer",
+      "home",
+      "health",
+      "outdoor comfort",
+      "winter cold",
+      "monsoon commuting",
+      "rain protection",
+      "weather"
+    ],
+    "description": "Mosquito protection for homes and travel. Protective seasonal gear optimized for wet monsoon commuting, rainy weather, or cold winter outdoor conditions. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 47,
+    "name": "ORS Hydration Pack",
+    "category": "health",
+    "brand": "Electral",
+    "price": 99,
+    "tags": [
+      "summer",
+      "medical emergency",
+      "first aid",
+      "health monitoring",
+      "wellness",
+      "travel",
+      "hydration"
+    ],
+    "description": "Electrolyte solution for hydration during hot weather. Vital health and wellness supplement or medical safety utility for home, trekking emergencies, or travel hydration. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 48,
+    "name": "Digital Thermometer",
+    "category": "health",
+    "brand": "Dr Trust",
+    "price": 299,
+    "tags": [
+      "home",
+      "medical emergency",
+      "medical",
+      "health",
+      "first aid",
+      "health monitoring",
+      "wellness",
+      "hydration"
+    ],
+    "description": "Digital thermometer for basic health monitoring. Vital health and wellness supplement or medical safety utility for home, trekking emergencies, or travel hydration. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 49,
+    "name": "Vitamin Tablets",
+    "category": "health",
+    "brand": "HK Vitals",
+    "price": 399,
+    "tags": [
+      "nutrition",
+      "medical emergency",
+      "health",
+      "first aid",
+      "health monitoring",
+      "wellness",
+      "hydration"
+    ],
+    "description": "Daily vitamin supplement for general wellness. Vital health and wellness supplement or medical safety utility for home, trekking emergencies, or travel hydration. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 50,
+    "name": "Foam Roller",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 699,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "workout",
+      "strength training",
+      "recovery",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Foam roller for muscle recovery after workouts. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 51,
+    "name": "Laptop Sleeve",
+    "category": "electronics",
+    "brand": "HP",
+    "price": 499,
+    "tags": [
+      "college",
+      "work",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "laptop",
+      "student",
+      "coding"
+    ],
+    "description": "Protective laptop sleeve for students and professionals. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 52,
+    "name": "Mechanical Keyboard",
+    "category": "electronics",
+    "brand": "Redragon",
+    "price": 2499,
+    "tags": [
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "coding"
+    ],
+    "description": "Mechanical keyboard suitable for coding and gaming. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 53,
+    "name": "Webcam",
+    "category": "electronics",
+    "brand": "Logitech",
+    "price": 1999,
+    "tags": [
+      "meetings",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "remote work",
+      "coding"
+    ],
+    "description": "HD webcam for meetings and online classes. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 54,
+    "name": "Portable SSD",
+    "category": "electronics",
+    "brand": "Samsung",
+    "price": 4999,
+    "tags": [
+      "storage",
+      "creator",
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "coding"
+    ],
+    "description": "Fast portable storage for files and projects. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 55,
+    "name": "Monitor Light Bar",
+    "category": "electronics",
+    "brand": "Xiaomi",
+    "price": 1999,
+    "tags": [
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "desk setup",
+      "electronics",
+      "coding"
+    ],
+    "description": "Desk lighting accessory for comfortable studying. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 56,
+    "name": "Exam Preparation Planner",
+    "category": "study",
+    "brand": "Classmate",
+    "price": 199,
+    "tags": [
+      "notes",
+      "exam",
+      "writing",
+      "exam preparation",
+      "desk setup",
+      "student",
+      "planning"
+    ],
+    "description": "Planner for organizing study schedules. Essential resource for college students, exam preparation, writing lecture notes, and desk organization. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 57,
+    "name": "Blue Light Glasses",
+    "category": "health",
+    "brand": "Lenskart",
+    "price": 999,
+    "tags": [
+      "medical emergency",
+      "work",
+      "screen",
+      "study",
+      "first aid",
+      "health monitoring",
+      "wellness",
+      "hydration"
+    ],
+    "description": "Glasses designed to reduce eye strain. Vital health and wellness supplement or medical safety utility for home, trekking emergencies, or travel hydration. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 58,
+    "name": "Reusable Coffee Mug",
+    "category": "home",
+    "brand": "Borosil",
+    "price": 349,
+    "tags": [
+      "organization",
+      "college",
+      "room setup",
+      "study",
+      "home utility",
+      "desk setup",
+      "travel",
+      "hostel",
+      "coffee"
+    ],
+    "description": "Insulated mug for coffee and tea lovers. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 59,
+    "name": "Protein Shaker",
+    "category": "fitness",
+    "brand": "MuscleBlaze",
+    "price": 249,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "protein",
+      "workout",
+      "strength training",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Shaker bottle for protein drinks and hydration. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 60,
+    "name": "Hiking Socks Pack",
+    "category": "outdoor",
+    "brand": "Forclaz",
+    "price": 399,
+    "tags": [
+      "camping",
+      "mountains",
+      "outdoor activity",
+      "comfort",
+      "trekking",
+      "adventure",
+      "hiking",
+      "travel",
+      "backpacking"
+    ],
+    "description": "Comfortable socks designed for long hikes and trekking. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 61,
+    "name": "Hot Wheels Car Pack (5pc)",
+    "category": "toys",
+    "brand": "Hot Wheels",
+    "price": 499,
+    "tags": [
+      "cars",
+      "collectible",
+      "gift",
+      "toys",
+      "kids",
+      "toy",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Set of five die-cast toy cars for kids who love collecting and racing. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 62,
+    "name": "Rubik's Cube 3x3",
+    "category": "toys",
+    "brand": "Rubik's",
+    "price": 399,
+    "tags": [
+      "puzzle",
+      "gift",
+      "toys",
+      "brain game",
+      "kids",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Classic 3x3 speed cube for puzzle lovers and casual players. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 63,
+    "name": "LEGO Classic Brick Box",
+    "category": "toys",
+    "brand": "LEGO",
+    "price": 2999,
+    "tags": [
+      "gift",
+      "toys",
+      "kids",
+      "lifestyle",
+      "building blocks",
+      "entertainment",
+      "creative"
+    ],
+    "description": "Box of colorful building bricks for open-ended creative play. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 64,
+    "name": "Remote Control Car",
+    "category": "toys",
+    "brand": "Hot Wheels",
+    "price": 1499,
+    "tags": [
+      "cars",
+      "gift",
+      "rc",
+      "toys",
+      "outdoor",
+      "kids",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Fast remote-controlled car for indoor and outdoor play. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 65,
+    "name": "Uno Card Game",
+    "category": "toys",
+    "brand": "Mattel",
+    "price": 199,
+    "tags": [
+      "gift",
+      "toys",
+      "card game",
+      "party",
+      "fun",
+      "lifestyle",
+      "entertainment",
+      "family"
+    ],
+    "description": "Classic card game perfect for family game nights and parties. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 66,
+    "name": "PS5 DualSense Controller",
+    "category": "toys",
+    "brand": "Sony",
+    "price": 5999,
+    "tags": [
+      "ps5",
+      "gaming",
+      "gift",
+      "toys",
+      "controller",
+      "lifestyle",
+      "console",
+      "entertainment"
+    ],
+    "description": "Wireless controller with haptic feedback for PlayStation 5. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 67,
+    "name": "Gaming Headset",
+    "category": "toys",
+    "brand": "Redragon",
+    "price": 1999,
+    "tags": [
+      "pc",
+      "gaming",
+      "gift",
+      "audio",
+      "toys",
+      "lifestyle",
+      "console",
+      "entertainment"
+    ],
+    "description": "Over-ear headset with mic for immersive gaming sessions. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 68,
+    "name": "Nerf Blaster",
+    "category": "toys",
+    "brand": "Nerf",
+    "price": 1299,
+    "tags": [
+      "gift",
+      "toys",
+      "outdoor",
+      "kids",
+      "fun",
+      "lifestyle",
+      "action",
+      "entertainment"
+    ],
+    "description": "Foam dart blaster for active outdoor play and games. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 69,
+    "name": "Chess Set Wooden",
+    "category": "toys",
+    "brand": "Generic",
+    "price": 799,
+    "tags": [
+      "board game",
+      "gift",
+      "toys",
+      "lifestyle",
+      "strategy",
+      "entertainment",
+      "family"
+    ],
+    "description": "Wooden chess set for strategy enthusiasts and family fun. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 70,
+    "name": "Soft Plush Teddy Bear",
+    "category": "toys",
+    "brand": "Archies",
+    "price": 599,
+    "tags": [
+      "gift",
+      "plush",
+      "cuddly",
+      "toys",
+      "kids",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Soft and cuddly teddy bear, a perfect gift for kids. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 71,
+    "name": "Fairy LED String Lights",
+    "category": "decoration",
+    "brand": "Generic",
+    "price": 299,
+    "tags": [
+      "decoration",
+      "festive",
+      "gift",
+      "party",
+      "lifestyle",
+      "entertainment",
+      "room decor",
+      "lights"
+    ],
+    "description": "Warm white LED string lights for room decor and festive occasions. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 72,
+    "name": "Wall Art Canvas Set",
+    "category": "decoration",
+    "brand": "WallMantra",
+    "price": 1299,
+    "tags": [
+      "art",
+      "decoration",
+      "home",
+      "wall decor",
+      "aesthetic",
+      "gift",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Set of canvas prints to add character to bedroom or living room walls. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 73,
+    "name": "Artificial Plant Pot",
+    "category": "decoration",
+    "brand": "Ikea",
+    "price": 499,
+    "tags": [
+      "decoration",
+      "gift",
+      "home decor",
+      "desk",
+      "lifestyle",
+      "plants",
+      "greenery",
+      "entertainment"
+    ],
+    "description": "Low-maintenance artificial plant for desks and shelves. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 74,
+    "name": "Photo Wall Hanging Frame",
+    "category": "decoration",
+    "brand": "Generic",
+    "price": 399,
+    "tags": [
+      "decoration",
+      "wall decor",
+      "gift",
+      "lifestyle",
+      "entertainment",
+      "memories",
+      "photos"
+    ],
+    "description": "Hanging frame to display multiple photos as wall decor. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 75,
+    "name": "Scented Candles Set",
+    "category": "decoration",
+    "brand": "Yankee Candle",
+    "price": 799,
+    "tags": [
+      "ambience",
+      "decoration",
+      "home",
+      "gift",
+      "candles",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Set of scented candles for cozy ambience and relaxation. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 76,
+    "name": "Wall Clock",
+    "category": "decoration",
+    "brand": "Ajanta",
+    "price": 599,
+    "tags": [
+      "decoration",
+      "functional",
+      "home",
+      "wall decor",
+      "gift",
+      "lifestyle",
+      "entertainment",
+      "clock"
+    ],
+    "description": "Stylish wall clock that doubles as a decor piece. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 77,
+    "name": "Tapestry Wall Hanging",
+    "category": "decoration",
+    "brand": "Generic",
+    "price": 699,
+    "tags": [
+      "decoration",
+      "tapestry",
+      "aesthetic",
+      "gift",
+      "entertainment",
+      "lifestyle",
+      "hostel",
+      "room decor"
+    ],
+    "description": "Large fabric tapestry to instantly transform a room's look. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 78,
+    "name": "Fairy Lights Curtain",
+    "category": "decoration",
+    "brand": "Generic",
+    "price": 499,
+    "tags": [
+      "decoration",
+      "festive",
+      "gift",
+      "party",
+      "lifestyle",
+      "curtain",
+      "entertainment",
+      "lights"
+    ],
+    "description": "Curtain-style LED lights for festive decoration and parties. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 79,
+    "name": "Decorative Cushion Covers",
+    "category": "decoration",
+    "brand": "Home Centre",
+    "price": 599,
+    "tags": [
+      "decoration",
+      "cushions",
+      "gift",
+      "home decor",
+      "comfort",
+      "lifestyle",
+      "entertainment",
+      "sofa"
+    ],
+    "description": "Set of cushion covers to refresh sofa and bed decor. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 80,
+    "name": "Mini Showpiece Figurines",
+    "category": "decoration",
+    "brand": "Generic",
+    "price": 349,
+    "tags": [
+      "showpiece",
+      "decoration",
+      "aesthetic",
+      "gift",
+      "desk decor",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Decorative figurines for shelves, desks and study tables. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 81,
+    "name": "Quechua Trekking Poles",
+    "category": "outdoor",
+    "brand": "Quechua",
+    "price": 999,
+    "tags": [
+      "camping",
+      "travel",
+      "mountains",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "support",
+      "backpacking"
+    ],
+    "description": "Adjustable trekking poles for stability on hiking trails. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 82,
+    "name": "Compact Camping Stove",
+    "category": "outdoor",
+    "brand": "Decathlon",
+    "price": 1399,
+    "tags": [
+      "camping",
+      "mountains",
+      "outdoor activity",
+      "trekking",
+      "adventure",
+      "hiking",
+      "outdoor",
+      "cooking",
+      "travel",
+      "backpacking"
+    ],
+    "description": "Portable gas stove for cooking during camping trips. Ideal for a rugged mountain trekking trip, outdoor camping adventure, or wilderness hiking expedition. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 83,
+    "name": "Adidas Gym Shorts",
+    "category": "fitness",
+    "brand": "Adidas",
+    "price": 899,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "sports",
+      "shorts",
+      "workout",
+      "strength training",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Lightweight shorts for gym workouts and training sessions. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 84,
+    "name": "Dumbbell Set 10kg",
+    "category": "fitness",
+    "brand": "Boldfit",
+    "price": 1999,
+    "tags": [
+      "muscle recovery",
+      "home workout",
+      "gym",
+      "workout",
+      "strength training",
+      "muscle",
+      "fitness",
+      "exercise"
+    ],
+    "description": "Pair of dumbbells for strength training and home workouts. Perfect for a home gym setup, high-intensity workout routine, fitness goals, and muscle strength training. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 85,
+    "name": "Aloe Vera Gel",
+    "category": "skincare",
+    "brand": "Patanjali",
+    "price": 149,
+    "tags": [
+      "summer",
+      "uv protection",
+      "face",
+      "sun protection",
+      "beach vacation",
+      "soothing",
+      "travel",
+      "hydration",
+      "skincare"
+    ],
+    "description": "Soothing aloe vera gel for skin hydration and sunburn relief. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 86,
+    "name": "Sunscreen Stick SPF 50",
+    "category": "skincare",
+    "brand": "Neutrogena",
+    "price": 449,
+    "tags": [
+      "summer",
+      "uv protection",
+      "sun protection",
+      "beach vacation",
+      "travel",
+      "sunscreen",
+      "hydration",
+      "skincare"
+    ],
+    "description": "Easy-to-apply sunscreen stick for on-the-go sun protection. Essential skin protection and daily skincare routine, optimized for summer travel and sunny beach vacations. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 87,
+    "name": "Anker Charging Cable",
+    "category": "electronics",
+    "brand": "Anker",
+    "price": 499,
+    "tags": [
+      "gaming",
+      "study",
+      "productivity",
+      "work from home",
+      "charging",
+      "desk setup",
+      "electronics",
+      "travel",
+      "coding",
+      "cable",
+      "phone"
+    ],
+    "description": "Durable charging cable compatible with most smartphones. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 88,
+    "name": "Wireless Earphones Neckband",
+    "category": "electronics",
+    "brand": "boAt",
+    "price": 1299,
+    "tags": [
+      "gaming",
+      "earphones",
+      "study",
+      "productivity",
+      "work from home",
+      "music",
+      "desk setup",
+      "bluetooth",
+      "electronics",
+      "travel",
+      "coding"
+    ],
+    "description": "Neckband-style wireless earphones for music and calls. Upgrades your late-night coding desk setup, student workstation, or professional productivity environment. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 89,
+    "name": "Oats Breakfast Pack",
+    "category": "grocery",
+    "brand": "Saffola",
+    "price": 249,
+    "tags": [
+      "snack",
+      "nutrition",
+      "breakfast",
+      "energy",
+      "study",
+      "healthy",
+      "healthy snack",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Healthy oats pack for a quick and nutritious breakfast. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 90,
+    "name": "Peanut Butter Jar",
+    "category": "grocery",
+    "brand": "MyFitness",
+    "price": 399,
+    "tags": [
+      "snack",
+      "nutrition",
+      "energy",
+      "study",
+      "healthy",
+      "healthy snack",
+      "protein",
+      "travel",
+      "fitness",
+      "late night"
+    ],
+    "description": "Creamy peanut butter packed with protein and energy. Provides quick energy and stamina during long late-night study sessions, intense gym workouts, or distance trekking. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 91,
+    "name": "Bedside Storage Caddy",
+    "category": "home",
+    "brand": "Ikea",
+    "price": 449,
+    "tags": [
+      "storage",
+      "organization",
+      "college",
+      "room setup",
+      "home utility",
+      "desk setup",
+      "hostel"
+    ],
+    "description": "Hanging storage caddy for bedside essentials. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 92,
+    "name": "Table Fan",
+    "category": "home",
+    "brand": "Bajaj",
+    "price": 1299,
+    "tags": [
+      "summer",
+      "organization",
+      "college",
+      "room setup",
+      "home utility",
+      "desk setup",
+      "cooling",
+      "hostel",
+      "room"
+    ],
+    "description": "Compact table fan for personal cooling in small spaces. A must-have for a college hostel room setup, standard room organization, or managing a student desk space. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 93,
+    "name": "Hooded Sweatshirt",
+    "category": "fashion",
+    "brand": "H&M",
+    "price": 1499,
+    "tags": [
+      "college fashion",
+      "fashion",
+      "college",
+      "casual",
+      "winter",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Comfortable hooded sweatshirt for casual and college wear. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 94,
+    "name": "Leather Wallet",
+    "category": "fashion",
+    "brand": "WildHorn",
+    "price": 799,
+    "tags": [
+      "formal",
+      "college fashion",
+      "fashion",
+      "gift",
+      "summer style",
+      "travel",
+      "casual wear",
+      "accessory"
+    ],
+    "description": "Sleek leather wallet for everyday carry. Stylish and comfortable choice for casual everyday wear, college campus outfits, or summer travel packing. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 95,
+    "name": "Pet Grooming Brush",
+    "category": "pets",
+    "brand": "Trixie",
+    "price": 349,
+    "tags": [
+      "dog",
+      "gift",
+      "grooming",
+      "pet care",
+      "lifestyle",
+      "pets",
+      "entertainment",
+      "cat"
+    ],
+    "description": "Grooming brush for removing loose fur from pets. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 96,
+    "name": "Highlighter Set",
+    "category": "study",
+    "brand": "Camlin",
+    "price": 149,
+    "tags": [
+      "exam",
+      "notes",
+      "writing",
+      "exam preparation",
+      "desk setup",
+      "student",
+      "planning"
+    ],
+    "description": "Set of colorful highlighters for marking important notes. Essential resource for college students, exam preparation, writing lecture notes, and desk organization. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 97,
+    "name": "Travel Duffel Bag",
+    "category": "travel",
+    "brand": "American Tourister",
+    "price": 1799,
+    "tags": [
+      "weekend",
+      "travel packing",
+      "document organization",
+      "weekend trip",
+      "beach vacation",
+      "travel",
+      "luggage",
+      "bag"
+    ],
+    "description": "Spacious duffel bag for weekend trips and short travel. Designed for smooth travel packing, weekend trips, holiday luggage organization, or a sunny beach vacation. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 98,
+    "name": "Winter Gloves",
+    "category": "seasonal",
+    "brand": "Decathlon",
+    "price": 399,
+    "tags": [
+      "weather",
+      "cold",
+      "outdoor comfort",
+      "winter cold",
+      "winter",
+      "outdoor",
+      "monsoon commuting",
+      "rain protection",
+      "accessory"
+    ],
+    "description": "Warm gloves for cold weather and winter outings. Protective seasonal gear optimized for wet monsoon commuting, rainy weather, or cold winter outdoor conditions. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 99,
+    "name": "Hand Sanitizer Pack",
+    "category": "health",
+    "brand": "Dettol",
+    "price": 149,
+    "tags": [
+      "medical emergency",
+      "health",
+      "safety",
+      "first aid",
+      "health monitoring",
+      "wellness",
+      "travel",
+      "hydration",
+      "hygiene"
+    ],
+    "description": "Pack of hand sanitizers for hygiene on the go. Vital health and wellness supplement or medical safety utility for home, trekking emergencies, or travel hydration. Pairs perfectly into a matching bundle cart."
+  },
+  {
+    "id": 100,
+    "name": "Action Figure Set",
+    "category": "toys",
+    "brand": "Marvel",
+    "price": 1199,
+    "tags": [
+      "collectible",
+      "gift",
+      "action figures",
+      "toys",
+      "kids",
+      "lifestyle",
+      "entertainment"
+    ],
+    "description": "Set of collectible action figures for kids and fans. Great addition to your lifestyle collection, home setup, or as a thoughtful gift. Pairs perfectly into a matching bundle cart."
+  }
+]
