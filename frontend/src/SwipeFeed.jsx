@@ -22,7 +22,7 @@ const SwipeFeed = () => {
       
       setLoading(true);
       try {
-        const response = await axios.post(`${import.meta.env.VITE_API_URL}/search`, {
+        const response = await axios.post(`/api/search`, {
           query: activeQuery,
           top_k: 5
         });
