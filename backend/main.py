@@ -66,66 +66,128 @@ def get_user_context(pid, signals):
 @app.post("/search")
 async def search(req: SearchRequest):
     global products, index, model, operational_db, user_signals
+    
     print(f"\n🚀 [INPUT] Received: '{req.query}' (top_k: {req.top_k})")
-    # 1. Query Expansion & Budget Extraction
-    expansion_prompt = f"""
-    User query: "{req.query}"
-    1. Predict 5 product keywords. 
-    2. Extract max budget (number). Default: 99999.
-    3. Extract max delivery days if urgency is mentioned (number). 
-       - IMPORTANT: Translate time words into integers! "Tomorrow" = 1, "next week" = 7, "this weekend" = 3, "today" = 0.
-       - If no time urgency is mentioned, use Default: 30.
-    
-    Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 30}}
-    """
-    try:
-        res = groq_client.chat.completions.create(
-            model="llama-3.1-8b-instant",
-            messages=[{"role": "user", "content": expansion_prompt}],
-            response_format={"type": "json_object"}
-        )
-        data = json.loads(res.choices[0].message.content)
-        query_enriched = f"{req.query}. Keywords: {data.get('keywords')}"
-        raw_budget = data.get("max_budget", 99999)
-        if isinstance(raw_budget, dict):
-            budget = raw_budget.get("number", 99999) # Extract if it's a dict
-        else:
-            budget = int(raw_budget) # Cast to int if it's a string or number
-        raw_delivery = data.get("max_delivery_days", 30)
-        delivery_limit = raw_delivery.get("number", 30) if isinstance(raw_delivery, dict) else int(raw_delivery)
-        
-    except:
-        print(f"Extraction Error: {e}")
-        query_enriched, budget, delivery_limit = req.query, 99999, 30
-    print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget: ₹{budget} | Max Delivery: {delivery_limit} days")    # 2. Vector Retrieve & Filter
-    vec = np.array(model.encode([query_enriched])).astype('float32')
-    _, indices = index.search(vec, 20)
-    
+    is_feed_refill = not req.query or req.query.strip().lower() == "feed"
     retrieved = []
-    for idx in indices[0]:
-        item = products[idx].copy()
-        ops = operational_db.get(item["id"], {})
-        item_price=ops.get("price",99999)
-        item_delivery=ops.get("delivery_days",30)
-        if item_price <= budget and item_delivery<= delivery_limit:
-            item["price"] = ops.get("price")
-            item["delivery_days"] = ops.get("delivery_days")
-            item["user_context"] = get_user_context(item["id"], user_signals)
-            retrieved.append(item)
-            if len(retrieved) >= req.top_k: break
-    print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index:")
-    for item in retrieved:
-        print(f"   -> ID: {item.get('id')} | Name: {item.get('name')} | Price: ₹{item.get('price')} | Delivery: {item.get('delivery_days')} days | User Context: {item.get('user_context')}")
+
+    # Declare these at the top so they exist for the return statement later
+    budget = 99999
+    delivery_limit = 30
+    query_enriched = req.query
+
+    if is_feed_refill:
+        print("🔄 [FEED] Generating personalized fallback feed...")
+        signal_pids = set()
+        signal_pids.update(user_signals.get("wishlist_products", []))
+        signal_pids.update([item["product_id"] for item in user_signals.get("abandoned_cart_products", [])])
+        signal_pids.update([item["product_id"] for item in user_signals.get("previously_bought_products", [])])
+        
+        # Look up these products in our databases
+        for pid in list(signal_pids):
+            base_item = next((p for p in products if p["id"] == pid), None)
+            if base_item:
+                item = base_item.copy()
+                ops = operational_db.get(item["id"], {})
+                item["price"] = ops.get("price", 99999)
+                item["delivery_days"] = ops.get("delivery_days", 14)
+                item["user_context"] = get_user_context(item["id"], user_signals)
+                retrieved.append(item)
+                
+        import random
+        random.shuffle(retrieved)  # Shuffle to add some variety
+        
+        # HACKATHON BACKUP: If the user doesn't have enough signals, pad with random items
+        if len(retrieved) < req.top_k:
+            pad_items = random.sample(products, req.top_k - len(retrieved))
+            for p in pad_items:
+                if p["id"] not in signal_pids:
+                    item = p.copy()
+                    ops = operational_db.get(item["id"], {})
+                    item["price"] = ops.get("price", 99999)
+                    item["delivery_days"] = ops.get("delivery_days", 14)
+                    item["user_context"] = get_user_context(item["id"], user_signals)
+                    retrieved.append(item)
+
+        retrieved = retrieved[:req.top_k]  # Limit to top_k
+        print(f"🔍 [FEED] Retrieved {len(retrieved)} personalized products.")
+        
+        # FIX: Define query_enriched for the feed reasoning
+        query_enriched = "Curated items based on user's past behavior, wishlists, and abandoned carts."
+
+    else:
+        # 1. Query Expansion & Budget Extraction
+        import re # Ensure regex is available
+        expansion_prompt = f"""
+        User query: "{req.query}"
+        1. Predict 5 product keywords. 
+        2. Extract max budget (number). Default: 99999.
+        3. Extract max delivery days if urgency is mentioned (number). 
+        - IMPORTANT: Translate time words into integers! "Tomorrow" = 1, "next week" = 7, "this weekend" = 3, "today" = 0.
+        - If no time urgency is mentioned, use Default: 30.
+        
+        Return JSON ONLY: {{"keywords": "...", "max_budget": 99999, "max_delivery_days": 30}}
+        """
+        try:
+            res = groq_client.chat.completions.create(
+                model="llama-3.1-8b-instant",
+                messages=[{"role": "user", "content": expansion_prompt}],
+                response_format={"type": "json_object"}
+            )
+            data = json.loads(res.choices[0].message.content)
+            query_enriched = f"{req.query}. Keywords: {data.get('keywords')}"
+            
+            # Robust Extraction
+            raw_budget = str(data.get("max_budget", 99999))
+            b_match = re.sub(r'\D', '', raw_budget)
+            budget = int(b_match) if b_match else 99999
+            
+            raw_delivery = str(data.get("max_delivery_days", 30))
+            d_match = re.sub(r'\D', '', raw_delivery)
+            delivery_limit = int(d_match) if d_match else 30
+            
+        except Exception as e: # FIX: Catch the specific exception
+            print(f"Extraction Error: {e}")
+            query_enriched, budget, delivery_limit = req.query, 99999, 30
+            
+        print(f"🧠 [ENRICHED] Query: '{query_enriched}' | Budget: ₹{budget} | Max Delivery: {delivery_limit} days")    
+        
+        # 2. Vector Retrieve & Filter
+        vec = np.array(model.encode([query_enriched])).astype('float32')
+        _, indices = index.search(vec, 20)
+        
+        retrieved = []
+        for idx in indices[0]:
+            item = products[idx].copy()
+            ops = operational_db.get(item["id"], {})
+            item_price = ops.get("price", 99999)
+            item_delivery = ops.get("delivery_days", 30)
+            
+            if item_price <= budget and item_delivery <= delivery_limit:
+                item["price"] = item_price
+                item["delivery_days"] = item_delivery
+                item["user_context"] = get_user_context(item["id"], user_signals)
+                retrieved.append(item)
+                if len(retrieved) >= req.top_k: break
+                
+        print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index")
 
     # 3. Reasoning
     try:
-        final_payload = await enrich_products_with_reasons(retrieved, req.query)
+        context_query = query_enriched if is_feed_refill else req.query
+        final_payload = await enrich_products_with_reasons(retrieved, context_query)
         print(f"✨ [OUTPUT] Generated {len(final_payload)} reasoned recommendations.")
-        # Optional: Print the first reason to check the 'vibe'
-        if final_payload:
-            print(f"   -> Reasoning Example: {final_payload[0].get('why_reason')}")
     except Exception as e:
         print(f"❌ [ERROR] Reasoning Generation Failed: {e}")
         final_payload = retrieved
         
-    return {"results": final_payload}
+    # FIX: Include ai_context for the React UI Chip
+    return {
+        "results": final_payload,
+        "ai_context": {
+            "query": req.query,
+            "budget": budget,
+            "delivery": delivery_limit,
+            "is_feed": is_feed_refill
+        }
+    }

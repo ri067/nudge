@@ -17,24 +17,55 @@ const SwipeFeed = () => {
   const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
-    const fetchCards = async () => {
-      if (!activeQuery) return;
-      
-      setLoading(true);
-      try {
-        const response = await axios.post(`/api/search`, {
-          query: activeQuery,
-          top_k: 5
-        });
-        setProducts(response.data.results);
-      } catch (error) {
-        console.error("Error fetching from AWS:", error);
-      } finally {
-        setLoading(false);
+    const fetchRefill = async () => {
+      // If we are running out of cards, fetch more personalized background feed
+      if (products.length < 2 && !loading) {
+        setLoading(true);
+        try {
+          const response = await axios.post(`/api/search`, {
+            query: "feed", // Triggers our Stage 0 fallback in the backend
+            top_k: 5
+          });
+          
+          // Append the new default items to the BOTTOM of the deck
+          setProducts((prev) => [...prev, ...response.data.results]);
+        } catch (error) {
+          console.error("Error fetching feed:", error);
+        } finally {
+          setLoading(false);
+        }
       }
     };
-    fetchCards();
-  }, [activeQuery]);
+    fetchRefill();
+  }, [products.length]); // Re-run this check every time the product array changes
+
+  // Explicit Search Override
+  const handleSearchSubmit = async (e) => {
+    e.preventDefault();
+    if (inputValue.trim()) {
+      setLoading(true);
+      setCurrentView('feed');
+      
+      try {
+        const response = await axios.post(`/api/search`, {
+          query: inputValue,
+          top_k: 5
+        });
+        
+        // The Magic Prepend: Put new search items at the TOP of the deck, 
+        // pushing the generic feed items further down.
+        setProducts((prev) => [...response.data.results, ...prev]);
+        
+      } catch (error) {
+        console.error("Error with specific search:", error);
+      } finally {
+        setLoading(false);
+        setInputValue(''); 
+      }
+    }
+  };
+
+  
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
