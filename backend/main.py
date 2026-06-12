@@ -55,20 +55,49 @@ def health_check():
     }
 
 @app.post("/search")
-async def active_search(req: SearchRequest):
-    """The core RAG retrieval endpoint, now with concurrent LLM reasoning."""
-    query_vector = model.encode([req.query]).astype("float32")
-    distances, indices = index.search(query_vector, req.top_k)
+async def search(request: Request):
+    data = await request.json()
+    user_query = data.get("query", "")
+    top_k = data.get("top_k", 5)
+
+    # ==========================================
+    # STAGE 1: QUERY EXPANSION (The New Brain)
+    # ==========================================
+    expansion_prompt = f"""
+    You are an e-commerce search assistant. 
+    The user is asking for: "{user_query}"
+    Predict 5 specific types of products, items, or ingredients they will need for this. 
+    Respond ONLY with a comma-separated list of items. No pleasantries or extra text.
+    """
     
-    raw_results = []
-    for i in range(req.top_k):
-        idx = int(indices[0][i])
-        if idx != -1 and idx < len(products):
-            product_data = products[idx].copy()
-            product_data["match_score"] = float(distances[0][i])
-            raw_results.append(product_data)
-            
-    # Enrich the raw FAISS results with Groq-generated UI text concurrently
-    enriched_results = await enrich_products_with_reasons(req.query, raw_results)
-            
-    return {"results": enriched_results}
+    # Call Groq to expand the query
+    expansion_response = groq_client.chat.completions.create(
+        model="llama3-8b-8192", # Or whichever model you are currently using
+        messages=[{"role": "user", "content": expansion_prompt}],
+        temperature=0.3 # Keep it low so it doesn't hallucinate weird items
+    )
+    
+    expanded_keywords = expansion_response.choices[0].message.content.strip()
+    
+    # We combine the user's original thought with the AI's predicted items
+    enriched_query = f"{user_query}. Keywords: {expanded_keywords}"
+    print(f"Original: {user_query} | Enriched: {enriched_query}")
+
+    # ==========================================
+    # STAGE 2: VECTOR SEARCH
+    # ==========================================
+    # NOW you encode the ENRICHED query instead of the raw user query
+    query_vector = embedding_model.encode([enriched_query], convert_to_numpy=True)
+    
+    distances, indices = faiss_index.search(query_vector, top_k)
+    
+    # Fetch the actual products from your metadata using the indices...
+    # retrieved_products = [metadata[i] for i in indices[0]]
+
+    # ==========================================
+    # STAGE 3: REASONING GENERATION
+    # ==========================================
+    # Now run your existing Groq code to generate the `why_reason` for the frontend
+    # ...
+    
+    return {"results": final_payload}
