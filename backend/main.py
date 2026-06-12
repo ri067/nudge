@@ -82,7 +82,7 @@ async def search(req: SearchRequest):
     try:
         # Call Groq to expand the query
         expansion_response = groq_client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": expansion_prompt}],
             temperature=0.3
         )
@@ -115,7 +115,7 @@ async def search(req: SearchRequest):
     # ==========================================
     # Pass the matched products and original query to your custom Groq reasoner
     try:
-        final_payload = enrich_products_with_reasons(retrieved_products, user_query)
+        final_payload = await enrich_products_with_reasons(retrieved_products, user_query)
     except Exception as e:
         print(f"Reasoning Generation Failed: {e}")
         # Fallback if your Groq reasoning block has a syntax error during the heat of the hackathon
