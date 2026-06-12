@@ -1,86 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-// ── Palette tokens ────────────────────────────────────────────────────────────
-const C = {
-  bgDeep:   '#131921',   // amazon dark navy
-  bgCard:   '#1F2D3D',   // card surface
-  bgPanel:  '#232F3E',   // amazon secondary nav color
-  green:    '#FF9900',   // amazon orange (primary accent)
-  coral:    '#FF4444',   // skip/remove red
-  violet:   '#00A8CC',   // amazon teal (info/trust)
-  white:    '#FFFFFF',
-  muted:    'rgba(255,255,255,0.55)',
-  glassBg:  'rgba(255,255,255,0.06)',
-  glassBdr: 'rgba(255,153,0,0.25)',   // orange-tinted border
-};
-
-// ── Confetti shapes (match / add-to-cart celebration) ─────────────────────────
-const ConfettiShape = ({ style, shape, color }) => {
-  const base = {
-    position: 'absolute',
-    opacity: 0.85,
-    pointerEvents: 'none',
-    ...style,
-  };
-  if (shape === 'circle')
-    return <div style={{ ...base, width: 36, height: 36, borderRadius: '50%', background: color }} />;
-  if (shape === 'triangle')
-    return (
-      <div style={{ ...base, width: 0, height: 0,
-        borderLeft: '18px solid transparent', borderRight: '18px solid transparent',
-        borderBottom: `32px solid ${color}` }} />
-    );
-  if (shape === 'blob')
-    return <div style={{ ...base, width: 48, height: 40, borderRadius: '60% 40% 70% 30% / 50% 60% 40% 50%', background: color }} />;
-  // square
-  return <div style={{ ...base, width: 28, height: 28, borderRadius: 6, background: color }} />;
-};
-
-const Confetti = () => (
-  <>
-    <ConfettiShape shape="blob"     color={C.violet}  style={{ top: 60,  left: -14 }} />
-    <ConfettiShape shape="circle"   color={C.green}   style={{ top: 100, left: 40 }} />
-    <ConfettiShape shape="triangle" color={C.coral}   style={{ top: 30,  right: 10 }} />
-    <ConfettiShape shape="blob"     color="#FEBD69"   style={{ top: 55,  right: -8 }} />
-    <ConfettiShape shape="square"   color={C.coral}   style={{ bottom: 80, left: 20 }} />
-    <ConfettiShape shape="circle"   color={C.green}   style={{ bottom: 60, left: 80 }} />
-    <ConfettiShape shape="triangle" color="#FEBD69"   style={{ bottom: 90, right: 30 }} />
-    <ConfettiShape shape="blob"     color={C.violet}  style={{ bottom: 50, right: -10 }} />
-    <ConfettiShape shape="square"   color={C.green}   style={{ bottom: 20, left: 120 }} />
-  </>
-);
-
-// ── Sparkle logo icon ─────────────────────────────────────────────────────────
-const Sparkle = ({ size = 18, color = C.green }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none">
-    <path d="M12 2L13.5 9.5L21 11L13.5 12.5L12 20L10.5 12.5L3 11L10.5 9.5L12 2Z"
-      fill={color} />
-  </svg>
-);
-
-// ── SwipeFeed main component ──────────────────────────────────────────────────
 const SwipeFeed = () => {
-  const [currentView, setCurrentView] = useState('feed');
-  const [products, setProducts]       = useState([]);
-  const [loading, setLoading]         = useState(true);
-  const [cartItems, setCartItems]     = useState([]);
-  const [inputValue, setInputValue]   = useState('');
+  // --- View State ---
+  const [currentView, setCurrentView] = useState('feed'); // 'feed' or 'cart'
+
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
+  
+  const [inputValue, setInputValue] = useState('');
   const [activeQuery, setActiveQuery] = useState('Going on a summer trek next week');
-  const [dragStart, setDragStart]     = useState({ x: 0, y: 0 });
-  const [dragOffset, setDragOffset]   = useState({ x: 0, y: 0 });
-  const [isDragging, setIsDragging]   = useState(false);
-  const [lastAdded, setLastAdded]     = useState(null); // for match-screen flash
+  
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     const fetchCards = async () => {
       if (!activeQuery) return;
+      
       setLoading(true);
       try {
-        const response = await axios.post(`/api/search`, { query: activeQuery, top_k: 5 });
+        const response = await axios.post(`/api/search`, {
+          query: activeQuery,
+          top_k: 5
+        });
         setProducts(response.data.results);
       } catch (error) {
-        console.error('Error fetching from API:', error);
+        console.error("Error fetching from AWS:", error);
       } finally {
         setLoading(false);
       }
@@ -92,8 +40,8 @@ const SwipeFeed = () => {
     e.preventDefault();
     if (inputValue.trim()) {
       setActiveQuery(inputValue);
-      setInputValue('');
-      setCurrentView('feed');
+      setInputValue(''); 
+      setCurrentView('feed'); // Ensure we jump back to feed if searching from cart
     }
   };
 
@@ -105,128 +53,92 @@ const SwipeFeed = () => {
 
   const handlePointerMove = (e) => {
     if (!isDragging) return;
-    setDragOffset({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y });
+    const offsetX = e.clientX - dragStart.x;
+    const offsetY = e.clientY - dragStart.y;
+    setDragOffset({ x: offsetX, y: offsetY });
   };
 
   const handlePointerUp = (e, product) => {
     if (!isDragging) return;
     setIsDragging(false);
     e.currentTarget.releasePointerCapture(e.pointerId);
-    if (dragOffset.x > 120)       handleSwipeAction('right', product);
-    else if (dragOffset.x < -120) handleSwipeAction('left', product);
-    else                          setDragOffset({ x: 0, y: 0 });
+
+    const sweepThreshold = 120;
+    if (dragOffset.x > sweepThreshold) {
+      handleSwipeAction('right', product);
+    } else if (dragOffset.x < -sweepThreshold) {
+      handleSwipeAction('left', product);
+    } else {
+      setDragOffset({ x: 0, y: 0 });
+    }
   };
 
   const handleSwipeAction = (direction, product) => {
+    if (!product) return;
     if (direction === 'right') {
       setCartItems((prev) => [...prev, product]);
-      setLastAdded(product);
-      setTimeout(() => setLastAdded(null), 1800);
     }
     setProducts((prev) => prev.filter((p) => p.id !== product.id));
     setDragOffset({ x: 0, y: 0 });
   };
 
+  // --- Cart Total Calculation ---
   const cartTotal = cartItems.reduce((sum, item) => sum + item.price, 0);
 
-  // ── Shared shell styles ─────────────────────────────────────────────────────
-  const shell = {
-    position: 'relative',
-    width: '100%',
-    height: '100%',
-    background: C.bgDeep,
-    fontFamily: "'Inter', 'Helvetica Neue', sans-serif",
-    overflow: 'hidden',
-    color: C.white,
-  };
-
-  // ══════════════════════════════════════════════════════════════════════
-  // VIEW: CART
-  // ══════════════════════════════════════════════════════════════════════
+  // ==========================================
+  // VIEW: CART (Styled to match the dark theme)
+  // ==========================================
   if (currentView === 'cart') {
     return (
-      <div style={{ ...shell, overflowY: 'auto', padding: '0 20px 32px' }}>
-        {/* radial glow bg */}
-        <div style={{
-          position: 'absolute', top: -100, left: '50%', transform: 'translateX(-50%)',
-          width: 400, height: 400, borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255,153,0,0.2) 0%, transparent 70%)',
-          pointerEvents: 'none',
-        }} />
-
-        {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 48, marginBottom: 28 }}>
-          <button
+      <div className="relative w-full h-screen p-6 flex flex-col bg-[#1e133d] font-sans text-white overflow-y-auto">
+        
+        {/* Navigation Header */}
+        <div className="flex items-center justify-between mb-8 mt-4">
+          <button 
             onClick={() => setCurrentView('feed')}
-            style={{ background: C.glassBg, border: `1px solid ${C.glassBdr}`, borderRadius: 50, padding: '8px 16px', color: C.white, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, fontSize: 14, fontWeight: 600 }}
+            className="flex items-center gap-2 text-gray-400 hover:text-white font-bold transition-colors"
           >
-            ← Back
+            <span className="text-xl">←</span> Back to Feed
           </button>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-            <Sparkle size={16} />
-            <span style={{ fontWeight: 900, fontSize: 20, letterSpacing: '-0.5px' }}>YOUR CART</span>
-          </div>
-          <div style={{ width: 72 }} />
+          <h1 className="text-2xl font-black text-white tracking-tighter">YOUR CART</h1>
         </div>
 
-        {/* Empty state */}
+        {/* Cart Contents */}
         {cartItems.length === 0 ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '60%', gap: 12, opacity: 0.6 }}>
-            <span style={{ fontSize: 56 }}>🛒</span>
-            <p style={{ fontWeight: 700, fontSize: 16 }}>Cart is empty</p>
-            <p style={{ fontSize: 13, color: C.muted }}>Swipe right to add items!</p>
+          <div className="flex-1 flex flex-col items-center justify-center text-gray-500">
+            <span className="text-6xl mb-4 opacity-50">🛒</span>
+            <p className="font-bold text-lg text-white">Your cart is empty.</p>
+            <p className="text-sm">Swipe right on some items!</p>
           </div>
         ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-            {cartItems.map((item, i) => (
-              <div key={i} style={{
-                background: C.bgCard,
-                borderRadius: 20,
-                padding: '14px 16px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 14,
-                border: `1px solid ${C.glassBdr}`,
-              }}>
-                <div style={{
-                  width: 56, height: 56, borderRadius: 14,
-                  background: 'linear-gradient(135deg, #1F2D3D, #00A8CC)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 26, flexShrink: 0,
-                }}>📦</div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <p style={{ fontSize: 10, fontWeight: 800, color: C.green, letterSpacing: 1.5, marginBottom: 2, textTransform: 'uppercase' }}>{item.brand}</p>
-                  <h3 style={{ fontWeight: 700, fontSize: 15, margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{item.name}</h3>
+          <div className="flex-1 flex flex-col gap-4">
+            {cartItems.map((item, index) => (
+              <div key={index} className="bg-[#332267] p-4 rounded-2xl shadow-sm border border-[#4d3a8a] flex items-center gap-4">
+                <div className="w-16 h-16 bg-[#1e133d] rounded-xl flex items-center justify-center text-3xl">
+                  📦
                 </div>
-                <p style={{ fontWeight: 900, fontSize: 18, color: C.green, flexShrink: 0 }}>₹{item.price}</p>
+                <div className="flex-1">
+                  <p className="text-xs font-bold text-[#d0ff52] uppercase">{item.brand}</p>
+                  <h3 className="font-bold text-white leading-tight">{item.name}</h3>
+                </div>
+                <div className="text-right">
+                  <p className="font-black text-lg text-white">₹{item.price}</p>
+                </div>
               </div>
             ))}
           </div>
         )}
 
-        {/* Checkout */}
+        {/* Checkout Footer */}
         {cartItems.length > 0 && (
-          <div style={{ marginTop: 28 }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 20 }}>
-              <p style={{ color: C.muted, fontWeight: 600, fontSize: 14 }}>Total</p>
-              <p style={{ fontWeight: 900, fontSize: 34, color: C.green, letterSpacing: '-1px' }}>₹{cartTotal}</p>
+          <div className="mt-8 pt-6 border-t border-[#4d3a8a]">
+            <div className="flex justify-between items-end mb-6">
+              <p className="text-gray-400 font-bold">Total</p>
+              <p className="text-3xl font-black text-[#d0ff52]">₹{cartTotal}</p>
             </div>
-            <button
-              onClick={() => alert('Hackathon Demo: Checkout complete!')}
-              style={{
-                width: '100%',
-                background: `linear-gradient(135deg, ${C.green}, #FEBD69)`,
-                color: '#111',
-                fontWeight: 900,
-                fontSize: 15,
-                letterSpacing: 2,
-                textTransform: 'uppercase',
-                border: 'none',
-                borderRadius: 20,
-                padding: '18px 0',
-                cursor: 'pointer',
-                boxShadow: `0 8px 32px rgba(255,153,0,0.4)`,
-              }}
+            <button 
+              onClick={() => alert("Hackathon Demo: Checkout flow complete!")}
+              className="w-full bg-[#d0ff52] text-[#1e133d] font-black py-4 rounded-2xl shadow-lg hover:bg-[#bbf033] transition-colors uppercase tracking-widest"
             >
               Secure Checkout
             </button>
@@ -236,306 +148,126 @@ const SwipeFeed = () => {
     );
   }
 
-  // ══════════════════════════════════════════════════════════════════════
-  // MATCH FLASH OVERLAY (shown briefly after swipe right)
-  // ══════════════════════════════════════════════════════════════════════
-  if (lastAdded) {
-    return (
-      <div style={{ ...shell, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: 32 }}>
-        <Confetti />
-
-        {/* Big circle headline */}
-        <div style={{
-          width: 160, height: 160, borderRadius: '50%',
-          background: C.green,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          marginBottom: 28,
-          boxShadow: `0 0 60px rgba(255,153,0,0.5)`,
-        }}>
-          <span style={{ fontSize: 32, fontWeight: 900, color: '#1a0a00', textAlign: 'center', lineHeight: 1.15 }}>
-            Added!
-          </span>
-        </div>
-
-        <h1 style={{ fontSize: 36, fontWeight: 900, color: C.white, textAlign: 'center', letterSpacing: '-1px', marginBottom: 8 }}>
-          It's in your <span style={{ color: C.green }}>cart!</span>
-        </h1>
-
-        {/* Two overlapping product/bag icons */}
-        <div style={{ display: 'flex', marginBottom: 20, position: 'relative', height: 90 }}>
-          <div style={{
-            width: 80, height: 80, borderRadius: 20, background: 'linear-gradient(135deg, #1F2D3D, #00A8CC)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 36,
-            border: '3px solid white', position: 'absolute', left: 0, zIndex: 2, boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-          }}>🛒</div>
-          <div style={{
-            width: 80, height: 80, borderRadius: 20, background: 'linear-gradient(135deg, #232F3E, #FF9900)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 36,
-            border: '3px solid white', position: 'absolute', left: 50, zIndex: 1, boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
-          }}>📦</div>
-        </div>
-
-        <p style={{ color: C.muted, fontSize: 15, marginBottom: 28, textAlign: 'center' }}>
-          <strong style={{ color: C.white }}>{lastAdded.name}</strong> has been added.
-        </p>
-
-        {/* Say hi / message bar style input */}
-        <div style={{
-          background: C.glassBg,
-          border: `1px solid ${C.glassBdr}`,
-          borderRadius: 50,
-          padding: '14px 20px',
-          display: 'flex',
-          alignItems: 'center',
-          width: '100%',
-          gap: 10,
-        }}>
-          <span style={{ flex: 1, color: C.muted, fontSize: 14 }}>Keep swiping for more!</span>
-          <Sparkle size={20} color={C.green} />
-        </div>
-      </div>
-    );
-  }
-
-  // ══════════════════════════════════════════════════════════════════════
-  // VIEW: SWIPE FEED
-  // ══════════════════════════════════════════════════════════════════════
+  // ==========================================
+  // VIEW: SWIPE FEED (Styled exactly like reference)
+  // ==========================================
   const activeProduct = products[0];
-  const swipeRatio    = Math.min(Math.abs(dragOffset.x) / 120, 1);
-  const isRight       = dragOffset.x > 40;
-  const isLeft        = dragOffset.x < -40;
-
   const cardStyle = isDragging
     ? {
-        transform: `translate(${dragOffset.x}px, ${dragOffset.y * 0.15}px) rotate(${dragOffset.x * 0.04}deg)`,
+        transform: `translate(${dragOffset.x}px, ${dragOffset.y * 0.2}px) rotate(${dragOffset.x * 0.05}deg)`,
         transition: 'none',
-        cursor: 'grabbing',
       }
     : {
         transform: 'translate(0px, 0px) rotate(0deg)',
-        transition: 'transform 0.3s cubic-bezier(.34,1.56,.64,1)',
-        cursor: 'grab',
+        transition: 'transform 0.3s ease-out',
       };
 
   return (
-    <div style={{ ...shell, display: 'flex', flexDirection: 'column', padding: '0 16px 16px', userSelect: 'none', touchAction: 'none' }}>
-
-      {/* Background radial glow */}
-      <div style={{
-        position: 'absolute', top: -80, left: '50%', transform: 'translateX(-50%)',
-        width: 320, height: 320, borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(255,153,0,0.15) 0%, transparent 70%)',
-        pointerEvents: 'none',
-      }} />
-
-      {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 44, marginBottom: 16, position: 'relative', zIndex: 10 }}>
-        {/* Logo */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-          <Sparkle size={22} />
-          <span style={{ fontWeight: 900, fontSize: 22, letterSpacing: '-0.5px' }}>NUDGE</span>
-        </div>
-
-        {/* Cart badge */}
-        <div
-          onClick={() => setCurrentView('cart')}
-          style={{
-            background: C.glassBg,
-            border: `1px solid ${C.glassBdr}`,
-            borderRadius: 50,
-            padding: '8px 16px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: 8,
-            cursor: 'pointer',
-            position: 'relative',
-          }}
-        >
-          <span style={{ fontSize: 18 }}>🛒</span>
-          <span style={{ fontWeight: 900, fontSize: 16 }}>{cartItems.length}</span>
-          {cartItems.length > 0 && (
-            <div style={{
-              position: 'absolute', top: 4, right: 4,
-              width: 10, height: 10, borderRadius: '50%',
-              background: C.coral,
-              border: `2px solid ${C.bgDeep}`,
-            }} />
-          )}
+    <div className="relative w-full h-screen p-5 flex flex-col pt-10 select-none touch-none bg-[#2a1b5c] overflow-hidden font-sans text-white">
+      
+      {/* Header matching the reference */}
+      <div className="flex justify-between items-center mb-6 w-full z-20">
+        <h1 className="text-2xl font-bold flex items-center gap-2 tracking-tight">
+          <span className="text-[#d0ff52] text-3xl">✦</span> Nudge
+        </h1>
+        <div className="flex items-center gap-3">
+          <button className="w-10 h-10 rounded-full bg-[#3d277d] flex items-center justify-center border border-[#55409e] text-lg">
+            <span className="opacity-80">⚙️</span>
+          </button>
+          <button 
+            onClick={() => setCurrentView('cart')}
+            className="relative w-10 h-10 rounded-full bg-[#3d277d] border border-[#55409e] flex items-center justify-center overflow-hidden cursor-pointer shadow-md"
+          >
+            <span className="text-lg">🛒</span>
+            {cartItems.length > 0 && (
+              <span className="absolute top-0 right-0 w-3 h-3 bg-[#ff4a7d] rounded-full border-2 border-[#2a1b5c]"></span>
+            )}
+          </button>
         </div>
       </div>
 
-      {/* Search bar */}
-      <form
-        onSubmit={handleSearchSubmit}
-        style={{ display: 'flex', gap: 8, marginBottom: 20, position: 'relative', zIndex: 10 }}
-      >
+      {/* Search Bar - Integrated smoothly into dark theme */}
+      <form onSubmit={handleSearchSubmit} className="flex gap-3 mb-4 w-full z-20">
         <input
           type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="What's on your mind?"
-          style={{
-            flex: 1,
-            background: C.glassBg,
-            border: `1px solid ${C.glassBdr}`,
-            borderRadius: 50,
-            padding: '12px 20px',
-            fontSize: 14,
-            color: C.white,
-            outline: 'none',
-          }}
+          className="flex-1 bg-[#3d277d] border border-[#55409e] text-white rounded-full px-5 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#d0ff52] placeholder-gray-400 shadow-inner"
         />
-        <button
-          type="submit"
-          style={{
-            background: C.green,
-            color: '#1a0a00',
-            border: 'none',
-            borderRadius: 50,
-            padding: '12px 22px',
-            fontSize: 14,
-            fontWeight: 800,
-            cursor: 'pointer',
-          }}
+        <button 
+          type="submit" 
+          className="bg-[#d0ff52] text-[#2a1b5c] rounded-full px-6 py-3 text-sm font-black shadow-lg active:scale-95 transition-transform"
         >
           Go
         </button>
       </form>
 
-      {/* Card area */}
-      <div style={{ flex: 1, position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      {/* Swipe Area */}
+      <div className="relative flex-1 w-full flex flex-col justify-center items-center mt-2">
         {loading ? (
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12, opacity: 0.7 }}>
-            <span style={{ fontSize: 40, animation: 'pulse 1.4s ease-in-out infinite' }}>🧠</span>
-            <p style={{ fontWeight: 700, fontSize: 14, color: C.muted }}>Analyzing request…</p>
+          <div className="flex flex-col items-center justify-center font-bold text-gray-400 animate-pulse">
+            <span className="text-4xl mb-3">🧠</span>
+            Analyzing request...
           </div>
-        ) : products.length === 0 ? (
-          <div style={{ textAlign: 'center', padding: 32 }}>
-            <span style={{ fontSize: 52 }}>🎉</span>
-            <h3 style={{ fontWeight: 900, fontSize: 22, marginBottom: 8 }}>All caught up!</h3>
-            <p style={{ color: C.muted, fontSize: 14 }}>Type a new thought above to get fresh picks.</p>
+        ) : !activeProduct ? (
+          <div className="flex flex-col h-full items-center justify-center p-6 text-center text-white">
+            <span className="text-5xl mb-4">🎉</span>
+            <h3 className="text-2xl font-bold">All caught up!</h3>
+            <p className="text-sm text-gray-400 mt-2">Type a new thought above to get fresh recommendations.</p>
           </div>
         ) : (
           <>
-            {/* Stack shadow card */}
+            {/* Background Stack Effect */}
             {products.length > 1 && (
-              <div style={{
-                position: 'absolute',
-                width: 300,
-                height: 420,
-                background: C.bgCard,
-                borderRadius: 32,
-                transform: 'scale(0.94) translateY(20px)',
-                opacity: 0.5,
-                border: `1px solid ${C.glassBdr}`,
-              }} />
+              <div className="absolute w-full max-w-sm h-[55vh] bg-[#3d277d] rounded-[2.5rem] border border-[#55409e] scale-95 translate-y-6 opacity-60 pointer-events-none" />
             )}
 
-            {/* Active card */}
+            {/* Draggable Card */}
             <div
               onPointerDown={handlePointerDown}
               onPointerMove={handlePointerMove}
               onPointerUp={(e) => handlePointerUp(e, activeProduct)}
-              style={{
-                position: 'absolute',
-                width: 300,
-                height: 420,
-                borderRadius: 32,
-                background: C.bgCard,
-                border: `1px solid ${C.glassBdr}`,
-                boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
-                overflow: 'hidden',
-                display: 'flex',
-                flexDirection: 'column',
-                zIndex: 10,
-                ...cardStyle,
-              }}
+              style={cardStyle}
+              className="absolute w-full max-w-sm h-[55vh] bg-gradient-to-br from-[#4a348b] to-[#2a1b5c] rounded-[2.5rem] shadow-2xl border border-[#6b55b5] flex flex-col overflow-hidden cursor-grab active:cursor-grabbing z-10"
             >
-              {/* Image area */}
-              <div style={{
-                flex: '0 0 55%',
-                background: 'linear-gradient(135deg, #1F2D3D 0%, #00A8CC 50%, #131921 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative',
-                overflow: 'hidden',
-              }}>
-                {/* Glow halo behind emoji */}
-                <div style={{
-                  position: 'absolute',
-                  width: 140, height: 140, borderRadius: '50%',
-                  background: `radial-gradient(circle, rgba(255,153,0,0.3) 0%, transparent 70%)`,
-                }} />
-                <span style={{ fontSize: 80, position: 'relative', zIndex: 2, filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.4))' }}>📦</span>
+              {/* Product Visual Area */}
+              <div className="h-2/3 flex items-center justify-center relative pointer-events-none border-b border-[#3d277d]/50 bg-[#1e133d]/20">
+                {/* Visual Glow Effect */}
+                <div className="absolute w-40 h-40 bg-orange-500 rounded-full blur-3xl opacity-20 top-10 left-10"></div>
+                <div className="absolute w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-20 bottom-10 right-10"></div>
+                
+                <span className="text-9xl drop-shadow-lg z-10">📦</span>
+                
+                {/* Match Badge matching reference */}
+                <div className="absolute top-5 right-5 bg-[#d0ff52] text-[#2a1b5c] text-sm font-black px-4 py-1.5 rounded-full shadow-lg z-20 flex items-center gap-1">
+                  <span className="text-xs">♡</span> {activeProduct.badge || '94%'}
+                </div>
 
-                {/* Match % badge (top right) */}
-                {activeProduct.match_score != null && (
-                  <div style={{
-                    position: 'absolute', top: 14, right: 14,
-                    background: C.green,
-                    color: '#1a0a00',
-                    borderRadius: 50,
-                    padding: '5px 12px',
-                    fontSize: 12,
-                    fontWeight: 900,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 4,
-                  }}>
-                    🤍 {Math.round(activeProduct.match_score * 100)}%
+                {/* Swipe Indicators */}
+                {dragOffset.x > 40 && (
+                  <div className="absolute top-8 left-8 border-4 border-[#d0ff52] text-[#d0ff52] text-xl font-black px-4 py-1 rounded-xl rotate-[-15deg] uppercase tracking-widest shadow-lg z-20">
+                    CART
                   </div>
                 )}
-
-                {/* Swipe labels */}
-                {isRight && (
-                  <div style={{
-                    position: 'absolute', top: 20, left: 16,
-                    background: C.green, color: '#1a0a00',
-                    padding: '6px 14px', borderRadius: 10,
-                    fontSize: 13, fontWeight: 900,
-                    letterSpacing: 1.5, textTransform: 'uppercase',
-                    transform: 'rotate(-12deg)',
-                    opacity: swipeRatio,
-                    boxShadow: `0 4px 20px rgba(255,153,0,0.5)`,
-                  }}>ADD ✓</div>
-                )}
-                {isLeft && (
-                  <div style={{
-                    position: 'absolute', top: 20, right: 16,
-                    background: C.coral, color: C.white,
-                    padding: '6px 14px', borderRadius: 10,
-                    fontSize: 13, fontWeight: 900,
-                    letterSpacing: 1.5, textTransform: 'uppercase',
-                    transform: 'rotate(12deg)',
-                    opacity: swipeRatio,
-                    boxShadow: `0 4px 20px rgba(255,77,106,0.5)`,
-                  }}>SKIP ✕</div>
+                {dragOffset.x < -40 && (
+                  <div className="absolute top-8 right-8 border-4 border-[#ff4a7d] text-[#ff4a7d] text-xl font-black px-4 py-1 rounded-xl rotate-[15deg] uppercase tracking-widest shadow-lg z-20">
+                    PASS
+                  </div>
                 )}
               </div>
 
-              {/* Info area */}
-              <div style={{ flex: 1, padding: '16px 18px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-                <div>
-                  <div style={{ fontSize: 10, fontWeight: 800, color: C.green, letterSpacing: 1.8, textTransform: 'uppercase', marginBottom: 4 }}>
-                    {activeProduct.badge || '🎯 CONTEXT MATCH'}
-                  </div>
-                  <h2 style={{ fontWeight: 800, fontSize: 18, margin: '0 0 4px', lineHeight: 1.2, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                    {activeProduct.name}
-                  </h2>
-                  <p style={{ fontWeight: 900, fontSize: 24, color: C.green, margin: 0, letterSpacing: '-0.5px' }}>
-                    ₹{activeProduct.price}
+              {/* Product Info Area */}
+              <div className="p-6 flex-1 flex flex-col justify-end bg-gradient-to-t from-[#1e133d] to-transparent pointer-events-none relative z-10">
+                <h2 className="text-3xl font-bold text-white leading-tight drop-shadow-md">
+                  {activeProduct.name}
+                </h2>
+                <div className="flex justify-between items-end mt-2">
+                  <p className="flex items-center gap-1 opacity-80 text-sm">
+                    📍 {activeProduct.brand || 'Location Context'}
                   </p>
-                </div>
-
-                <div style={{
-                  background: 'rgba(0,168,204,0.15)',
-                  border: `1px solid rgba(0,168,204,0.35)`,
-                  borderRadius: 14,
-                  padding: '10px 14px',
-                }}>
-                  <p style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.8)', fontStyle: 'italic', margin: 0, lineHeight: 1.4 }}>
-                    "{activeProduct.why_reason || 'Highly relevant for your query.'}"
+                  <p className="text-2xl font-black text-[#d0ff52] drop-shadow-md">
+                    ₹{activeProduct.price}
                   </p>
                 </div>
               </div>
@@ -544,81 +276,33 @@ const SwipeFeed = () => {
         )}
       </div>
 
-      {/* Action buttons (Dateasy-style: X, pause/add, heart) */}
-      {!loading && products.length > 0 && activeProduct && (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20, paddingBottom: 8, paddingTop: 16, position: 'relative', zIndex: 10 }}>
-          <button
+      {/* Action Buttons (Below Card) */}
+      {activeProduct && (
+        <div className="flex items-center justify-center gap-6 mt-6 mb-2 z-20">
+          <button 
             onClick={() => handleSwipeAction('left', activeProduct)}
-            style={{
-              width: 52, height: 52, borderRadius: '50%',
-              background: C.bgPanel,
-              border: `1px solid ${C.glassBdr}`,
-              color: C.white,
-              fontSize: 20,
-              cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: '0 4px 16px rgba(0,0,0,0.3)',
-            }}
-          >✕</button>
-
-          <button
+            className="w-14 h-14 bg-[#3d277d] rounded-full flex items-center justify-center text-2xl text-white shadow-lg border border-[#55409e] hover:bg-[#4a348b] transition-colors"
+          >
+            ✕
+          </button>
+          <button className="w-16 h-16 bg-[#d0ff52] rounded-full flex items-center justify-center text-3xl text-[#2a1b5c] font-black shadow-[0_0_20px_rgba(208,255,82,0.3)]">
+            ||
+          </button>
+          <button 
             onClick={() => handleSwipeAction('right', activeProduct)}
-            style={{
-              width: 68, height: 68, borderRadius: '50%',
-              background: C.green,
-              border: 'none',
-              fontSize: 24,
-              cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: `0 6px 28px rgba(255,153,0,0.5)`,
-            }}
-          >🛒</button>
-
-          <button
-            onClick={() => handleSwipeAction('right', activeProduct)}
-            style={{
-              width: 52, height: 52, borderRadius: '50%',
-              background: C.coral,
-              border: 'none',
-              fontSize: 20,
-              cursor: 'pointer',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              boxShadow: `0 4px 20px rgba(255,77,106,0.4)`,
-            }}
-          >❤️</button>
+            className="w-14 h-14 bg-[#ff4a7d] rounded-full flex items-center justify-center text-2xl text-white shadow-lg border border-[#ff6b95] hover:bg-[#ff6b95] transition-colors"
+          >
+            ♥
+          </button>
         </div>
       )}
 
-      {/* Bottom nav pill */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        background: 'rgba(255,255,255,0.08)',
-        border: `1px solid ${C.glassBdr}`,
-        borderRadius: 50,
-        padding: '10px 16px',
-        marginTop: 10,
-        position: 'relative',
-        zIndex: 10,
-      }}>
-        {[
-          { icon: <Sparkle size={20} color={C.green} />, active: true },
-          { icon: <span style={{ fontSize: 18, opacity: 0.5 }}>⟳</span> },
-          { icon: <span style={{ fontSize: 18, opacity: 0.5 }}>💬</span> },
-          { icon: <span style={{ fontSize: 18, opacity: 0.5 }}>♡</span> },
-        ].map((item, i) => (
-          <button key={i} style={{
-            background: item.active ? C.bgPanel : 'transparent',
-            border: 'none',
-            borderRadius: 50,
-            width: 44, height: 44,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            cursor: 'pointer',
-          }}>
-            {item.icon}
-          </button>
-        ))}
+      {/* Bottom Navigation Pill */}
+      <div className="mt-4 bg-[#3d277d] px-8 py-4 rounded-[2rem] flex justify-between items-center text-2xl z-20 w-full border border-[#55409e]">
+        <span className="text-[#d0ff52] cursor-pointer drop-shadow-[0_0_8px_rgba(208,255,82,0.6)]">✦</span>
+        <span className="text-[#6b55b5] cursor-pointer hover:text-white transition-colors">🌀</span>
+        <span className="text-[#6b55b5] cursor-pointer hover:text-white transition-colors">💬</span>
+        <span className="text-[#6b55b5] cursor-pointer hover:text-white transition-colors">♡</span>
       </div>
     </div>
   );
