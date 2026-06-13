@@ -231,6 +231,7 @@ const SwipeFeed = () => {
             <div className="bg-white p-2 rounded-full shadow-sm text-lg">✨</div>
             <div className="flex-1 pt-0.5">
               <p className="text-xs font-black text-blue-600 uppercase tracking-wider mb-0.5">AI Understood</p>
+              
               <p className="text-sm text-gray-700 leading-snug">
                 Finding items for <span className="font-bold">"{aiContext?.query}"</span>
                 {aiContext && aiContext.budget !== 99999 && (
@@ -244,10 +245,22 @@ const SwipeFeed = () => {
                   </span>
                 )}
               </p>
+
+              {/* --- NEW: DETERMINISTIC FILTER COUNT --- */}
+              {aiContext && aiContext.dropped_count > 0 && (
+                <div className="mt-2 flex items-center gap-1.5 text-xs font-bold text-slate-500 bg-white/60 w-fit px-2 py-1 rounded-md border border-slate-200/60">
+                  <span className="text-red-400 text-[10px]">⛔</span> 
+                  Strictly removed {aiContext.dropped_count} items exceeding limits
+                </div>
+              )}
+              {/* --------------------------------------- */}
+
             </div>
           </div>
         </div>
       </div>
+
+      
 
       {/* Card Deck */}
       <div className="relative flex-1 w-full flex justify-center items-center mt-2">

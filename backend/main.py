@@ -167,6 +167,7 @@ async def search(req: SearchRequest):
         _, indices = index.search(vec, 20)
         
         retrieved = []
+        dropcount=0
         for idx in indices[0]:
             item = products[idx].copy()
             ops = operational_db.get(item["id"], {})
@@ -178,8 +179,11 @@ async def search(req: SearchRequest):
                 item["delivery_days"] = item_delivery
                 item["user_context"] = get_user_context(item["id"], user_signals)
                 retrieved.append(item)
+            else:
+                dropcount += 1
                 
         print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index")
+        print(f"🗑️ [FILTER] Dropped {dropcount} products based on budget and delivery constraints")
 
     # 3. Reasoning
     try:
@@ -202,6 +206,7 @@ async def search(req: SearchRequest):
             "query": req.query,
             "budget": budget,
             "delivery": delivery_limit,
-            "is_feed": is_feed_refill
+            "is_feed": is_feed_refill,
+            "dropped_count": dropcount,
         }
     }
