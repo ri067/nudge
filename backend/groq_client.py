@@ -18,13 +18,15 @@ async def enrich_products_with_reasons(products, user_query, user_signals, budge
     # 2. Dynamic Bundle Logic based on Budget extraction
     if budget >= 99999:
         bundle_instructions = """
-        Since no strict budget was defined, create 2-3 TIERED BUNDLES (e.g., 'Budget Beach Kit', 'Standard Beach Kit', 'Premium Beach Kit'). 
+        Since no strict budget was defined, create 2-3 TIERED BUNDLES. 
+        CRITICAL: Name the tiers dynamically based on the user's specific query (e.g., 'Budget [Topic] Kit', 'Premium [Topic] Kit'). Do NOT just call everything a Beach Kit!
         Use cheaper candidates for the Budget tier and higher-end/branded candidates for the Premium tier.
         """
     else:
         bundle_instructions = f"""
         A strict budget of ₹{budget} was defined. 
-        Create exactly ONE bundle ('Essentials Kit') where the combined price of the items is STRICTLY LESS THAN ₹{budget}.
+        Create exactly ONE bundle where the combined price of the items is STRICTLY LESS THAN ₹{budget}.
+        CRITICAL: Name the bundle dynamically based on the user's specific query (e.g., 'Essential [Topic] Kit').
         """
 
     # 3. The Super-Prompt
