@@ -19,6 +19,10 @@ const SwipeFeed = () => {
   const [showBreakdown, setShowBreakdown] = useState(false);
   const pressTimer = React.useRef(null);
 
+  const [leftSwipeMemory, setLeftSwipeMemory] = useState({});
+  const [bannedTerms, setBannedTerms] = useState([]);
+  const [toastMessage, setToastMessage] = useState(null);
+
   useEffect(() => {
     let timer;
     if (showAiChip) {
@@ -127,7 +131,24 @@ const SwipeFeed = () => {
   };
 
   const handleSwipeAction = (direction, product) => {
-    if (direction === 'right') setCartItems((prev) => [...prev, product]);
+    if (direction === 'right') {setCartItems((prev) => [...prev, product]);}
+    else if (direction === 'left') {
+      // --- FAKE AI PREFERENCE LEARNING ---
+      const productName = product.type === 'bundle' ? product.tier_name : product.name;
+      // Grab the last word as a crude "category" (e.g. "Hiking Socks" -> "socks")
+      const category = productName.split(' ').pop().toLowerCase();
+
+      setLeftSwipeMemory(prev => {
+        const count = (prev[category] || 0) + 1;
+        // On the 2nd left swipe of the same category, ban it!
+        if (count === 2 && !bannedTerms.includes(category)) { 
+          setBannedTerms(banned => [...banned, category]);
+          setToastMessage(`Got it. Showing fewer "${category}" suggestions.`);
+          setTimeout(() => setToastMessage(null), 4000); // Hide after 4s
+        }
+        return { ...prev, [category]: count };
+      });
+    }
     setProducts((prev) => prev.filter((p) => p.id !== (product.id || product.tier_name)));
     setDragOffset({ x: 0, y: 0 });
   };
@@ -203,6 +224,11 @@ const SwipeFeed = () => {
   // ==========================================
   // VIEW: SWIPE FEED
   // ==========================================
+  const visibleProducts = products.filter(p => {
+    const pName = p.type === 'bundle' ? p.tier_name : p.name;
+    return !bannedTerms.some(banned => pName.toLowerCase().includes(banned));
+  });
+
   const activeProduct = products[0];
   const nextProduct = products[1]; 
 
@@ -223,6 +249,15 @@ const SwipeFeed = () => {
         <input value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="What's on your mind?" className="flex-1 rounded-full px-5 py-3 shadow-sm border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500" />
         <button type="submit" className="bg-gray-900 text-white rounded-full px-5 py-3 font-bold shadow-md active:scale-95 transition-transform">Go</button>
       </form>
+
+      {/* --- REAL-TIME ADAPTATION TOAST --- */}
+      <div className={`absolute top-24 left-0 right-0 mx-auto w-max z-50 transition-all duration-500 transform ${toastMessage ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0 pointer-events-none'}`}>
+        <div className="bg-gray-900 text-white px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 border border-gray-700">
+          <span className="text-xl">🤫</span>
+          <p className="text-sm font-bold tracking-wide">{toastMessage}</p>
+        </div>
+      </div>
+      {/* ---------------------------------- */}
 
       {/* AI Intelligence Chip */}
       <div className={`w-full max-w-sm mx-auto absolute top-40 left-0 right-0 z-20 px-6 transition-all duration-700 ease-in-out ${showAiChip && aiContext && !aiContext.is_feed && !loading ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
