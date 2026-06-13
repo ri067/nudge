@@ -193,7 +193,7 @@ const SwipeFeed = () => {
                   {item.type === 'bundle' ? (
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#FFE8D6] to-[#FFD8C2] flex items-center justify-center text-2xl border border-[#FFD8C2] shrink-0">🎁</div>
                   ) : (
-                    <img src={`/api/images/product_${item.id}.jpg`} className="w-16 h-16 rounded-xl object-cover shrink-0 bg-[#F5EFE7]" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
+                    <img draggable="false" src={`/api/images/product_${item.id}.jpg`} className="w-16 h-16 rounded-xl object-cover shrink-0 bg-[#F5EFE7]" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
                   )}
 
                   <div className="flex-1 min-w-0">
@@ -341,12 +341,12 @@ const SwipeFeed = () => {
 
             {/* NEXT CARD (BACKGROUND) */}
             {nextProduct && (
-              <div className="absolute w-80 h-[28rem] bg-white rounded-[2rem] border border-[#F0E4D8] scale-95 translate-y-5 opacity-80 z-0 flex flex-col overflow-hidden shadow-sm">
+              <div className="absolute w-80 h-[28rem] bg-white rounded-[2rem] border border-[#F0E4D8] scale-95 translate-y-5 opacity-80 z-0 flex flex-col overflow-hidden shadow-sm select-none">
                 <div className="h-3/5 relative border-b border-[#F0E4D8] bg-[#F5EFE7] flex items-center justify-center">
                   {nextProduct.type === 'bundle' ? (
                     <div className="text-6xl opacity-40">🎁</div>
                   ) : (
-                    <img src={`/api/images/product_${nextProduct.id}.jpg`} className="w-full h-full object-cover grayscale-[20%] blur-[1px] pointer-events-none opacity-90" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
+                    <img draggable="false" src={`/api/images/product_${nextProduct.id}.jpg`} className="w-full h-full object-cover grayscale-[20%] blur-[1px] pointer-events-none opacity-90" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
                   )}
                 </div>
                 <div className="p-5 flex-1 flex flex-col">
@@ -366,7 +366,7 @@ const SwipeFeed = () => {
               onPointerMove={handlePointerMove}
               onPointerUp={(e) => handlePointerUp(e, activeProduct)}
               style={cardStyle}
-              className="absolute w-80 h-[28rem] bg-white rounded-[2rem] shadow-2xl shadow-[#1A1625]/10 overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-[#F0E4D8] flex flex-col touch-none"
+              className="absolute w-80 h-[28rem] bg-white rounded-[2rem] shadow-2xl shadow-[#1A1625]/10 overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-[#F0E4D8] flex flex-col touch-none select-none"
             >
 
               {/* --- UNIFIED HOLD-TO-REVEAL OVERLAY (WORKS FOR BOTH) --- */}
@@ -427,7 +427,7 @@ const SwipeFeed = () => {
                     <div className="grid grid-cols-2 gap-2 w-full max-w-[220px] pointer-events-none">
                       {activeProduct.items?.slice(0, 4).map((subItem, idx) => (
                         <div key={idx} className="relative w-full pt-[100%] rounded-xl overflow-hidden shadow-sm border border-white/60">
-                          <img src={`/api/images/product_${subItem.id}.jpg`} className="absolute inset-0 w-full h-full object-cover" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
+                          <img draggable="false" src={`/api/images/product_${subItem.id}.jpg`} className="absolute inset-0 w-full h-full object-cover" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
                         </div>
                       ))}
                     </div>
@@ -452,7 +452,7 @@ const SwipeFeed = () => {
                 // --- INDIVIDUAL CARD LAYOUT ---
                 <>
                   <div className="h-3/5 relative border-b border-[#F0E4D8] bg-[#F5EFE7]">
-                    <img src={`/api/images/product_${activeProduct.id}.jpg`} className="w-full h-full object-cover pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
+                    <img draggable="false" src={`/api/images/product_${activeProduct.id}.jpg`} className="w-full h-full object-cover pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
                     {dragOffset.x > 40 && <div className="absolute top-6 left-6 bg-[#2DD4BF] text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[-12deg] uppercase shadow-lg">Add to cart</div>}
                     {dragOffset.x < -40 && <div className="absolute top-6 right-6 bg-[#FF6B4A] text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[12deg] uppercase shadow-lg">Skip</div>}
                   </div>
