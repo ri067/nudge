@@ -153,7 +153,14 @@ const SwipeFeed = () => {
               <p className="text-gray-500 font-bold">Total</p>
               <p className="text-3xl font-black text-gray-900">₹{cartTotal}</p>
             </div>
-            <button className="w-full bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg uppercase active:scale-95 transition-transform">
+            <button 
+              onClick={() => {
+                alert(`Redirecting to Secure Payment Gateway to pay ₹${cartTotal}... \n\n(Demo Checkout Success!)`);
+                setCartItems([]); // Empty the cart
+                setCurrentView('feed'); // Send them back to the swipe feed
+              }}
+              className="w-full bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg uppercase active:scale-95 transition-transform"
+            >
               Secure Checkout
             </button>
           </div>
