@@ -23,6 +23,16 @@ const SwipeFeed = () => {
   const [bannedTerms, setBannedTerms] = useState([]);
   const [toastMessage, setToastMessage] = useState(null);
 
+  const visibleProducts = products.filter(p => {
+    if (p.type === 'bundle') {
+      return !p.items?.some(subItem =>
+        subItem.category && bannedTerms.includes(subItem.category.toLowerCase())
+      );
+    }
+    const pCat = p.category ? p.category.toLowerCase() : '';
+    return !bannedTerms.includes(pCat);
+  });
+
   useEffect(() => {
     let timer;
     if (showAiChip) {
@@ -35,7 +45,7 @@ const SwipeFeed = () => {
 
   useEffect(() => {
     const fetchRefill = async () => {
-      if (products.length < 2 && !loading) {
+      if (visibleProducts.length < 2 && !loading) {
         setLoading(true);
         try {
           const response = await axios.post(`/api/search`, {
@@ -55,7 +65,7 @@ const SwipeFeed = () => {
       }
     };
     fetchRefill();
-  }, [products.length]); 
+  }, [visibleProducts.length, products.length]); 
 
   const handleSearchSubmit = async (e) => {
     e.preventDefault();
@@ -224,20 +234,8 @@ const SwipeFeed = () => {
   // ==========================================
   // VIEW: SWIPE FEED
   // ==========================================
-  const visibleProducts = products.filter(p => {
-    if (p.type === 'bundle') {
-      // If it's a bundle, hide it if ANY of its sub-items belong to a banned category
-      return !p.items?.some(subItem => 
-        subItem.category && bannedTerms.includes(subItem.category.toLowerCase())
-      );
-    }
-    // If it's an individual item, check its category directly
-    const pCat = p.category ? p.category.toLowerCase() : '';
-    return !bannedTerms.includes(pCat);
-  });
-
-  const activeProduct = products[0];
-  const nextProduct = products[1]; 
+  const activeProduct = visibleProducts[0];
+  const nextProduct = visibleProducts[1]; 
 
   const cardStyle = isDragging
     ? { transform: `translate3d(${dragOffset.x}px, ${dragOffset.y * 0.2}px, 0) rotate(${dragOffset.x * 0.05}deg)`, transition: 'none', willChange: 'transform' }
@@ -306,11 +304,11 @@ const SwipeFeed = () => {
 
       {/* Card Deck */}
       <div className="relative flex-1 w-full flex justify-center items-center mt-2">
-        {loading && products.length === 0 ? (
+        {loading && visibleProducts.length === 0 ? (
           <div className="font-bold text-gray-400 animate-pulse text-center">
             <span className="text-3xl block mb-2">🧠</span> Analyzing...
           </div>
-        ) : products.length === 0 ? (
+        ) : visibleProducts.length === 0 ? (
           <div className="text-center font-bold text-gray-400">🎉 All caught up!</div>
         ) : (
           <>
