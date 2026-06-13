@@ -15,6 +15,10 @@ const SwipeFeed = () => {
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
 
+  // X-Ray State
+  const [showBreakdown, setShowBreakdown] = useState(false);
+  const pressTimer = React.useRef(null);
+
   useEffect(() => {
     let timer;
     if (showAiChip) {
@@ -74,21 +78,49 @@ const SwipeFeed = () => {
     }
   };
 
-  const handlePointerDown = (e) => {
+  const handlePointerDown = (e, product) => {
     setIsDragging(true);
     setDragStart({ x: e.clientX, y: e.clientY });
     e.currentTarget.setPointerCapture(e.pointerId);
+
+    // If it's a bundle, start the "Hold to Reveal" timer (400ms)
+    if (product?.type === 'bundle') {
+      pressTimer.current = setTimeout(() => {
+        setShowBreakdown(true);
+        if (navigator.vibrate) navigator.vibrate(50); 
+      }, 400);
+    }
   };
 
   const handlePointerMove = (e) => {
     if (!isDragging) return;
-    setDragOffset({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y });
+    const newX = e.clientX - dragStart.x;
+    const newY = e.clientY - dragStart.y;
+    setDragOffset({ x: newX, y: newY });
+
+    // If they start swiping, cancel the long-press timer!
+    if (Math.abs(newX) > 10 || Math.abs(newY) > 10) {
+      if (pressTimer.current) clearTimeout(pressTimer.current);
+    }
   };
 
   const handlePointerUp = (e, product) => {
+    // Always clear the timer when they let go
+    if (pressTimer.current) clearTimeout(pressTimer.current);
+    
+    // If they were viewing the breakdown, close it and cancel the swipe
+    if (showBreakdown) {
+      setShowBreakdown(false);
+      setIsDragging(false);
+      setDragOffset({ x: 0, y: 0 });
+      e.currentTarget.releasePointerCapture(e.pointerId);
+      return;
+    }
+
     if (!isDragging) return;
     setIsDragging(false);
     e.currentTarget.releasePointerCapture(e.pointerId);
+    
     if (dragOffset.x > 120) handleSwipeAction('right', product);
     else if (dragOffset.x < -120) handleSwipeAction('left', product);
     else setDragOffset({ x: 0, y: 0 });
@@ -100,7 +132,6 @@ const SwipeFeed = () => {
     setDragOffset({ x: 0, y: 0 });
   };
 
-  // CALCULATE TOTAL: Dynamically checks for total_price (bundles) vs price (individual)
   const cartTotal = cartItems.reduce((sum, item) => sum + (item.type === 'bundle' ? item.total_price : item.price), 0);
 
   // ==========================================
@@ -156,8 +187,8 @@ const SwipeFeed = () => {
             <button 
               onClick={() => {
                 alert(`Redirecting to Secure Payment Gateway to pay ₹${cartTotal}... \n\n(Demo Checkout Success!)`);
-                setCartItems([]); // Empty the cart
-                setCurrentView('feed'); // Send them back to the swipe feed
+                setCartItems([]);
+                setCurrentView('feed');
               }}
               className="w-full bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg uppercase active:scale-95 transition-transform"
             >
@@ -250,11 +281,38 @@ const SwipeFeed = () => {
             )}
 
             {/* ACTIVE TOP CARD (FOREGROUND) */}
-            <div onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={(e) => handlePointerUp(e, activeProduct)} style={cardStyle} className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10 touch-none">
+            <div 
+              onPointerDown={(e) => handlePointerDown(e, activeProduct)} 
+              onPointerMove={handlePointerMove} 
+              onPointerUp={(e) => handlePointerUp(e, activeProduct)} 
+              style={cardStyle} 
+              className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10 touch-none"
+            >
               
               {activeProduct.type === 'bundle' ? (
                 // --- BUNDLE LAYOUT ---
                 <>
+                  {/* --- HOLD-TO-REVEAL OVERLAY --- */}
+                  {showBreakdown && (
+                    <div className="absolute inset-0 z-50 bg-gray-900/95 backdrop-blur-md p-6 flex flex-col justify-center text-white transition-opacity duration-200">
+                      <h3 className="text-sm font-black text-purple-400 mb-6 tracking-widest uppercase flex items-center gap-2">
+                        <span>🧠</span> SIGNAL X-RAY
+                      </h3>
+                      <div className="space-y-5 overflow-y-auto max-h-[80%] pb-4">
+                        {activeProduct.items?.map((subItem, idx) => (
+                          <div key={idx} className="border-b border-gray-700/50 pb-3">
+                            <p className="font-bold text-lg leading-tight mb-1">{subItem.name}</p>
+                            <p className="text-sm text-gray-400 italic flex items-start gap-2">
+                              <span className="text-purple-400 mt-0.5">↳</span> 
+                              {subItem.user_context || "Semantic match for current search intent."}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  {/* ---------------------------------- */}
+                  
                   <div className="h-3/5 relative border-b border-purple-100 bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-4">
                     <div className="grid grid-cols-2 gap-2 w-full max-w-[220px] pointer-events-none">
                       {activeProduct.items?.slice(0, 4).map((subItem, idx) => (
@@ -263,11 +321,11 @@ const SwipeFeed = () => {
                         </div>
                       ))}
                     </div>
-                    {dragOffset.x > 40 && <div className="absolute top-6 left-6 bg-green-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[-12deg] uppercase shadow-lg">Add Bundle</div>}
-                    {dragOffset.x < -40 && <div className="absolute top-6 right-6 bg-red-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[12deg] uppercase shadow-lg">Skip</div>}
+                    {dragOffset.x > 40 && <div className="absolute top-6 left-6 bg-green-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[-12deg] uppercase shadow-lg z-10">Add Bundle</div>}
+                    {dragOffset.x < -40 && <div className="absolute top-6 right-6 bg-red-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[12deg] uppercase shadow-lg z-10">Skip</div>}
                   </div>
 
-                  <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none bg-white">
+                  <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none bg-white relative z-0">
                     <div>
                       <div className="text-[10px] font-black text-purple-600 mb-1 tracking-widest uppercase flex items-center gap-1">
                         <span>🎁</span> CURATED KIT
@@ -289,7 +347,7 @@ const SwipeFeed = () => {
                     {dragOffset.x < -40 && <div className="absolute top-6 right-6 bg-red-500 text-white text-sm font-black px-4 py-1.5 rounded-lg rotate-[12deg] uppercase shadow-lg">Skip</div>}
                   </div>
 
-                  <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none bg-white">
+                  <div className="p-5 flex-1 flex flex-col justify-between pointer-events-none bg-white relative z-0">
                     <div>
                       <h2 className="text-xl font-bold leading-tight text-gray-900 line-clamp-1">{activeProduct.name}</h2>
                       <p className="text-2xl font-black mt-1 text-gray-900">₹{activeProduct.price}</p>
