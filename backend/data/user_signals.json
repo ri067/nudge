@@ -11,6 +11,14 @@
     {
       "product_id": 82,
       "days_since_cart": 23
+    },
+    {
+      "product_id": 98,
+      "days_since_cart": 2
+    },
+    {
+      "product_id": 12, 
+      "days_since_cart": 1
     }
   ],
 
@@ -29,6 +37,11 @@
       "product_id": 59,
       "purchase_count": 3,
       "last_purchase_days_ago": 41
+    },
+    {
+      "product_id": 33,
+      "purchase_count": 1,
+      "days_since_purchase": 45
     }
   ]
 }
