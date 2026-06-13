@@ -116,38 +116,52 @@ const SwipeFeed = () => {
   // ==========================================
   if (currentView === 'cart') {
     return (
-      <div className="relative w-full h-full p-6 flex flex-col bg-gray-50 overflow-y-auto">
-        <div className="flex items-center justify-between mb-8 mt-4">
+      // 1. We change overflow-y-auto to overflow-hidden on the parent to stop the whole page from scrolling
+      <div className="relative w-full h-full flex flex-col bg-gray-50 overflow-hidden">
+        
+        {/* Header - Fixed at the top (shrink-0 prevents it from getting crushed) */}
+        <div className="px-6 pt-10 pb-4 flex items-center justify-between shrink-0">
           <button onClick={() => setCurrentView('feed')} className="text-gray-500 hover:text-gray-900 font-bold">← Back</button>
           <h1 className="text-2xl font-black tracking-tighter">YOUR CART</h1>
         </div>
-        {cartItems.length === 0 ? (
-          <div className="flex-1 flex flex-col items-center justify-center text-gray-400">
-            <span className="text-6xl mb-4 opacity-50">🛒</span>
-            <p className="font-bold text-lg">Your cart is empty.</p>
-          </div>
-        ) : (
-          <div className="flex-1 flex flex-col gap-4">
-            {cartItems.map((item, i) => (
-              <div key={i} className="bg-white p-4 rounded-2xl shadow-sm border flex items-center gap-4">
-                <img src={`/api/images/product_${item.id}.jpg`} className="w-16 h-16 rounded-xl object-cover" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
-                <div className="flex-1">
-                  <h3 className="font-bold text-gray-900 leading-tight">{item.name}</h3>
+        
+        {/* Scrollable Content Area - Only the items scroll! */}
+        <div className="flex-1 overflow-y-auto px-6">
+          {cartItems.length === 0 ? (
+            <div className="h-full flex flex-col items-center justify-center text-gray-400 pb-20">
+              <span className="text-6xl mb-4 opacity-50">🛒</span>
+              <p className="font-bold text-lg">Your cart is empty.</p>
+            </div>
+          ) : (
+            <div className="flex flex-col gap-4 pb-8">
+              {cartItems.map((item, i) => (
+                <div key={i} className="bg-white p-4 rounded-2xl shadow-sm border flex items-center gap-4 shrink-0">
+                  <img src={`/api/images/product_${item.id}.jpg`} className="w-16 h-16 rounded-xl object-cover" onError={(e) => e.target.src = 'https://via.placeholder.com/150'} />
+                  <div className="flex-1">
+                    <h3 className="font-bold text-gray-900 leading-tight">{item.name}</h3>
+                  </div>
+                  <div className="text-right">
+                    <p className="font-black text-lg text-gray-900">₹{item.price}</p>
+                  </div>
                 </div>
-                <div className="text-right">
-                  <p className="font-black text-lg text-gray-900">₹{item.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+              ))}
+            </div>
+          )}
+        </div>
+
+        {/* Sticky Footer - Pinned absolutely to the bottom */}
         {cartItems.length > 0 && (
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="flex justify-between items-end mb-6">
+          <div className="bg-white px-6 py-6 border-t border-gray-200 shrink-0 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] z-20 pb-safe">
+            <div className="flex justify-between items-end mb-4">
               <p className="text-gray-500 font-bold">Total</p>
               <p className="text-3xl font-black text-gray-900">₹{cartTotal}</p>
             </div>
-            <button className="w-full bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg uppercase">Secure Checkout</button>
+            <button 
+              onClick={() => alert("Checkout flow triggered!")}
+              className="w-full bg-green-500 text-white font-black py-4 rounded-2xl shadow-lg uppercase active:scale-95 transition-transform"
+            >
+              Secure Checkout
+            </button>
           </div>
         )}
       </div>
