@@ -2798,5 +2798,145 @@
       "duration_days": 59,
       "trend": "decreasing"
     }
+  },
+  {
+    "id": 101,
+    "price": 2499,
+    "inventory_count": 18,
+    "inventory_location": "Delhi Warehouse",
+    "delivery_days": 1,
+    "stock_status": "Low Stock",
+    "price_history": [
+      {
+        "date": "2026-04-15",
+        "price": 2899
+      },
+      {
+        "date": "2026-05-15",
+        "price": 2699
+      },
+      {
+        "date": "2026-06-13",
+        "price": 2499
+      }
+    ],
+    "price_change": {
+      "amount": -400,
+      "percent": -13.8,
+      "duration_days": 59,
+      "trend": "decreasing"
+    }
+  },
+  {
+    "id": 102,
+    "price": 2199,
+    "inventory_count": 42,
+    "inventory_location": "Gurugram Warehouse",
+    "delivery_days": 2,
+    "stock_status": "In Stock",
+    "price_history": [
+      {
+        "date": "2026-04-15",
+        "price": 2399
+      },
+      {
+        "date": "2026-05-15",
+        "price": 2299
+      },
+      {
+        "date": "2026-06-13",
+        "price": 2199
+      }
+    ],
+    "price_change": {
+      "amount": -200,
+      "percent": -8.3,
+      "duration_days": 59,
+      "trend": "decreasing"
+    }
+  },
+  {
+    "id": 103,
+    "price": 3499,
+    "inventory_count": 9,
+    "inventory_location": "Mumbai Warehouse",
+    "delivery_days": 3,
+    "stock_status": "Low Stock",
+    "price_history": [
+      {
+        "date": "2026-04-15",
+        "price": 3799
+      },
+      {
+        "date": "2026-05-15",
+        "price": 3599
+      },
+      {
+        "date": "2026-06-13",
+        "price": 3499
+      }
+    ],
+    "price_change": {
+      "amount": -300,
+      "percent": -7.9,
+      "duration_days": 59,
+      "trend": "decreasing"
+    }
+  },
+  {
+    "id": 104,
+    "price": 1499,
+    "inventory_count": 65,
+    "inventory_location": "Noida Warehouse",
+    "delivery_days": 1,
+    "stock_status": "In Stock",
+    "price_history": [
+      {
+        "date": "2026-04-15",
+        "price": 1699
+      },
+      {
+        "date": "2026-05-15",
+        "price": 1599
+      },
+      {
+        "date": "2026-06-13",
+        "price": 1499
+      }
+    ],
+    "price_change": {
+      "amount": -200,
+      "percent": -11.8,
+      "duration_days": 59,
+      "trend": "decreasing"
+    }
+  },
+  {
+    "id": 105,
+    "price": 1899,
+    "inventory_count": 31,
+    "inventory_location": "Bangalore Warehouse",
+    "delivery_days": 2,
+    "stock_status": "In Stock",
+    "price_history": [
+      {
+        "date": "2026-04-15",
+        "price": 2099
+      },
+      {
+        "date": "2026-05-15",
+        "price": 1999
+      },
+      {
+        "date": "2026-06-13",
+        "price": 1899
+      }
+    ],
+    "price_change": {
+      "amount": -200,
+      "percent": -9.5,
+      "duration_days": 59,
+      "trend": "decreasing"
+    }
   }
 ]

@@ -1379,5 +1379,75 @@
       "gift"
     ],
     "description": "Set of collectible action figures for kids and fans."
+  },
+  {
+    "id": 101,
+    "name": "Aviator Sunglasses",
+    "category": "sunglasses",
+    "brand": "Ray-Ban",
+    "price": 2499,
+    "tags": [
+      "aviator",
+      "uv protection",
+      "fashion",
+      "outdoor"
+    ],
+    "description": "Classic aviator sunglasses with UV-protected lenses and a lightweight metal frame."
+  },
+  {
+    "id": 102,
+    "name": "Wayfarer Sunglasses",
+    "category": "sunglasses",
+    "brand": "Ray-Ban",
+    "price": 2199,
+    "tags": [
+      "wayfarer",
+      "casual",
+      "uv protection",
+      "unisex"
+    ],
+    "description": "Iconic wayfarer sunglasses designed for everyday style and eye protection."
+  },
+  {
+    "id": 103,
+    "name": "Sport Performance Sunglasses",
+    "category": "sunglasses",
+    "brand": "Oakley",
+    "price": 3499,
+    "tags": [
+      "sports",
+      "polarized",
+      "running",
+      "cycling"
+    ],
+    "description": "High-performance polarized sunglasses ideal for sports and outdoor activities."
+  },
+  {
+    "id": 104,
+    "name": "Round Retro Sunglasses",
+    "category": "sunglasses",
+    "brand": "Fastrack",
+    "price": 1499,
+    "tags": [
+      "retro",
+      "round",
+      "fashion",
+      "trendy"
+    ],
+    "description": "Stylish round-frame sunglasses inspired by classic retro fashion."
+  },
+  {
+    "id": 105,
+    "name": "Polarized Driving Sunglasses",
+    "category": "sunglasses",
+    "brand": "Polaroid",
+    "price": 1899,
+    "tags": [
+      "driving",
+      "polarized",
+      "anti-glare",
+      "travel"
+    ],
+    "description": "Polarized sunglasses that reduce glare and improve visibility while driving."
   }
 ]
