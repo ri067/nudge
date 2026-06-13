@@ -178,7 +178,6 @@ const SwipeFeed = () => {
         <button type="submit" className="bg-gray-900 text-white rounded-full px-5 py-3 font-bold shadow-md active:scale-95 transition-transform">Go</button>
       </form>
 
-      {/* --- THE AI INTELLIGENCE CHIP (WITH FADE ANIMATION) --- */}
       <div className={`w-full max-w-sm mx-auto absolute top-40 left-0 right-0 z-20 px-6 transition-all duration-700 ease-in-out ${showAiChip && aiContext && !aiContext.is_feed && !loading ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-3 shadow-md">
           <div className="flex items-start gap-3">
@@ -187,12 +186,16 @@ const SwipeFeed = () => {
               <p className="text-xs font-black text-blue-600 uppercase tracking-wider mb-0.5">AI Understood</p>
               <p className="text-sm text-gray-700 leading-snug">
                 Finding items for <span className="font-bold">"{aiContext?.query}"</span>
-                {aiContext?.budget !== 99999 && (
+                
+                {/* FIX: explicitly require aiContext to be truthy first */}
+                {aiContext && aiContext.budget !== 99999 && (
                   <span className="bg-green-100 text-green-800 px-1.5 py-0.5 rounded ml-1 font-semibold text-xs whitespace-nowrap">
                     ≤ ₹{aiContext.budget}
                   </span>
                 )}
-                {aiContext?.delivery !== 30 && (
+                
+                {/* FIX: explicitly require aiContext to be truthy first */}
+                {aiContext && aiContext.delivery !== 30 && (
                   <span className="bg-purple-100 text-purple-800 px-1.5 py-0.5 rounded ml-1 font-semibold text-xs whitespace-nowrap">
                     Fast (≤ {aiContext.delivery} days)
                   </span>
