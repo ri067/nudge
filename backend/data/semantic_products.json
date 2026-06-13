@@ -2963,706 +2963,702 @@
     },
     {
         "id": 201,
-        "name": "Trekking Backpack 45L",
+        "name": "4-Person Dome Tent",
         "category": "outdoor",
-        "brand": "Wildcraft",
-        "price": 1062,
+        "brand": "Coleman",
+        "price": 2802,
         "tags": [
-            "backpack",
-            "trekking",
-            "hiking",
+            "camping",
+            "tent",
             "outdoor",
-            "travel"
+            "family"
         ],
-        "description": "Durable water-resistant backpack designed for multi-day treks and outdoor expeditions."
+        "description": "Spacious dome tent with rainfly, ideal for family camping trips."
     },
     {
         "id": 202,
-        "name": "Training Gloves",
-        "category": "fitness",
-        "brand": "Nike",
-        "price": 4617,
+        "name": "Insulated Sleeping Bag -5\u00b0C",
+        "category": "outdoor",
+        "brand": "Forclaz",
+        "price": 3145,
         "tags": [
-            "fitness",
-            "gym",
-            "gloves",
-            "training"
+            "sleeping bag",
+            "camping",
+            "outdoor",
+            "winter"
         ],
-        "description": "Padded grip gloves designed for weightlifting and gym training sessions."
+        "description": "Cold-weather sleeping bag rated to -5\u00b0C for high-altitude treks."
     },
     {
         "id": 203,
-        "name": "Vitamin C Face Serum",
-        "category": "skincare",
-        "brand": "Mamaearth",
-        "price": 2055,
+        "name": "Portable Camping Stove",
+        "category": "outdoor",
+        "brand": "Decathlon",
+        "price": 3575,
         "tags": [
-            "skincare",
-            "serum",
-            "face",
-            "brightening"
+            "stove",
+            "camping",
+            "cooking",
+            "outdoor"
         ],
-        "description": "Vitamin C enriched serum for brightening and even skin tone."
+        "description": "Compact butane stove for quick meals during outdoor expeditions."
     },
     {
         "id": 204,
-        "name": "Wireless Earbuds",
-        "category": "electronics",
-        "brand": "boAt",
-        "price": 4614,
+        "name": "Adjustable Dumbbell Set 20kg",
+        "category": "fitness",
+        "brand": "Cult.fit",
+        "price": 4782,
         "tags": [
-            "earbuds",
-            "audio",
-            "wireless",
-            "electronics"
+            "dumbbell",
+            "fitness",
+            "home gym",
+            "strength"
         ],
-        "description": "True wireless earbuds with deep bass and long battery life."
+        "description": "Space-saving adjustable dumbbells for varied strength workouts at home."
     },
     {
         "id": 205,
-        "name": "Instant Coffee 200g",
-        "category": "grocery",
-        "brand": "Nescafe",
-        "price": 203,
+        "name": "Yoga Mat 6mm",
+        "category": "fitness",
+        "brand": "Decathlon",
+        "price": 3399,
         "tags": [
-            "coffee",
-            "grocery",
-            "beverage",
-            "instant"
+            "yoga",
+            "mat",
+            "fitness",
+            "exercise"
         ],
-        "description": "Smooth instant coffee granules for a quick energizing brew."
+        "description": "Extra-cushioned non-slip mat for yoga and floor exercises."
     },
     {
         "id": 206,
-        "name": "LED Bulb 9W Pack of 4",
-        "category": "home",
-        "brand": "Philips",
-        "price": 2907,
+        "name": "Skipping Rope with Counter",
+        "category": "fitness",
+        "brand": "Strauss",
+        "price": 3583,
         "tags": [
-            "home",
-            "lighting",
-            "led",
-            "energy saving"
+            "skipping rope",
+            "cardio",
+            "fitness",
+            "home workout"
         ],
-        "description": "Energy-efficient LED bulbs offering bright cool white light."
+        "description": "Digital counter skipping rope for tracking cardio sessions."
     },
     {
         "id": 207,
-        "name": "Men's Slim Fit Jeans",
-        "category": "fashion",
-        "brand": "Levis",
-        "price": 2316,
+        "name": "BCAA Powder 250g",
+        "category": "fitness",
+        "brand": "Optimum Nutrition",
+        "price": 5736,
         "tags": [
-            "fashion",
-            "jeans",
-            "men",
-            "casual"
+            "supplement",
+            "fitness",
+            "recovery",
+            "amino acids"
         ],
-        "description": "Comfortable slim-fit denim jeans for everyday casual wear."
+        "description": "Branched-chain amino acid powder to aid muscle recovery post-workout."
     },
     {
         "id": 208,
-        "name": "Cat Food Pouches Pack of 12",
-        "category": "pets",
-        "brand": "Whiskas",
-        "price": 795,
+        "name": "Niacinamide Serum 30ml",
+        "category": "skincare",
+        "brand": "The Ordinary",
+        "price": 948,
         "tags": [
-            "pets",
-            "cat food",
-            "nutrition",
-            "pouches"
+            "skincare",
+            "serum",
+            "face",
+            "oil control"
         ],
-        "description": "Tasty wet cat food pouches with essential nutrients."
+        "description": "Lightweight serum that targets blemishes and controls excess oil."
     },
     {
         "id": 209,
-        "name": "Ball Pen Pack of 10",
-        "category": "study",
-        "brand": "Parker",
-        "price": 1725,
+        "name": "Green Tea Face Wash",
+        "category": "skincare",
+        "brand": "Plum",
+        "price": 5723,
         "tags": [
-            "study",
-            "pen",
-            "stationery",
-            "writing"
+            "skincare",
+            "face wash",
+            "cleanser",
+            "oily skin"
         ],
-        "description": "Smooth-writing ball pens suitable for daily writing needs."
+        "description": "Antioxidant-rich face wash that clears pores for oily skin types."
     },
     {
         "id": 210,
-        "name": "Hard Shell Trolley Bag",
-        "category": "travel",
-        "brand": "Safari",
-        "price": 2057,
+        "name": "Sunscreen SPF 50",
+        "category": "skincare",
+        "brand": "Lakme",
+        "price": 3112,
         "tags": [
-            "travel",
-            "luggage",
-            "trolley",
-            "bag"
+            "skincare",
+            "sunscreen",
+            "spf",
+            "sun protection"
         ],
-        "description": "Lightweight hard-shell trolley with smooth-rolling wheels for travel."
+        "description": "Broad-spectrum sunscreen offering lightweight daily sun protection."
     },
     {
         "id": 211,
-        "name": "Insulated Water Bottle",
-        "category": "seasonal",
-        "brand": "Cello",
-        "price": 1482,
+        "name": "Smart Band 8",
+        "category": "electronics",
+        "brand": "Mi",
+        "price": 4855,
         "tags": [
-            "seasonal",
-            "bottle",
-            "insulated",
-            "summer"
+            "smartband",
+            "wearable",
+            "fitness tracker",
+            "electronics"
         ],
-        "description": "Double-walled insulated bottle keeping drinks cold for hours."
+        "description": "Fitness band with heart-rate tracking, SpO2 monitor, and AMOLED display."
     },
     {
         "id": 212,
-        "name": "Digital BP Monitor",
-        "category": "health",
-        "brand": "Dr Trust",
-        "price": 734,
+        "name": "Bluetooth Headphones WH-CH520",
+        "category": "electronics",
+        "brand": "Sony",
+        "price": 2508,
         "tags": [
-            "health",
-            "bp monitor",
-            "medical",
-            "device"
+            "headphones",
+            "audio",
+            "bluetooth",
+            "wireless"
         ],
-        "description": "Accurate digital blood pressure monitor for home use."
+        "description": "Lightweight on-ear headphones with up to 50 hours of battery life."
     },
     {
         "id": 213,
-        "name": "Classic Building Bricks Set",
-        "category": "toys",
-        "brand": "LEGO",
-        "price": 4712,
+        "name": "Smart Watch GT",
+        "category": "electronics",
+        "brand": "Realme",
+        "price": 1395,
         "tags": [
-            "toys",
-            "lego",
-            "building",
-            "kids"
+            "smartwatch",
+            "wearable",
+            "electronics",
+            "fitness"
         ],
-        "description": "Creative building bricks set encouraging imaginative play for kids."
+        "description": "Smartwatch with HD display, multiple sport modes, and long battery life."
     },
     {
         "id": 214,
-        "name": "Scented Candle Jar",
-        "category": "decoration",
-        "brand": "Yankee Candle",
-        "price": 2734,
+        "name": "Type-C Fast Charging Cable",
+        "category": "electronics",
+        "brand": "Ambrane",
+        "price": 4721,
         "tags": [
-            "decoration",
-            "candle",
-            "scented",
-            "home"
+            "cable",
+            "charging",
+            "electronics",
+            "type-c"
         ],
-        "description": "Long-lasting scented candle creating a cozy home atmosphere."
+        "description": "Durable braided cable supporting fast charging for Type-C devices."
     },
     {
         "id": 215,
-        "name": "Aviator Sunglasses",
-        "category": "sunglasses",
-        "brand": "Fastrack",
-        "price": 2727,
+        "name": "Table Fan 400mm",
+        "category": "electronics",
+        "brand": "Crompton",
+        "price": 4900,
         "tags": [
-            "sunglasses",
-            "aviator",
-            "fashion",
-            "UV protection"
+            "fan",
+            "appliance",
+            "electronics",
+            "cooling"
         ],
-        "description": "Stylish aviator sunglasses with UV-protected lenses."
+        "description": "High-speed table fan with adjustable tilt for effective room cooling."
     },
     {
         "id": 216,
-        "name": "Trekking Backpack 45L - Variant 2",
-        "category": "outdoor",
-        "brand": "Wildcraft",
-        "price": 1320,
+        "name": "Ready to Eat Poha 200g",
+        "category": "grocery",
+        "brand": "MTR",
+        "price": 5590,
         "tags": [
-            "backpack",
-            "trekking",
-            "hiking",
-            "outdoor",
-            "travel"
+            "ready to eat",
+            "grocery",
+            "breakfast",
+            "instant"
         ],
-        "description": "Durable water-resistant backpack designed for multi-day treks and outdoor expeditions."
+        "description": "Quick and authentic poha that's ready to eat in minutes."
     },
     {
         "id": 217,
-        "name": "Training Gloves - Variant 2",
-        "category": "fitness",
-        "brand": "Nike",
-        "price": 4938,
+        "name": "Cooking Oil 1L",
+        "category": "grocery",
+        "brand": "Saffola",
+        "price": 3800,
         "tags": [
-            "fitness",
-            "gym",
-            "gloves",
-            "training"
+            "cooking oil",
+            "grocery",
+            "kitchen",
+            "health"
         ],
-        "description": "Padded grip gloves designed for weightlifting and gym training sessions."
+        "description": "Heart-healthy refined cooking oil suitable for everyday cooking."
     },
     {
         "id": 218,
-        "name": "Vitamin C Face Serum - Variant 2",
-        "category": "skincare",
-        "brand": "Mamaearth",
-        "price": 1283,
+        "name": "Namkeen Mixture 400g",
+        "category": "grocery",
+        "brand": "Haldiram's",
+        "price": 1526,
         "tags": [
-            "skincare",
-            "serum",
-            "face",
-            "brightening"
+            "snack",
+            "grocery",
+            "namkeen",
+            "savory"
         ],
-        "description": "Vitamin C enriched serum for brightening and even skin tone."
+        "description": "Crunchy traditional namkeen mix perfect for tea-time snacking."
     },
     {
         "id": 219,
-        "name": "Wireless Earbuds - Variant 2",
-        "category": "electronics",
-        "brand": "boAt",
-        "price": 1402,
+        "name": "Digestive Biscuits 400g",
+        "category": "grocery",
+        "brand": "Britannia",
+        "price": 2178,
         "tags": [
-            "earbuds",
-            "audio",
-            "wireless",
-            "electronics"
+            "biscuit",
+            "grocery",
+            "snack",
+            "digestive"
         ],
-        "description": "True wireless earbuds with deep bass and long battery life."
+        "description": "Whole wheat digestive biscuits for a wholesome light snack."
     },
     {
         "id": 220,
-        "name": "Instant Coffee 200g - Variant 2",
-        "category": "grocery",
-        "brand": "Nescafe",
-        "price": 3984,
+        "name": "Electric Kettle 1.8L",
+        "category": "home",
+        "brand": "Wonderchef",
+        "price": 4651,
         "tags": [
-            "coffee",
-            "grocery",
-            "beverage",
-            "instant"
+            "home",
+            "kitchen",
+            "appliance",
+            "kettle"
         ],
-        "description": "Smooth instant coffee granules for a quick energizing brew."
+        "description": "Stainless steel electric kettle with auto shut-off for quick boiling."
     },
     {
         "id": 221,
-        "name": "LED Bulb 9W Pack of 4 - Variant 2",
+        "name": "Mixer Grinder 750W",
         "category": "home",
-        "brand": "Philips",
-        "price": 1088,
+        "brand": "Bajaj",
+        "price": 3552,
         "tags": [
             "home",
-            "lighting",
-            "led",
-            "energy saving"
+            "kitchen",
+            "appliance",
+            "mixer"
         ],
-        "description": "Energy-efficient LED bulbs offering bright cool white light."
+        "description": "Powerful mixer grinder with multiple jars for everyday kitchen tasks."
     },
     {
         "id": 222,
-        "name": "Men's Slim Fit Jeans - Variant 2",
-        "category": "fashion",
-        "brand": "Levis",
-        "price": 3866,
+        "name": "Cotton Bedsheet Double",
+        "category": "home",
+        "brand": "Spaces",
+        "price": 2050,
         "tags": [
-            "fashion",
-            "jeans",
-            "men",
-            "casual"
+            "home",
+            "bedsheet",
+            "bedding",
+            "cotton"
         ],
-        "description": "Comfortable slim-fit denim jeans for everyday casual wear."
+        "description": "Soft cotton double bedsheet with matching pillow covers."
     },
     {
         "id": 223,
-        "name": "Cat Food Pouches Pack of 12 - Variant 2",
-        "category": "pets",
-        "brand": "Whiskas",
-        "price": 1021,
+        "name": "Pressure Cooker 5L",
+        "category": "home",
+        "brand": "Pigeon",
+        "price": 2459,
         "tags": [
-            "pets",
-            "cat food",
-            "nutrition",
-            "pouches"
+            "home",
+            "kitchen",
+            "cookware",
+            "pressure cooker"
         ],
-        "description": "Tasty wet cat food pouches with essential nutrients."
+        "description": "Aluminium pressure cooker designed for fast and even cooking."
     },
     {
         "id": 224,
-        "name": "Ball Pen Pack of 10 - Variant 2",
-        "category": "study",
-        "brand": "Parker",
-        "price": 1473,
+        "name": "Women's Casual Dress",
+        "category": "fashion",
+        "brand": "H&M",
+        "price": 2760,
         "tags": [
-            "study",
-            "pen",
-            "stationery",
-            "writing"
+            "fashion",
+            "dress",
+            "women",
+            "casual"
         ],
-        "description": "Smooth-writing ball pens suitable for daily writing needs."
+        "description": "Comfortable cotton-blend casual dress for everyday wear."
     },
     {
         "id": 225,
-        "name": "Hard Shell Trolley Bag - Variant 2",
-        "category": "travel",
-        "brand": "Safari",
-        "price": 1066,
+        "name": "Men's Formal Shoes",
+        "category": "fashion",
+        "brand": "Bata",
+        "price": 3890,
         "tags": [
-            "travel",
-            "luggage",
-            "trolley",
-            "bag"
+            "fashion",
+            "shoes",
+            "formal",
+            "men"
         ],
-        "description": "Lightweight hard-shell trolley with smooth-rolling wheels for travel."
+        "description": "Classic leather formal shoes suitable for office and occasions."
     },
     {
         "id": 226,
-        "name": "Insulated Water Bottle - Variant 2",
-        "category": "seasonal",
-        "brand": "Cello",
-        "price": 795,
+        "name": "Men's Formal Shirt",
+        "category": "fashion",
+        "brand": "Van Heusen",
+        "price": 5346,
         "tags": [
-            "seasonal",
-            "bottle",
-            "insulated",
-            "summer"
+            "fashion",
+            "shirt",
+            "formal",
+            "men"
         ],
-        "description": "Double-walled insulated bottle keeping drinks cold for hours."
+        "description": "Wrinkle-resistant formal shirt ideal for workwear."
     },
     {
         "id": 227,
-        "name": "Digital BP Monitor - Variant 2",
-        "category": "health",
-        "brand": "Dr Trust",
-        "price": 1180,
+        "name": "Puppy Dog Food 1.5kg",
+        "category": "pets",
+        "brand": "Royal Canin",
+        "price": 1479,
         "tags": [
-            "health",
-            "bp monitor",
-            "medical",
-            "device"
+            "pets",
+            "dog food",
+            "puppy",
+            "nutrition"
         ],
-        "description": "Accurate digital blood pressure monitor for home use."
+        "description": "Specially formulated nutrition to support healthy puppy growth."
     },
     {
         "id": 228,
-        "name": "Classic Building Bricks Set - Variant 2",
-        "category": "toys",
-        "brand": "LEGO",
-        "price": 3616,
+        "name": "Pet Shampoo 200ml",
+        "category": "pets",
+        "brand": "Himalaya",
+        "price": 1389,
         "tags": [
-            "toys",
-            "lego",
-            "building",
-            "kids"
+            "pets",
+            "shampoo",
+            "grooming",
+            "care"
         ],
-        "description": "Creative building bricks set encouraging imaginative play for kids."
+        "description": "Gentle herbal shampoo for healthy skin and shiny coat."
     },
     {
         "id": 229,
-        "name": "Scented Candle Jar - Variant 2",
-        "category": "decoration",
-        "brand": "Yankee Candle",
-        "price": 3209,
+        "name": "Color Pencils Set of 24",
+        "category": "study",
+        "brand": "Faber-Castell",
+        "price": 1853,
         "tags": [
-            "decoration",
-            "candle",
-            "scented",
-            "home"
+            "study",
+            "color pencils",
+            "stationery",
+            "art"
         ],
-        "description": "Long-lasting scented candle creating a cozy home atmosphere."
+        "description": "Vibrant color pencil set ideal for school art projects."
     },
     {
         "id": 230,
-        "name": "Polarized Wayfarer Sunglasses - Variant 2",
-        "category": "sunglasses",
-        "brand": "Polaroid",
-        "price": 2919,
+        "name": "Pencil Box Pack of 10",
+        "category": "study",
+        "brand": "Natraj",
+        "price": 4034,
         "tags": [
-            "sunglasses",
-            "polarized",
-            "wayfarer",
-            "fashion"
+            "study",
+            "pencil",
+            "stationery",
+            "school"
         ],
-        "description": "Polarized wayfarer sunglasses reducing glare for clear vision."
+        "description": "Smooth-writing graphite pencils suitable for daily school use."
     },
     {
         "id": 231,
-        "name": "Trekking Backpack 45L - Variant 3",
-        "category": "outdoor",
-        "brand": "Wildcraft",
-        "price": 731,
+        "name": "Travel Backpack 30L",
+        "category": "travel",
+        "brand": "Decathlon",
+        "price": 4113,
         "tags": [
+            "travel",
             "backpack",
-            "trekking",
-            "hiking",
-            "outdoor",
-            "travel"
+            "luggage",
+            "bag"
         ],
-        "description": "Durable water-resistant backpack designed for multi-day treks and outdoor expeditions."
+        "description": "Versatile 30L backpack suitable for weekend getaways and day trips."
     },
     {
         "id": 232,
-        "name": "Training Gloves - Variant 3",
-        "category": "fitness",
-        "brand": "Nike",
-        "price": 730,
+        "name": "Laptop Trolley Bag",
+        "category": "travel",
+        "brand": "Skybags",
+        "price": 2318,
         "tags": [
-            "fitness",
-            "gym",
-            "gloves",
-            "training"
+            "travel",
+            "trolley",
+            "laptop bag",
+            "luggage"
         ],
-        "description": "Padded grip gloves designed for weightlifting and gym training sessions."
+        "description": "Trolley bag with dedicated laptop compartment for business travel."
     },
     {
         "id": 233,
-        "name": "Vitamin C Face Serum - Variant 3",
-        "category": "skincare",
-        "brand": "Mamaearth",
-        "price": 1233,
+        "name": "Personal Air Cooler",
+        "category": "seasonal",
+        "brand": "Symphony",
+        "price": 4477,
         "tags": [
-            "skincare",
-            "serum",
-            "face",
-            "brightening"
+            "seasonal",
+            "cooler",
+            "summer",
+            "appliance"
         ],
-        "description": "Vitamin C enriched serum for brightening and even skin tone."
+        "description": "Compact air cooler delivering effective cooling for personal spaces."
     },
     {
         "id": 234,
-        "name": "Wireless Earbuds - Variant 3",
-        "category": "electronics",
-        "brand": "boAt",
-        "price": 3484,
+        "name": "Winter Jacket",
+        "category": "seasonal",
+        "brand": "Wildcraft",
+        "price": 2591,
         "tags": [
-            "earbuds",
-            "audio",
-            "wireless",
-            "electronics"
+            "seasonal",
+            "jacket",
+            "winter",
+            "warm"
         ],
-        "description": "True wireless earbuds with deep bass and long battery life."
+        "description": "Insulated winter jacket designed to keep you warm in cold weather."
     },
     {
         "id": 235,
-        "name": "Instant Coffee 200g - Variant 3",
-        "category": "grocery",
-        "brand": "Nescafe",
-        "price": 3517,
+        "name": "Room Heater",
+        "category": "seasonal",
+        "brand": "Usha",
+        "price": 1975,
         "tags": [
-            "coffee",
-            "grocery",
-            "beverage",
-            "instant"
+            "seasonal",
+            "heater",
+            "winter",
+            "appliance"
         ],
-        "description": "Smooth instant coffee granules for a quick energizing brew."
+        "description": "Compact room heater providing quick warmth during winter months."
     },
     {
         "id": 236,
-        "name": "LED Bulb 9W Pack of 4 - Variant 3",
-        "category": "home",
-        "brand": "Philips",
-        "price": 1045,
+        "name": "Glucose Monitor Kit",
+        "category": "health",
+        "brand": "Accu-Chek",
+        "price": 1748,
         "tags": [
-            "home",
-            "lighting",
-            "led",
-            "energy saving"
+            "health",
+            "glucose monitor",
+            "diabetes",
+            "medical"
         ],
-        "description": "Energy-efficient LED bulbs offering bright cool white light."
+        "description": "Easy-to-use blood glucose monitor for daily diabetes management."
     },
     {
         "id": 237,
-        "name": "Men's Slim Fit Jeans - Variant 3",
-        "category": "fashion",
-        "brand": "Levis",
-        "price": 1653,
+        "name": "Liv 52 Tablets",
+        "category": "health",
+        "brand": "Himalaya",
+        "price": 387,
         "tags": [
-            "fashion",
-            "jeans",
-            "men",
-            "casual"
+            "health",
+            "liver care",
+            "supplement",
+            "ayurveda"
         ],
-        "description": "Comfortable slim-fit denim jeans for everyday casual wear."
+        "description": "Ayurvedic supplement that supports healthy liver function."
     },
     {
         "id": 238,
-        "name": "Cat Food Pouches Pack of 12 - Variant 3",
-        "category": "pets",
-        "brand": "Whiskas",
-        "price": 4658,
+        "name": "Remote Control Car",
+        "category": "toys",
+        "brand": "Funskool",
+        "price": 2970,
         "tags": [
-            "pets",
-            "cat food",
-            "nutrition",
-            "pouches"
+            "toys",
+            "rc car",
+            "kids",
+            "remote control"
         ],
-        "description": "Tasty wet cat food pouches with essential nutrients."
+        "description": "High-speed remote control car designed for indoor and outdoor play."
     },
     {
         "id": 239,
-        "name": "Ball Pen Pack of 10 - Variant 3",
-        "category": "study",
-        "brand": "Parker",
-        "price": 2086,
+        "name": "Doll House Playset",
+        "category": "toys",
+        "brand": "Barbie",
+        "price": 4000,
         "tags": [
-            "study",
-            "pen",
-            "stationery",
-            "writing"
+            "toys",
+            "doll house",
+            "kids",
+            "playset"
         ],
-        "description": "Smooth-writing ball pens suitable for daily writing needs."
+        "description": "Multi-room doll house playset that sparks imaginative play."
     },
     {
         "id": 240,
-        "name": "Hard Shell Trolley Bag - Variant 3",
-        "category": "travel",
-        "brand": "Safari",
-        "price": 630,
+        "name": "String Fairy Lights",
+        "category": "decoration",
+        "brand": "Philips",
+        "price": 5149,
         "tags": [
-            "travel",
-            "luggage",
-            "trolley",
-            "bag"
+            "decoration",
+            "lights",
+            "fairy lights",
+            "festive"
         ],
-        "description": "Lightweight hard-shell trolley with smooth-rolling wheels for travel."
+        "description": "Warm white string lights perfect for festive home decoration."
     },
     {
         "id": 241,
-        "name": "Insulated Water Bottle - Variant 3",
-        "category": "seasonal",
-        "brand": "Cello",
-        "price": 3877,
+        "name": "Wooden Wall Shelf",
+        "category": "decoration",
+        "brand": "Generic",
+        "price": 5561,
         "tags": [
-            "seasonal",
-            "bottle",
-            "insulated",
-            "summer"
+            "decoration",
+            "shelf",
+            "wall decor",
+            "storage"
         ],
-        "description": "Double-walled insulated bottle keeping drinks cold for hours."
+        "description": "Rustic wooden wall shelf for displaying decor items or books."
     },
     {
         "id": 242,
-        "name": "Digital BP Monitor - Variant 3",
-        "category": "health",
-        "brand": "Dr Trust",
-        "price": 1705,
-        "tags": [
-            "health",
-            "bp monitor",
-            "medical",
-            "device"
-        ],
-        "description": "Accurate digital blood pressure monitor for home use."
-    },
-    {
-        "id": 243,
-        "name": "Classic Building Bricks Set - Variant 3",
-        "category": "toys",
-        "brand": "LEGO",
-        "price": 2719,
-        "tags": [
-            "toys",
-            "lego",
-            "building",
-            "kids"
-        ],
-        "description": "Creative building bricks set encouraging imaginative play for kids."
-    },
-    {
-        "id": 244,
-        "name": "Scented Candle Jar - Variant 3",
-        "category": "decoration",
-        "brand": "Yankee Candle",
-        "price": 4500,
-        "tags": [
-            "decoration",
-            "candle",
-            "scented",
-            "home"
-        ],
-        "description": "Long-lasting scented candle creating a cozy home atmosphere."
-    },
-    {
-        "id": 245,
-        "name": "Aviator Sunglasses - Variant 3",
+        "name": "Round Sunglasses",
         "category": "sunglasses",
-        "brand": "Fastrack",
-        "price": 706,
+        "brand": "Vincent Chase",
+        "price": 5358,
         "tags": [
             "sunglasses",
-            "aviator",
+            "round",
             "fashion",
             "UV protection"
         ],
-        "description": "Stylish aviator sunglasses with UV-protected lenses."
+        "description": "Trendy round-frame sunglasses with UV-protected lenses."
+    },
+    {
+        "id": 243,
+        "name": "Sports Sunglasses",
+        "category": "sunglasses",
+        "brand": "Carrera",
+        "price": 845,
+        "tags": [
+            "sunglasses",
+            "sports",
+            "UV protection",
+            "fashion"
+        ],
+        "description": "Lightweight sports sunglasses designed for active outdoor use."
+    },
+    {
+        "id": 244,
+        "name": "Hiking Boots",
+        "category": "outdoor",
+        "brand": "AdventurePro",
+        "price": 3962,
+        "tags": [
+            "hiking",
+            "boots",
+            "outdoor",
+            "footwear"
+        ],
+        "description": "Sturdy waterproof hiking boots with reinforced ankle support."
+    },
+    {
+        "id": 245,
+        "name": "Smart Doorbell",
+        "category": "electronics",
+        "brand": "Noise",
+        "price": 3020,
+        "tags": [
+            "smart home",
+            "doorbell",
+            "electronics",
+            "security"
+        ],
+        "description": "WiFi-enabled video doorbell with motion alerts for home security."
     },
     {
         "id": 246,
-        "name": "Trekking Backpack 45L - Variant 1",
-        "category": "outdoor",
-        "brand": "Wildcraft",
-        "price": 4892,
+        "name": "Vacuum Insulated Flask 1L",
+        "category": "home",
+        "brand": "Milton",
+        "price": 5472,
         "tags": [
-            "backpack",
-            "trekking",
-            "hiking",
-            "outdoor",
-            "travel"
+            "home",
+            "flask",
+            "insulated",
+            "kitchen"
         ],
-        "description": "Durable water-resistant backpack designed for multi-day treks and outdoor expeditions."
+        "description": "Vacuum-insulated flask that keeps beverages hot or cold for hours."
     },
     {
         "id": 247,
-        "name": "Training Gloves - Variant 1",
+        "name": "Running Shoes",
         "category": "fitness",
-        "brand": "Nike",
-        "price": 4432,
+        "brand": "Puma",
+        "price": 1878,
         "tags": [
             "fitness",
-            "gym",
-            "gloves",
-            "training"
+            "shoes",
+            "running",
+            "sportswear"
         ],
-        "description": "Padded grip gloves designed for weightlifting and gym training sessions."
+        "description": "Lightweight running shoes with cushioned soles for daily runs."
     },
     {
         "id": 248,
-        "name": "Vitamin C Face Serum - Variant 1",
-        "category": "skincare",
-        "brand": "Mamaearth",
-        "price": 2325,
+        "name": "Cheese Slices 200g",
+        "category": "grocery",
+        "brand": "Amul",
+        "price": 4954,
         "tags": [
-            "skincare",
-            "serum",
-            "face",
-            "brightening"
+            "grocery",
+            "cheese",
+            "dairy",
+            "snack"
         ],
-        "description": "Vitamin C enriched serum for brightening and even skin tone."
+        "description": "Creamy cheese slices ideal for sandwiches and quick snacks."
     },
     {
         "id": 249,
-        "name": "Wireless Earbuds - Variant 1",
-        "category": "electronics",
-        "brand": "boAt",
-        "price": 744,
+        "name": "Casual Leather Sandals",
+        "category": "fashion",
+        "brand": "Woodland",
+        "price": 3048,
         "tags": [
-            "earbuds",
-            "audio",
-            "wireless",
-            "electronics"
+            "fashion",
+            "sandals",
+            "footwear",
+            "casual"
         ],
-        "description": "True wireless earbuds with deep bass and long battery life."
+        "description": "Durable leather sandals designed for everyday comfort."
     },
     {
         "id": 250,
-        "name": "Instant Coffee 200g - Variant 1",
-        "category": "grocery",
-        "brand": "Nescafe",
-        "price": 750,
+        "name": "Monopoly Board Game",
+        "category": "toys",
+        "brand": "Hasbro",
+        "price": 4259,
         "tags": [
-            "coffee",
-            "grocery",
-            "beverage",
-            "instant"
+            "toys",
+            "board game",
+            "family",
+            "classic"
         ],
-        "description": "Smooth instant coffee granules for a quick energizing brew."
+        "description": "Classic property-trading board game for family game nights."
     }
 ]
