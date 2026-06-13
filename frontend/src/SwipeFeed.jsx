@@ -161,9 +161,18 @@ const SwipeFeed = () => {
   const nextProduct = products[1]; // GRAB THE SECOND PRODUCT
 
   const cardStyle = isDragging
-    ? { transform: `translate(${dragOffset.x}px, ${dragOffset.y * 0.2}px) rotate(${dragOffset.x * 0.05}deg)`, transition: 'none' }
-    : { transform: 'translate(0px, 0px) rotate(0deg)', transition: 'transform 0.3s ease-out' };
-
+  ? { 
+      // Use translate3d instead of translate to force GPU rendering
+      transform: `translate3d(${dragOffset.x}px, ${dragOffset.y * 0.2}px, 0) rotate(${dragOffset.x * 0.05}deg)`, 
+      transition: 'none',
+      // Tell the browser to prepare for heavy lifting
+      willChange: 'transform' 
+    }
+  : { 
+      transform: 'translate3d(0px, 0px, 0) rotate(0deg)', 
+      transition: 'transform 0.3s ease-out',
+      willChange: 'transform'
+    };
   return (
     <div className="relative w-full h-full p-4 flex flex-col pt-8 bg-gray-50 overflow-hidden">
       
@@ -218,7 +227,7 @@ const SwipeFeed = () => {
           <>
             {/* --- REAL NEXT CARD (BACKGROUND) --- */}
             {nextProduct && (
-              <div className="absolute w-80 h-[28rem] bg-white rounded-3xl border border-gray-200 scale-95 translate-y-5 opacity-70 z-0 flex flex-col overflow-hidden shadow-sm">
+              <div className="absolute w-80 h-[28rem] bg-white touch-none rounded-3xl border border-gray-200 scale-95 translate-y-5 opacity-70 z-0 flex flex-col overflow-hidden shadow-sm">
                 <div className="h-3/5 relative border-b border-gray-100 bg-gray-100">
                   {/* Image is slightly blurred/grayscale to push it to the background visually */}
                   <img src={`/api/images/product_${nextProduct.id}.jpg`} className="w-full h-full object-cover grayscale-[30%] blur-[1px] pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
@@ -233,7 +242,7 @@ const SwipeFeed = () => {
             )}
 
             {/* --- ACTIVE TOP CARD (FOREGROUND) --- */}
-            <div onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={(e) => handlePointerUp(e, activeProduct)} style={cardStyle} className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10">
+            <div onPointerDown={handlePointerDown} onPointerMove={handlePointerMove} onPointerUp={(e) => handlePointerUp(e, activeProduct)} style={cardStyle} className="absolute w-80 h-[28rem] bg-white touch-none rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10">
               
               <div className="h-3/5 relative border-b border-gray-100 bg-gray-100">
                 <img src={`/api/images/product_${activeProduct.id}.jpg`} className="w-full h-full object-cover pointer-events-none" onError={(e) => e.target.src = 'https://via.placeholder.com/300?text=No+Image'} />
