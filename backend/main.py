@@ -178,18 +178,22 @@ async def search(req: SearchRequest):
                 item["delivery_days"] = item_delivery
                 item["user_context"] = get_user_context(item["id"], user_signals)
                 retrieved.append(item)
-                if len(retrieved) >= req.top_k: break
                 
         print(f"🔍 [RAG] Retrieved {len(retrieved)} products from FAISS index")
 
     # 3. Reasoning
     try:
         context_query = query_enriched if is_feed_refill else req.query
-        final_payload = await enrich_products_with_reasons(retrieved, context_query)
-        print(f"✨ [OUTPUT] Generated {len(final_payload)} reasoned recommendations.")
+        final_payload = await enrich_products_with_reasons(
+            products=retrieved, 
+            user_query=context_query, 
+            user_signals=user_signals, 
+            budget=budget
+        )
+        print(f"✨ [OUTPUT] Generated {len(final_payload)} cards (mix of bundles & individuals).")
     except Exception as e:
         print(f"❌ [ERROR] Reasoning Generation Failed: {e}")
-        final_payload = retrieved
+        final_payload = retrieved[:req.top_k]
         
     # FIX: Include ai_context for the React UI Chip
     return {
