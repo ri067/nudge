@@ -134,20 +134,22 @@ const SwipeFeed = () => {
     if (direction === 'right') {setCartItems((prev) => [...prev, product]);}
     else if (direction === 'left') {
       // --- FAKE AI PREFERENCE LEARNING ---
-      const productName = product.type === 'bundle' ? product.tier_name : product.name;
-      // Grab the last word as a crude "category" (e.g. "Hiking Socks" -> "socks")
-      const category = productName.split(' ').pop().toLowerCase();
+      const category = product.category 
+        ? product.category.toLowerCase() 
+        : (product.type === 'bundle' ? 'kit' : 'item');
 
-      setLeftSwipeMemory(prev => {
-        const count = (prev[category] || 0) + 1;
-        // On the 2nd left swipe of the same category, ban it!
-        if (count === 2 && !bannedTerms.includes(category)) { 
-          setBannedTerms(banned => [...banned, category]);
-          setToastMessage(`Got it. Showing fewer "${category}" suggestions.`);
-          setTimeout(() => setToastMessage(null), 4000); // Hide after 4s
-        }
-        return { ...prev, [category]: count };
-      });
+      // 2. Ignore generic fallbacks so we don't accidentally ban everything
+      if (category !== 'item' && category !== 'kit') {
+        setLeftSwipeMemory(prev => {
+          const count = (prev[category] || 0) + 1;
+          if (count === 2 && !bannedTerms.includes(category)) { 
+            setBannedTerms(banned => [...banned, category]);
+            setToastMessage(`Got it. Showing fewer "${category}" suggestions.`);
+            setTimeout(() => setToastMessage(null), 4000); 
+          }
+          return { ...prev, [category]: count };
+        });
+      }
     }
     setProducts((prev) => prev.filter((p) => p.id !== (product.id || product.tier_name)));
     setDragOffset({ x: 0, y: 0 });
@@ -225,8 +227,15 @@ const SwipeFeed = () => {
   // VIEW: SWIPE FEED
   // ==========================================
   const visibleProducts = products.filter(p => {
-    const pName = p.type === 'bundle' ? p.tier_name : p.name;
-    return !bannedTerms.some(banned => pName.toLowerCase().includes(banned));
+    if (p.type === 'bundle') {
+      // If it's a bundle, hide it if ANY of its sub-items belong to a banned category
+      return !p.items?.some(subItem => 
+        subItem.category && bannedTerms.includes(subItem.category.toLowerCase())
+      );
+    }
+    // If it's an individual item, check its category directly
+    const pCat = p.category ? p.category.toLowerCase() : '';
+    return !bannedTerms.includes(pCat);
   });
 
   const activeProduct = products[0];
