@@ -1979,5 +1979,260 @@
         "price": 249,
         "tags": ["summer", "hygiene", "apparel", "anti stain", "seasonal"],
         "description": "Absorbent, peel-and-stick premium disposable garment sheets shielding office shirts from sweat patches."
+    },
+    {
+        "id": 182,
+        "name": "Boat Rockerz 450 Bluetooth Headphones",
+        "category": "electronics",
+        "brand": "boAt",
+        "price": 1499,
+        "tags": [
+            "headphones",
+            "audio",
+            "music",
+            "bluetooth",
+            "wireless",
+            "bass"
+        ],
+        "description": "On-ear wireless headphones featuring massive dynamic drivers and up to 15 hours of playback."
+    },
+    {
+        "id": 183,
+        "name": "Logitech Pebble M350 Wireless Mouse",
+        "category": "electronics",
+        "brand": "Logitech",
+        "price": 1295,
+        "tags": [
+            "mouse",
+            "productivity",
+            "wireless",
+            "office",
+            "laptop",
+            "silent"
+        ],
+        "description": "Sleek, minimalist, and silent Bluetooth mouse designed to slip easily into your laptop sleeve."
+    },
+    {
+        "id": 184,
+        "name": "Neutrogena Hydro Boost Water Gel",
+        "category": "skincare",
+        "brand": "Neutrogena",
+        "price": 1150,
+        "tags": [
+            "moisturizer",
+            "skincare",
+            "face",
+            "hydration",
+            "dry skin",
+            "gel"
+        ],
+        "description": "Unique oil-free water gel moisturizer containing hyaluronic acid to lock in intense skin hydration."
+    },
+    {
+        "id": 185,
+        "name": "Mamaearth Onion Hair Fall Control Oil",
+        "category": "skincare",
+        "brand": "Mamaearth",
+        "price": 399,
+        "tags": [
+            "hair care",
+            "oil",
+            "herbal",
+            "skincare",
+            "natural",
+            "hair fall"
+        ],
+        "description": "Nourishing oil blended with onion seed oil and Redensyl to boost hair growth and reduce breakage."
+    },
+    {
+        "id": 186,
+        "name": "Nivia Classic Badminton Racket (Pair)",
+        "category": "fitness",
+        "brand": "Nivia",
+        "price": 899,
+        "tags": ["badminton", "racket", "sports", "outdoor", "fitness", "game"],
+        "description": "Lightweight steel-frame badminton rackets complete with premium synthetic strings and carrying covers."
+    },
+    {
+        "id": 187,
+        "name": "Vector X Dynamic Leather Football Boots",
+        "category": "fitness",
+        "brand": "Vector X",
+        "price": 1249,
+        "tags": [
+            "shoes",
+            "football",
+            "sports",
+            "fitness",
+            "footwear",
+            "cleats"
+        ],
+        "description": "High-grip studded athletic shoes offering precision control on artificial turf and muddy ground."
+    },
+    {
+        "id": 188,
+        "name": "Wildcraft Camp Sleeping Pad",
+        "category": "outdoor",
+        "brand": "Wildcraft",
+        "price": 1499,
+        "tags": [
+            "camping",
+            "trekking",
+            "sleeping pad",
+            "outdoor",
+            "travel",
+            "mattress"
+        ],
+        "description": "Rollable self-inflating closed-cell foam pad isolating hikers from cold damp tent floors."
+    },
+    {
+        "id": 189,
+        "name": "Decathlon Itiwit Waterproof Dry Bag 10L",
+        "category": "outdoor",
+        "brand": "Itiwit",
+        "price": 799,
+        "tags": [
+            "dry bag",
+            "waterproof",
+            "rafting",
+            "monsoon",
+            "travel",
+            "outdoor"
+        ],
+        "description": "Heavy-duty roll-top floating dry cylinder keeping phones and cameras safe during watersports."
+    },
+    {
+        "id": 190,
+        "name": "Milton Thermosteel Duo Flask 1L",
+        "category": "home",
+        "brand": "Milton",
+        "price": 1099,
+        "tags": ["flask", "bottle", "kitchen", "office", "travel", "hot water"],
+        "description": "Vacuum-insulated double-wall stainless steel bottle maintaining liquid temperatures for 24 hours."
+    },
+    {
+        "id": 191,
+        "name": "Hawkins Contura Aluminum Pressure Cooker 3L",
+        "category": "home",
+        "brand": "Hawkins",
+        "price": 1425,
+        "tags": [
+            "kitchen",
+            "cooker",
+            "appliances",
+            "cooking",
+            "staple",
+            "home"
+        ],
+        "description": "Hard-anodized inner-lid pressure cooker optimizing fuel consumption and heating execution speeds."
+    },
+    {
+        "id": 192,
+        "name": "Prestige Stainless Steel Gas Stove (2 Burner)",
+        "category": "home",
+        "brand": "Prestige",
+        "price": 3199,
+        "tags": ["kitchen", "cooking", "stove", "appliances", "home setup"],
+        "description": "Sleek brass-burner countertop manual ignition LPG gas stove for everyday safe cooking workflows."
+    },
+    {
+        "id": 193,
+        "name": "Fortune Premium Kachi Ghani Mustard Oil 1L",
+        "category": "grocery",
+        "brand": "Fortune",
+        "price": 175,
+        "tags": ["oil", "cooking", "grocery", "staple", "traditional"],
+        "description": "Cold-pressed pure mustard oil offering a high pungent aroma vital for authentic regional curries."
+    },
+    {
+        "id": 194,
+        "name": "Catch Turmeric Powder 500g",
+        "category": "grocery",
+        "brand": "Catch",
+        "price": 110,
+        "tags": ["spices", "grocery", "cooking", "haldi", "staple"],
+        "description": "Sourced from premier plantations, this finely ground golden turmeric delivers deep natural spice tints."
+    },
+    {
+        "id": 195,
+        "name": "Levis regular Fit Casual Jeans",
+        "category": "fashion",
+        "brand": "Levis",
+        "price": 2899,
+        "tags": ["jeans", "denim", "casual", "college", "fashion", "apparel"],
+        "description": "Classic straight-fit durable cotton denim trousers pairing clean rivets with deep patch pockets."
+    },
+    {
+        "id": 196,
+        "name": "Classmate Notebooks Long Book (Pack of 6)",
+        "category": "study",
+        "brand": "Classmate",
+        "price": 360,
+        "tags": [
+            "notebooks",
+            "stationery",
+            "student",
+            "college",
+            "study",
+            "exam"
+        ],
+        "description": "Premium smooth-textured ruled long papers perfect for heavy code sketching and lecture logs."
+    },
+    {
+        "id": 197,
+        "name": "Uniball Air Micro Rollerball Pens (Pack of 3)",
+        "category": "study",
+        "brand": "Uniball",
+        "price": 240,
+        "tags": ["pens", "stationery", "notes", "student", "study", "exam"],
+        "description": "Dynamic scratching-free rollerball ink adjusting flowing densities seamlessly relative to write speeds."
+    },
+    {
+        "id": 198,
+        "name": "Philips Grooming Kit Multipro QT4015",
+        "category": "health",
+        "brand": "Philips",
+        "price": 1899,
+        "tags": [
+            "trimmer",
+            "grooming",
+            "hygiene",
+            "health",
+            "electronics",
+            "travel"
+        ],
+        "description": "Cordless precision facial trimmer featuring skin-friendly rounded titanium blade tracks."
+    },
+    {
+        "id": 199,
+        "name": "Puma Axis Unisex Sneakers",
+        "category": "fashion",
+        "brand": "Puma",
+        "price": 2999,
+        "tags": [
+            "shoes",
+            "sneakers",
+            "casual",
+            "footwear",
+            "fashion",
+            "streetwear"
+        ],
+        "description": "Mesh-paneled lightweight retro sneakers built structurally for high-comfort campus walking loops."
+    },
+    {
+        "id": 200,
+        "name": "Eveready Alkaline AAA Batteries (Pack of 10)",
+        "category": "seasonal",
+        "brand": "Eveready",
+        "price": 220,
+        "tags": [
+            "batteries",
+            "electricity",
+            "home",
+            "remote",
+            "gadget",
+            "seasonal"
+        ],
+        "description": "High-drain leak-resistant long shelf life primary power cells targeted to power remote controls."
     }
 ]
