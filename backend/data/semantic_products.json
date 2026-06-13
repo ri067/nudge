@@ -1355,5 +1355,629 @@
             "dry fruits"
         ],
         "description": "Raw, unsalted, crunchy whole California almonds packed with plant-based protein, healthy fats, and fiber."
+    },
+    {
+        "id": 132,
+        "name": "OnePlus Supervooc 65W Fast Charger",
+        "category": "electronics",
+        "brand": "OnePlus",
+        "price": 1999,
+        "tags": [
+            "charging",
+            "adapter",
+            "fast charge",
+            "travel",
+            "phone",
+            "electronics"
+        ],
+        "description": "High-speed wall adapter engineered to safe-charge compatible flagship devices rapidly."
+    },
+    {
+        "id": 133,
+        "name": "SanDisk Ultra 128GB MicroSDXC Card",
+        "category": "electronics",
+        "brand": "SanDisk",
+        "price": 849,
+        "tags": [
+            "storage",
+            "memory card",
+            "nintendo",
+            "phone",
+            "camera",
+            "electronics"
+        ],
+        "description": "High-end capacity flash memory ideal for expanding storage on tablets, phones, and dash cams."
+    },
+    {
+        "id": 134,
+        "name": "Seagate One Touch 2TB External HDD",
+        "category": "electronics",
+        "brand": "Seagate",
+        "price": 5499,
+        "tags": [
+            "storage",
+            "hard drive",
+            "back up",
+            "pc",
+            "laptop",
+            "electronics"
+        ],
+        "description": "Password-protected portable hard drive offering convenient file storage and automatic backups."
+    },
+    {
+        "id": 135,
+        "name": "Amazon Basics Ergonomic Wireless Mouse",
+        "category": "electronics",
+        "brand": "Amazon Basics",
+        "price": 899,
+        "tags": ["productivity", "work", "office", "laptop", "pc", "wireless"],
+        "description": "Contoured wireless computer mouse utilizing an optical tracker and adjustable DPI keys."
+    },
+    {
+        "id": 136,
+        "name": "Plum Green Tea Pore Cleansing Face Wash",
+        "category": "skincare",
+        "brand": "Plum",
+        "price": 349,
+        "tags": [
+            "face wash",
+            "skincare",
+            "acne",
+            "oil control",
+            "vegan",
+            "cleanser"
+        ],
+        "description": "Soap-free, non-drying facial cleanser loaded with green tea extracts and gentle cellulose beads."
+    },
+    {
+        "id": 137,
+        "name": "Biotique Bio Morning Nectar Lotion",
+        "category": "skincare",
+        "brand": "Biotique",
+        "price": 280,
+        "tags": [
+            "lotion",
+            "moisturizer",
+            "skincare",
+            "herbal",
+            "face",
+            "daily"
+        ],
+        "description": "Ayurvedic daily brightening lotion blended with pure honey, wheatgerm, and seaweed."
+    },
+    {
+        "id": 138,
+        "name": "The Ordinary Glycolic Acid 7% Toning Solution",
+        "category": "skincare",
+        "brand": "The Ordinary",
+        "price": 1250,
+        "tags": [
+            "toner",
+            "skincare",
+            "exfoliating",
+            "glow",
+            "face",
+            "bestseller"
+        ],
+        "description": "Alpha hydroxy acid toning solution designed to improve skin clarity and uneven texture."
+    },
+    {
+        "id": 139,
+        "name": "L'Oreal Paris Extraordinary Hair Serum",
+        "category": "skincare",
+        "brand": "L'Oreal",
+        "price": 499,
+        "tags": ["hair care", "serum", "salon", "frizz control", "shine"],
+        "description": "Deeply nourishing leave-in hair treatment formulated with a blend of six rare flower oils."
+    },
+    {
+        "id": 140,
+        "name": "Decathlon Kalenji Running T-Shirt",
+        "category": "fitness",
+        "brand": "Kalenji",
+        "price": 499,
+        "tags": [
+            "running",
+            "workout",
+            "fitness",
+            "sports",
+            "apparel",
+            "breathable"
+        ],
+        "description": "Ultra-lightweight moisture-wicking athletic tee built for ventilation during marathons."
+    },
+    {
+        "id": 141,
+        "name": "Nivia Storm Football (Size 5)",
+        "category": "fitness",
+        "brand": "Nivia",
+        "price": 599,
+        "tags": [
+            "football",
+            "sports",
+            "outdoor",
+            "training",
+            "match",
+            "fitness"
+        ],
+        "description": "Durable 32-panel rubberized ball designed for optimal shape retention on rough playgrounds."
+    },
+    {
+        "id": 142,
+        "name": "Strauss Adjustable Hand Gripper",
+        "category": "fitness",
+        "brand": "Strauss",
+        "price": 249,
+        "tags": [
+            "forearm",
+            "grip",
+            "home workout",
+            "strength",
+            "fitness",
+            "rehab"
+        ],
+        "description": "Resistance-adjustable hand grip trainer calibrated to build forearm muscle and finger endurance."
+    },
+    {
+        "id": 143,
+        "name": "Kakss Skipping Rope with Counter",
+        "category": "fitness",
+        "brand": "Kakss",
+        "price": 349,
+        "tags": [
+            "skipping",
+            "jump rope",
+            "cardio",
+            "fitness",
+            "weight loss",
+            "gym"
+        ],
+        "description": "Tangle-free jump rope featuring a mechanical rotating counter tracking individual loops."
+    },
+    {
+        "id": 144,
+        "name": "Quechua Waterproof Hiking Jacket",
+        "category": "outdoor",
+        "brand": "Quechua",
+        "price": 2999,
+        "tags": [
+            "hiking",
+            "trekking",
+            "jacket",
+            "waterproof",
+            "monsoon",
+            "outdoor"
+        ],
+        "description": "Breathable, fully seam-sealed rain protection jacket ideal for mountain trekking environments."
+    },
+    {
+        "id": 145,
+        "name": "Lixada Camp Cooking Mess Kit",
+        "category": "outdoor",
+        "brand": "Lixada",
+        "price": 1899,
+        "tags": [
+            "cooking",
+            "camping",
+            "pots",
+            "outdoor",
+            "backpacking",
+            "travel"
+        ],
+        "description": "Nesting aluminum pots and pans set designed compactly for campfire chefs and hikers."
+    },
+    {
+        "id": 146,
+        "name": "Fastrack Military Digital Watch",
+        "category": "outdoor",
+        "brand": "Fastrack",
+        "price": 2199,
+        "tags": [
+            "watch",
+            "outdoor",
+            "sports",
+            "waterproof",
+            "tactical",
+            "accessory"
+        ],
+        "description": "Rugged, water-resistant tactical sports watch featuring a backend stopwatch and night backlight."
+    },
+    {
+        "id": 147,
+        "name": "Wildcraft Travel Waist Pouch",
+        "category": "outdoor",
+        "brand": "Wildcraft",
+        "price": 749,
+        "tags": [
+            "fanny pack",
+            "pouch",
+            "travel",
+            "hiking",
+            "organization",
+            "safety"
+        ],
+        "description": "Multi-compartment secure waist fanny pack for passport tracking, currency, and accessories."
+    },
+    {
+        "id": 148,
+        "name": "Prestige Induction Cooktop 1600W",
+        "category": "home",
+        "brand": "Prestige",
+        "price": 2899,
+        "tags": [
+            "kitchen",
+            "hostel",
+            "appliances",
+            "cooking",
+            "electricity",
+            "college"
+        ],
+        "description": "Compact electromagnetic cooking panel featuring automated Indian menu options and power-saving steps."
+    },
+    {
+        "id": 149,
+        "name": "Borosil Glass Lunch Box Set (3pc)",
+        "category": "home",
+        "brand": "Borosil",
+        "price": 1199,
+        "tags": [
+            "lunch box",
+            "office",
+            "meal prep",
+            "kitchen",
+            "microwave safe"
+        ],
+        "description": "Bake-and-serve borosilicate glass containers featuring leak-proof airtight clip-on lids."
+    },
+    {
+        "id": 150,
+        "name": "Amazon Basics Velvet Clothes Hangers (30pc)",
+        "category": "home",
+        "brand": "Amazon Basics",
+        "price": 949,
+        "tags": ["organization", "wardrobe", "closet", "hostel", "home setup"],
+        "description": "Non-slip cascading velvet textures keeping delicate shirts and heavy blazers upright."
+    },
+    {
+        "id": 151,
+        "name": "Home Centre Anti-Skid Door Mat",
+        "category": "home",
+        "brand": "Home Centre",
+        "price": 299,
+        "tags": ["decor", "bathroom", "home", "living room", "mat"],
+        "description": "Quick-dry microfibre bathroom entrance floor mat with a sticky thermoplastic rubber backing."
+    },
+    {
+        "id": 152,
+        "name": "Tata Sampann Unpolished Toor Dal 1kg",
+        "category": "grocery",
+        "brand": "Tata",
+        "price": 185,
+        "tags": ["dal", "lentils", "grocery", "staple", "healthy", "cooking"],
+        "description": "Nutrient-rich, unpolished split pigeon peas sourced cleanly for staple household lunches."
+    },
+    {
+        "id": 153,
+        "name": "Aashirvaad Svasti Pure Cow Ghee 1L",
+        "category": "grocery",
+        "brand": "Aashirvaad",
+        "price": 690,
+        "tags": ["ghee", "cooking", "grocery", "staple", "traditional"],
+        "description": "Aromatic golden cow ghee produced via a proprietary slow-cook process for deep flavor."
+    },
+    {
+        "id": 154,
+        "name": "Amul Dark Chocolate Bar 150g",
+        "category": "grocery",
+        "brand": "Amul",
+        "price": 120,
+        "tags": ["chocolate", "snack", "grocery", "sweet", "dessert"],
+        "description": "Rich dark chocolate containing 55% premium single-origin cocoa solids for baking or snacking."
+    },
+    {
+        "id": 155,
+        "name": "Cadbury Oreo Biscuit Combo (Pack of 5)",
+        "category": "grocery",
+        "brand": "Cadbury",
+        "price": 150,
+        "tags": ["biscuits", "snack", "grocery", "cookies", "party", "hostel"],
+        "description": "Crunchy chocolate sandwich biscuits loaded with sweet vanilla creme fillings."
+    },
+    {
+        "id": 156,
+        "name": "Peter England Slim Fit Formal Shirt",
+        "category": "fashion",
+        "brand": "Peter England",
+        "price": 1499,
+        "tags": [
+            "formal",
+            "shirt",
+            "office",
+            "interview",
+            "fashion",
+            "apparel"
+        ],
+        "description": "Crisp solid cotton-blend business shirt featuring standard cuffs and a structured stiff collar."
+    },
+    {
+        "id": 157,
+        "name": "Bata Leather Formal Loafers",
+        "category": "fashion",
+        "brand": "Bata",
+        "price": 2299,
+        "tags": ["shoes", "formal", "office", "leather", "fashion", "footwear"],
+        "description": "Slip-on breathable faux-leather shoes with memory cushion targeted for office use."
+    },
+    {
+        "id": 158,
+        "name": "Zudio Unisex Printed Hoodie",
+        "category": "fashion",
+        "brand": "Zudio",
+        "price": 899,
+        "tags": [
+            "casual",
+            "college",
+            "hoodie",
+            "winter",
+            "streetwear",
+            "fashion"
+        ],
+        "description": "Oversized graphic fleece sweatshirt built loosely to accommodate street style configurations."
+    },
+    {
+        "id": 159,
+        "name": "Skybag Campus Backpack 32L",
+        "category": "fashion",
+        "brand": "Skybags",
+        "price": 1699,
+        "tags": ["bag", "backpack", "college", "student", "school", "travel"],
+        "description": "Funky print triple-compartment school pack equipped with integrated rain defense hoods."
+    },
+    {
+        "id": 160,
+        "name": "Drools Absolute Calcium Tablets (110pc)",
+        "category": "pets",
+        "brand": "Drools",
+        "price": 450,
+        "tags": ["dog", "supplements", "pet care", "health", "bones"],
+        "description": "Chewable calcium-phosphorus health blocks maximizing joint durability in growing puppies."
+    },
+    {
+        "id": 161,
+        "name": "SmartyKat Organic Catnip Shaker",
+        "category": "pets",
+        "brand": "SmartyKat",
+        "price": 320,
+        "tags": ["cat", "toy", "catnip", "pet care", "organic"],
+        "description": "Pure, highly potent organic catnip herb flakes to sprinkle over scratching poles."
+    },
+    {
+        "id": 162,
+        "name": "Foodie Puppies Double Stainless Steel Bowl",
+        "category": "pets",
+        "brand": "Foodie Puppies",
+        "price": 599,
+        "tags": ["pet care", "dog", "cat", "feeding", "bowl", "station"],
+        "description": "No-spill elevated base platform pairing food and water dishes in rust-resistant alloy structures."
+    },
+    {
+        "id": 163,
+        "name": "Casio Scientific Calculator FX-991EX",
+        "category": "study",
+        "brand": "Casio",
+        "price": 1695,
+        "tags": ["student", "college", "exam", "engineering", "math", "coding"],
+        "description": "High-resolution matrix calculator capable of processing complex calculus, vectors, and equations."
+    },
+    {
+        "id": 164,
+        "name": "Luxor Pastel Highlighters (Pack of 5)",
+        "category": "study",
+        "brand": "Luxor",
+        "price": 125,
+        "tags": [
+            "stationery",
+            "notes",
+            "student",
+            "study",
+            "highlighter",
+            "exam"
+        ],
+        "description": "Smudge-shield soft tone fluorescent markers protecting vital text blocks without bleeding past pages."
+    },
+    {
+        "id": 165,
+        "name": "Kangaroo Heavy Duty Stapler",
+        "category": "study",
+        "brand": "Kangaroo",
+        "price": 180,
+        "tags": ["office", "stationery", "documents", "study", "organization"],
+        "description": "All-metal mechanical office stapler supporting quick document management binding pipelines."
+    },
+    {
+        "id": 166,
+        "name": "Safari Pentagon Hardside Cabin Luggage",
+        "category": "travel",
+        "brand": "Safari",
+        "price": 2499,
+        "tags": [
+            "suitcase",
+            "luggage",
+            "travel",
+            "flight",
+            "wheels",
+            "weekend"
+        ],
+        "description": "Scratch-resistant polycarbonate luggage spinner featuring 360-degree multi-directional wheels."
+    },
+    {
+        "id": 167,
+        "name": "Gocheer Electronic Scale for Bags",
+        "category": "travel",
+        "brand": "Gocheer",
+        "price": 499,
+        "tags": ["travel", "gadget", "luggage", "weight", "flight", "safety"],
+        "description": "Handheld ergonomic digital luggage loop gauge calculating payload limits before airport check-ins."
+    },
+    {
+        "id": 168,
+        "name": "Godrej Aer Pocket Car Perfume",
+        "category": "travel",
+        "brand": "Godrej",
+        "price": 160,
+        "tags": ["travel", "car", "freshener", "fragrance", "road trip"],
+        "description": "Slim gel-based dashboard hanging matrix dispensing fresh floral accents continuously."
+    },
+    {
+        "id": 169,
+        "name": "Dettol Antiseptic Liquid 1L",
+        "category": "health",
+        "brand": "Dettol",
+        "price": 415,
+        "tags": ["health", "safety", "first aid", "hygiene", "medical", "home"],
+        "description": "Concentrated therapeutic sanitizing solution vital for first-aid wound washing or linen cleansing."
+    },
+    {
+        "id": 170,
+        "name": "Volini Pain Relief Spray 100g",
+        "category": "health",
+        "brand": "Volini",
+        "price": 320,
+        "tags": ["health", "gym", "injury", "medical", "spray", "pain relief"],
+        "description": "Micro-gel aerosol tracking down joint soreness, deep back pain, and muscle sprains quickly."
+    },
+    {
+        "id": 171,
+        "name": "Hansaplast Cotton Bandage Strips (50pc)",
+        "category": "health",
+        "brand": "Hansaplast",
+        "price": 149,
+        "tags": ["first aid", "safety", "medical", "health", "cuts"],
+        "description": "Breathable medicated dressings treating surface scrapes and minor sports lacerations cleanly."
+    },
+    {
+        "id": 172,
+        "name": "Barbie Dreamhouse Convertible Toy",
+        "category": "toys",
+        "brand": "Mattel",
+        "price": 1899,
+        "tags": ["doll", "toys", "kids", "gift", "pretend play"],
+        "description": "Classic pink detailed doll cruiser vehicle complete with working rolling wheels and seatbelts."
+    },
+    {
+        "id": 173,
+        "name": "Funskool Monopoly Deluxe Edition",
+        "category": "toys",
+        "brand": "Funskool",
+        "price": 999,
+        "tags": ["board game", "strategy", "toys", "family", "party", "gift"],
+        "description": "Classic real-estate trading board game designed to improve strategic planning and cash negotiation basics."
+    },
+    {
+        "id": 174,
+        "name": "BeyTech Burst Turbo Battling Top",
+        "category": "toys",
+        "brand": "Generic",
+        "price": 499,
+        "tags": ["beyblade", "toys", "kids", "spinning top", "stadium"],
+        "description": "Metal-accented high-velocity spinning battle top featuring custom launch triggers."
+    },
+    {
+        "id": 175,
+        "name": "Ray-Ban Clubmaster Sunglasses",
+        "category": "sunglasses",
+        "brand": "Ray-Ban",
+        "price": 4499,
+        "tags": [
+            "clubmaster",
+            "sunglasses",
+            "fashion",
+            "retro",
+            "premium",
+            "uv protection"
+        ],
+        "description": "Premium browline cultural silhouette glasses providing maximum reduction in reflective solar glare."
+    },
+    {
+        "id": 176,
+        "name": "Oakley Frogskins Polarized Glasses",
+        "category": "sunglasses",
+        "brand": "Oakley",
+        "price": 4999,
+        "tags": [
+            "sports",
+            "polarized",
+            "sunglasses",
+            "beach",
+            "cycling",
+            "outdoor"
+        ],
+        "description": "Retro aesthetic lifestyle sunglasses combining light impact frameworks and dynamic polarized tinting."
+    },
+    {
+        "id": 177,
+        "name": "Fastrack Shield Sports Aviators",
+        "category": "sunglasses",
+        "brand": "Fastrack",
+        "price": 1799,
+        "tags": [
+            "sunglasses",
+            "wrap around",
+            "biking",
+            "running",
+            "fashion",
+            "summer"
+        ],
+        "description": "Monolithic shield mask eyewear engineered to block wind dust and peripheral UV fields during riding."
+    },
+    {
+        "id": 178,
+        "name": "Duckback Extra Soft Raincoat with Pants",
+        "category": "seasonal",
+        "brand": "Duckback",
+        "price": 1299,
+        "tags": [
+            "raincoat",
+            "monsoon",
+            "waterproof",
+            "travel",
+            "bike riding",
+            "seasonal"
+        ],
+        "description": "Heavy duty PVC motorcycle rain coat gear including elastic trousers and reflection safety lines."
+    },
+    {
+        "id": 179,
+        "name": "Usha Quartz Room Heater 800W",
+        "category": "seasonal",
+        "brand": "Usha",
+        "price": 1599,
+        "tags": ["heater", "winter", "room setup", "appliances", "seasonal"],
+        "description": "Dual heating-element space warmers featuring an automatic tip-over shut-off toggle for safe operation."
+    },
+    {
+        "id": 180,
+        "name": "Vicks Warm Steam Inhaler",
+        "category": "seasonal",
+        "brand": "Vicks",
+        "price": 449,
+        "tags": [
+            "winter",
+            "monsoon",
+            "medical",
+            "health",
+            "seasonal",
+            "steamer"
+        ],
+        "description": "Targeted respiratory vaporization tool relieving nasal congestion and throat seasonal blocks."
+    },
+    {
+        "id": 181,
+        "name": "Sirona Underarm Sweat Pads (24pc)",
+        "category": "seasonal",
+        "brand": "Sirona",
+        "price": 249,
+        "tags": ["summer", "hygiene", "apparel", "anti stain", "seasonal"],
+        "description": "Absorbent, peel-and-stick premium disposable garment sheets shielding office shirts from sweat patches."
     }
 ]
