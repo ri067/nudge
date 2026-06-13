@@ -75,6 +75,7 @@ async def search(req: SearchRequest):
     budget = 99999
     delivery_limit = 30
     query_enriched = req.query
+    dropcount=0
 
     if is_feed_refill:
         print("🔄 [FEED] Generating personalized fallback feed...")
@@ -167,7 +168,7 @@ async def search(req: SearchRequest):
         _, indices = index.search(vec, 20)
         
         retrieved = []
-        dropcount=0
+        
         for idx in indices[0]:
             item = products[idx].copy()
             ops = operational_db.get(item["id"], {})
