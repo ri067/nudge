@@ -78,7 +78,6 @@ const SwipeFeed = () => {
         console.error("Error with specific search:", error);
       } finally {
         setLoading(false);
-        setInputValue(''); 
       }
     }
   };
