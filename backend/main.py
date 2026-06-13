@@ -63,18 +63,18 @@ def get_user_context(product_id, user_signals):
     # 2. Check Abandoned Cart
     for item in user_signals.get("abandoned_cart_products", []):
         if item.get("product_id") == product_id:
+            # THIS MUST BE INDENTED UNDER THE 'IF'
             signals.append(f"Abandoned in cart {item.get('days_since_cart', 0)} days ago.")
             
     # 3. Check Previously Bought
     for item in user_signals.get("previously_bought_products", []):
-        if item.get("product_id") == product_id:
+        # We also force both to be integers just in case your mock JSON has string IDs
+        if int(item.get("product_id", -1)) == int(product_id):
+            # THIS MUST BE INDENTED UNDER THE 'IF'
             signals.append(f"Usually bought every {item.get('days_since_purchase', 30)} days.")
 
-    # 4. ALWAYS append the base semantic match
-    signals.append("Semantic match for current search intent.")
-    
-    # 5. Join them all together with the '|' delimiter so React can split them!
     return " | ".join(signals)
+
 
 @app.post("/search")
 async def search(req: SearchRequest):

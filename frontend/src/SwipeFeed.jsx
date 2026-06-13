@@ -353,8 +353,17 @@ const SwipeFeed = () => {
                   <div className="space-y-5 overflow-y-auto max-h-[80%] pb-4">
                     {/* Dynamically map bundle items OR the single individual item */}
                     {(activeProduct.type === 'bundle' ? activeProduct.items : [activeProduct])?.map((subItem, idx) => {
-                      const rawContext = subItem.user_context || "Semantic match for current search intent.";
-                      const signals = rawContext.split('|').map(s => s.trim());
+                      
+                      // 1. Grab Groq's custom reason (from the item itself, or fallback to the bundle's reason)
+                      const groqReason = `AI Reason: "${subItem.why_reason || activeProduct.why_reason}"`;
+
+                      // 2. Combine the backend Ghost signals with the Groq reason
+                      const rawContext = subItem.user_context 
+                        ? `${subItem.user_context} | ${groqReason}` 
+                        : groqReason;
+
+                      // 3. Split them up for the UI
+                      const signals = rawContext.split('|').map(s => s.trim()).filter(Boolean);
                       const isConvergence = signals.length > 1;
 
                       return (
@@ -382,6 +391,9 @@ const SwipeFeed = () => {
                       );
                     })}
                   </div>
+
+
+                  
                 </div>
               )}
               {/* ------------------------------------------------------- */}
