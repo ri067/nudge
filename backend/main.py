@@ -53,15 +53,28 @@ class SearchRequest(BaseModel):
     query: str
     top_k: int = 5
 
-def get_user_context(pid, signals):
-    context = []
-    if pid in signals.get("wishlist_products", []):
-        context.append("This is on the user's wishlist.")
-    abandoned = next((i for i in signals.get("abandoned_cart_products", []) if i["product_id"] == pid), None)
-    if abandoned:
-        context.append(f"Abandoned in cart {abandoned['days_since_cart']} days ago.")
-    print(f"👤 [SIGNAL] Found {len(context)} historical signals for ID {pid}")
-    return " ".join(context)
+def get_user_context(product_id, user_signals):
+    signals = []
+    
+    # 1. Check Wishlist
+    if product_id in user_signals.get("wishlist_products", []):
+        signals.append("This is on the user's wishlist.")
+        
+    # 2. Check Abandoned Cart
+    for item in user_signals.get("abandoned_cart_products", []):
+        if item.get("product_id") == product_id:
+            signals.append(f"Abandoned in cart {item.get('days_since_cart', 0)} days ago.")
+            
+    # 3. Check Previously Bought
+    for item in user_signals.get("previously_bought_products", []):
+        if item.get("product_id") == product_id:
+            signals.append(f"Usually bought every {item.get('days_since_purchase', 30)} days.")
+
+    # 4. ALWAYS append the base semantic match
+    signals.append("Semantic match for current search intent.")
+    
+    # 5. Join them all together with the '|' delimiter so React can split them!
+    return " | ".join(signals)
 
 @app.post("/search")
 async def search(req: SearchRequest):

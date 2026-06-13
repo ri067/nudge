@@ -88,12 +88,10 @@ const SwipeFeed = () => {
     e.currentTarget.setPointerCapture(e.pointerId);
 
     // If it's a bundle, start the "Hold to Reveal" timer (400ms)
-    if (product?.type === 'bundle') {
-      pressTimer.current = setTimeout(() => {
-        setShowBreakdown(true);
-        if (navigator.vibrate) navigator.vibrate(50); 
-      }, 400);
-    }
+    pressTimer.current = setTimeout(() => {
+      setShowBreakdown(true);
+      if (navigator.vibrate) navigator.vibrate(50); 
+    }, 400);
   };
 
   const handlePointerMove = (e) => {
@@ -346,30 +344,51 @@ const SwipeFeed = () => {
               className="absolute w-80 h-[28rem] bg-white rounded-3xl shadow-2xl overflow-hidden cursor-grab active:cursor-grabbing z-10 border border-gray-100 flex flex-col transition-shadow hover:shadow-blue-900/10 touch-none"
             >
               
+              {/* --- UNIFIED HOLD-TO-REVEAL OVERLAY (WORKS FOR BOTH) --- */}
+              {showBreakdown && (
+                <div className="absolute inset-0 z-50 bg-gray-900/95 backdrop-blur-md p-6 flex flex-col justify-center text-white transition-opacity duration-200 z-50">
+                  <h3 className="text-sm font-black text-purple-400 mb-6 tracking-widest uppercase flex items-center gap-2">
+                    <span>🧠</span> SIGNAL X-RAY
+                  </h3>
+                  <div className="space-y-5 overflow-y-auto max-h-[80%] pb-4">
+                    {/* Dynamically map bundle items OR the single individual item */}
+                    {(activeProduct.type === 'bundle' ? activeProduct.items : [activeProduct])?.map((subItem, idx) => {
+                      const rawContext = subItem.user_context || "Semantic match for current search intent.";
+                      const signals = rawContext.split('|').map(s => s.trim());
+                      const isConvergence = signals.length > 1;
+
+                      return (
+                        <div key={idx} className={`pb-3 border-b ${isConvergence ? 'border-amber-500/50' : 'border-gray-700/50'}`}>
+                          <div className="flex justify-between items-start mb-1">
+                            <p className={`font-bold text-lg leading-tight ${isConvergence ? 'text-amber-400' : 'text-white'}`}>
+                              {subItem.name}
+                            </p>
+                            {isConvergence && (
+                              <span className="bg-gradient-to-r from-amber-500 to-orange-600 text-white text-[9px] font-black px-2 py-0.5 rounded-sm uppercase tracking-widest shadow-[0_0_10px_rgba(245,158,11,0.4)] whitespace-nowrap ml-2 mt-0.5 h-fit">
+                                Dual Signal Match
+                              </span>
+                            )}
+                          </div>
+                          
+                          <div className="flex flex-col gap-1.5 mt-2">
+                            {signals.map((sig, i) => (
+                              <p key={i} className={`text-sm italic flex items-start gap-2 ${isConvergence ? 'text-amber-200/80' : 'text-gray-400'}`}>
+                                <span className={isConvergence ? 'text-amber-500' : 'text-purple-400'}>↳</span> 
+                                {sig}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+              {/* ------------------------------------------------------- */}
+
               {activeProduct.type === 'bundle' ? (
                 // --- BUNDLE LAYOUT ---
                 <>
-                  {/* --- HOLD-TO-REVEAL OVERLAY --- */}
-                  {showBreakdown && (
-                    <div className="absolute inset-0 z-50 bg-gray-900/95 backdrop-blur-md p-6 flex flex-col justify-center text-white transition-opacity duration-200">
-                      <h3 className="text-sm font-black text-purple-400 mb-6 tracking-widest uppercase flex items-center gap-2">
-                        <span>🧠</span> SIGNAL X-RAY
-                      </h3>
-                      <div className="space-y-5 overflow-y-auto max-h-[80%] pb-4">
-                        {activeProduct.items?.map((subItem, idx) => (
-                          <div key={idx} className="border-b border-gray-700/50 pb-3">
-                            <p className="font-bold text-lg leading-tight mb-1">{subItem.name}</p>
-                            <p className="text-sm text-gray-400 italic flex items-start gap-2">
-                              <span className="text-purple-400 mt-0.5">↳</span> 
-                              {subItem.user_context || "Semantic match for current search intent."}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                  {/* ---------------------------------- */}
-                  
                   <div className="h-3/5 relative border-b border-purple-100 bg-gradient-to-br from-purple-50 to-indigo-50 flex items-center justify-center p-4">
                     <div className="grid grid-cols-2 gap-2 w-full max-w-[220px] pointer-events-none">
                       {activeProduct.items?.slice(0, 4).map((subItem, idx) => (
@@ -420,6 +439,9 @@ const SwipeFeed = () => {
         )}
       </div>
     </div>
+
+
+
   );
 };
 
