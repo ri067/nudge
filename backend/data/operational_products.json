@@ -3227,9 +3227,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2699 },
-            { "date": "2026-05-15", "price": 2599 },
-            { "date": "2026-06-13", "price": 2499 }
+            {
+                "date": "2026-04-15",
+                "price": 2699
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2599
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2499
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -3246,9 +3255,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1350 },
-            { "date": "2026-05-15", "price": 1400 },
-            { "date": "2026-06-13", "price": 1450 }
+            {
+                "date": "2026-04-15",
+                "price": 1350
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1400
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1450
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3265,9 +3283,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 399 },
-            { "date": "2026-05-15", "price": 399 },
-            { "date": "2026-06-13", "price": 399 }
+            {
+                "date": "2026-04-15",
+                "price": 399
+            },
+            {
+                "date": "2026-05-15",
+                "price": 399
+            },
+            {
+                "date": "2026-06-13",
+                "price": 399
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3284,9 +3311,18 @@
         "delivery_days": 3,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 450 },
-            { "date": "2026-05-15", "price": 440 },
-            { "date": "2026-06-13", "price": 425 }
+            {
+                "date": "2026-04-15",
+                "price": 450
+            },
+            {
+                "date": "2026-05-15",
+                "price": 440
+            },
+            {
+                "date": "2026-06-13",
+                "price": 425
+            }
         ],
         "price_change": {
             "amount": -25,
@@ -3303,9 +3339,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2199 },
-            { "date": "2026-05-15", "price": 1999 },
-            { "date": "2026-06-13", "price": 1899 }
+            {
+                "date": "2026-04-15",
+                "price": 2199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1899
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -3322,9 +3367,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 599 },
-            { "date": "2026-05-15", "price": 649 },
-            { "date": "2026-06-13", "price": 699 }
+            {
+                "date": "2026-04-15",
+                "price": 599
+            },
+            {
+                "date": "2026-05-15",
+                "price": 649
+            },
+            {
+                "date": "2026-06-13",
+                "price": 699
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3341,9 +3395,18 @@
         "delivery_days": 1,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3999 },
-            { "date": "2026-05-15", "price": 3899 },
-            { "date": "2026-06-13", "price": 3849 }
+            {
+                "date": "2026-04-15",
+                "price": 3999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3899
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3849
+            }
         ],
         "price_change": {
             "amount": -150,
@@ -3360,9 +3423,18 @@
         "delivery_days": 4,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 4999 },
-            { "date": "2026-05-15", "price": 4999 },
-            { "date": "2026-06-13", "price": 4999 }
+            {
+                "date": "2026-04-15",
+                "price": 4999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4999
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3379,9 +3451,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1499 },
-            { "date": "2026-05-15", "price": 1399 },
-            { "date": "2026-06-13", "price": 1299 }
+            {
+                "date": "2026-04-15",
+                "price": 1499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1399
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1299
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -3398,9 +3479,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2900 },
-            { "date": "2026-05-15", "price": 3100 },
-            { "date": "2026-06-13", "price": 3200 }
+            {
+                "date": "2026-04-15",
+                "price": 2900
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3100
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3200
+            }
         ],
         "price_change": {
             "amount": 300,
@@ -3417,9 +3507,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 499 },
-            { "date": "2026-05-15", "price": 475 },
-            { "date": "2026-06-13", "price": 449 }
+            {
+                "date": "2026-04-15",
+                "price": 499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 475
+            },
+            {
+                "date": "2026-06-13",
+                "price": 449
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -3436,9 +3535,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1799 },
-            { "date": "2026-05-15", "price": 1699 },
-            { "date": "2026-06-13", "price": 1599 }
+            {
+                "date": "2026-04-15",
+                "price": 1799
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1699
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1599
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -3455,9 +3563,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 899 },
-            { "date": "2026-05-15", "price": 949 },
-            { "date": "2026-06-13", "price": 999 }
+            {
+                "date": "2026-04-15",
+                "price": 899
+            },
+            {
+                "date": "2026-05-15",
+                "price": 949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 999
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3474,9 +3591,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 395 },
-            { "date": "2026-05-15", "price": 410 },
-            { "date": "2026-06-13", "price": 415 }
+            {
+                "date": "2026-04-15",
+                "price": 395
+            },
+            {
+                "date": "2026-05-15",
+                "price": 410
+            },
+            {
+                "date": "2026-06-13",
+                "price": 415
+            }
         ],
         "price_change": {
             "amount": 20,
@@ -3493,9 +3619,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 380 },
-            { "date": "2026-05-15", "price": 380 },
-            { "date": "2026-06-13", "price": 380 }
+            {
+                "date": "2026-04-15",
+                "price": 380
+            },
+            {
+                "date": "2026-05-15",
+                "price": 380
+            },
+            {
+                "date": "2026-06-13",
+                "price": 380
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3512,9 +3647,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 549 },
-            { "date": "2026-05-15", "price": 520 },
-            { "date": "2026-06-13", "price": 499 }
+            {
+                "date": "2026-04-15",
+                "price": 549
+            },
+            {
+                "date": "2026-05-15",
+                "price": 520
+            },
+            {
+                "date": "2026-06-13",
+                "price": 499
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -3531,9 +3675,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1999 },
-            { "date": "2026-05-15", "price": 1999 },
-            { "date": "2026-06-13", "price": 1999 }
+            {
+                "date": "2026-04-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1999
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3550,9 +3703,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 999 },
-            { "date": "2026-05-15", "price": 899 },
-            { "date": "2026-06-13", "price": 849 }
+            {
+                "date": "2026-04-15",
+                "price": 999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 899
+            },
+            {
+                "date": "2026-06-13",
+                "price": 849
+            }
         ],
         "price_change": {
             "amount": -150,
@@ -3569,9 +3731,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 5799 },
-            { "date": "2026-05-15", "price": 5599 },
-            { "date": "2026-06-13", "price": 5499 }
+            {
+                "date": "2026-04-15",
+                "price": 5799
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5599
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5499
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -3588,9 +3759,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 799 },
-            { "date": "2026-05-15", "price": 849 },
-            { "date": "2026-06-13", "price": 899 }
+            {
+                "date": "2026-04-15",
+                "price": 799
+            },
+            {
+                "date": "2026-05-15",
+                "price": 849
+            },
+            {
+                "date": "2026-06-13",
+                "price": 899
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3607,9 +3787,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 349 },
-            { "date": "2026-05-15", "price": 349 },
-            { "date": "2026-06-13", "price": 349 }
+            {
+                "date": "2026-04-15",
+                "price": 349
+            },
+            {
+                "date": "2026-05-15",
+                "price": 349
+            },
+            {
+                "date": "2026-06-13",
+                "price": 349
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3626,9 +3815,18 @@
         "delivery_days": 2,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 320 },
-            { "date": "2026-05-15", "price": 299 },
-            { "date": "2026-06-13", "price": 280 }
+            {
+                "date": "2026-04-15",
+                "price": 320
+            },
+            {
+                "date": "2026-05-15",
+                "price": 299
+            },
+            {
+                "date": "2026-06-13",
+                "price": 280
+            }
         ],
         "price_change": {
             "amount": -40,
@@ -3645,9 +3843,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1150 },
-            { "date": "2026-05-15", "price": 1200 },
-            { "date": "2026-06-13", "price": 1250 }
+            {
+                "date": "2026-04-15",
+                "price": 1150
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1200
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1250
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3664,9 +3871,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 549 },
-            { "date": "2026-05-15", "price": 520 },
-            { "date": "2026-06-13", "price": 499 }
+            {
+                "date": "2026-04-15",
+                "price": 549
+            },
+            {
+                "date": "2026-05-15",
+                "price": 520
+            },
+            {
+                "date": "2026-06-13",
+                "price": 499
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -3683,9 +3899,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 449 },
-            { "date": "2026-05-15", "price": 479 },
-            { "date": "2026-06-13", "price": 499 }
+            {
+                "date": "2026-04-15",
+                "price": 449
+            },
+            {
+                "date": "2026-05-15",
+                "price": 479
+            },
+            {
+                "date": "2026-06-13",
+                "price": 499
+            }
         ],
         "price_change": {
             "amount": 50,
@@ -3702,9 +3927,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 649 },
-            { "date": "2026-05-15", "price": 620 },
-            { "date": "2026-06-13", "price": 599 }
+            {
+                "date": "2026-04-15",
+                "price": 649
+            },
+            {
+                "date": "2026-05-15",
+                "price": 620
+            },
+            {
+                "date": "2026-06-13",
+                "price": 599
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -3721,9 +3955,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 249 },
-            { "date": "2026-05-15", "price": 249 },
-            { "date": "2026-06-13", "price": 249 }
+            {
+                "date": "2026-04-15",
+                "price": 249
+            },
+            {
+                "date": "2026-05-15",
+                "price": 249
+            },
+            {
+                "date": "2026-06-13",
+                "price": 249
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3740,9 +3983,18 @@
         "delivery_days": 4,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 299 },
-            { "date": "2026-05-15", "price": 320 },
-            { "date": "2026-06-13", "price": 349 }
+            {
+                "date": "2026-04-15",
+                "price": 299
+            },
+            {
+                "date": "2026-05-15",
+                "price": 320
+            },
+            {
+                "date": "2026-06-13",
+                "price": 349
+            }
         ],
         "price_change": {
             "amount": 50,
@@ -3759,9 +4011,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3299 },
-            { "date": "2026-05-15", "price": 3149 },
-            { "date": "2026-06-13", "price": 2999 }
+            {
+                "date": "2026-04-15",
+                "price": 3299
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3149
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2999
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -3778,9 +4039,18 @@
         "delivery_days": 2,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1799 },
-            { "date": "2026-05-15", "price": 1850 },
-            { "date": "2026-06-13", "price": 1899 }
+            {
+                "date": "2026-04-15",
+                "price": 1799
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1850
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1899
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3797,9 +4067,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2499 },
-            { "date": "2026-05-15", "price": 2299 },
-            { "date": "2026-06-13", "price": 2199 }
+            {
+                "date": "2026-04-15",
+                "price": 2499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2299
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2199
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -3816,9 +4095,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 749 },
-            { "date": "2026-05-15", "price": 749 },
-            { "date": "2026-06-13", "price": 749 }
+            {
+                "date": "2026-04-15",
+                "price": 749
+            },
+            {
+                "date": "2026-05-15",
+                "price": 749
+            },
+            {
+                "date": "2026-06-13",
+                "price": 749
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3835,9 +4123,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3199 },
-            { "date": "2026-05-15", "price": 2999 },
-            { "date": "2026-06-13", "price": 2899 }
+            {
+                "date": "2026-04-15",
+                "price": 3199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2899
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -3854,9 +4151,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1099 },
-            { "date": "2026-05-15", "price": 1149 },
-            { "date": "2026-06-13", "price": 1199 }
+            {
+                "date": "2026-04-15",
+                "price": 1099
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1149
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1199
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3873,9 +4179,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 999 },
-            { "date": "2026-05-15", "price": 949 },
-            { "date": "2026-06-13", "price": 949 }
+            {
+                "date": "2026-04-15",
+                "price": 999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 949
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -3892,9 +4207,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 299 },
-            { "date": "2026-05-15", "price": 299 },
-            { "date": "2026-06-13", "price": 299 }
+            {
+                "date": "2026-04-15",
+                "price": 299
+            },
+            {
+                "date": "2026-05-15",
+                "price": 299
+            },
+            {
+                "date": "2026-06-13",
+                "price": 299
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3911,9 +4235,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 165 },
-            { "date": "2026-05-15", "price": 175 },
-            { "date": "2026-06-13", "price": 185 }
+            {
+                "date": "2026-04-15",
+                "price": 165
+            },
+            {
+                "date": "2026-05-15",
+                "price": 175
+            },
+            {
+                "date": "2026-06-13",
+                "price": 185
+            }
         ],
         "price_change": {
             "amount": 20,
@@ -3930,9 +4263,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 650 },
-            { "date": "2026-05-15", "price": 675 },
-            { "date": "2026-06-13", "price": 690 }
+            {
+                "date": "2026-04-15",
+                "price": 650
+            },
+            {
+                "date": "2026-05-15",
+                "price": 675
+            },
+            {
+                "date": "2026-06-13",
+                "price": 690
+            }
         ],
         "price_change": {
             "amount": 40,
@@ -3949,9 +4291,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 120 },
-            { "date": "2026-05-15", "price": 120 },
-            { "date": "2026-06-13", "price": 120 }
+            {
+                "date": "2026-04-15",
+                "price": 120
+            },
+            {
+                "date": "2026-05-15",
+                "price": 120
+            },
+            {
+                "date": "2026-06-13",
+                "price": 120
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -3968,9 +4319,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 140 },
-            { "date": "2026-05-15", "price": 145 },
-            { "date": "2026-06-13", "price": 150 }
+            {
+                "date": "2026-04-15",
+                "price": 140
+            },
+            {
+                "date": "2026-05-15",
+                "price": 145
+            },
+            {
+                "date": "2026-06-13",
+                "price": 150
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -3987,9 +4347,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1699 },
-            { "date": "2026-05-15", "price": 1599 },
-            { "date": "2026-06-13", "price": 1499 }
+            {
+                "date": "2026-04-15",
+                "price": 1699
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1599
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1499
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4006,9 +4375,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2499 },
-            { "date": "2026-05-15", "price": 2399 },
-            { "date": "2026-06-13", "price": 2299 }
+            {
+                "date": "2026-04-15",
+                "price": 2499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2399
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2299
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4025,9 +4403,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 899 },
-            { "date": "2026-05-15", "price": 899 },
-            { "date": "2026-06-13", "price": 899 }
+            {
+                "date": "2026-04-15",
+                "price": 899
+            },
+            {
+                "date": "2026-05-15",
+                "price": 899
+            },
+            {
+                "date": "2026-06-13",
+                "price": 899
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4044,9 +4431,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1999 },
-            { "date": "2026-05-15", "price": 1799 },
-            { "date": "2026-06-13", "price": 1699 }
+            {
+                "date": "2026-04-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1799
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1699
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -4063,9 +4459,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 399 },
-            { "date": "2026-05-15", "price": 425 },
-            { "date": "2026-06-13", "price": 450 }
+            {
+                "date": "2026-04-15",
+                "price": 399
+            },
+            {
+                "date": "2026-05-15",
+                "price": 425
+            },
+            {
+                "date": "2026-06-13",
+                "price": 450
+            }
         ],
         "price_change": {
             "amount": 51,
@@ -4082,9 +4487,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 320 },
-            { "date": "2026-05-15", "price": 320 },
-            { "date": "2026-06-13", "price": 320 }
+            {
+                "date": "2026-04-15",
+                "price": 320
+            },
+            {
+                "date": "2026-05-15",
+                "price": 320
+            },
+            {
+                "date": "2026-06-13",
+                "price": 320
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4101,9 +4515,18 @@
         "delivery_days": 1,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 649 },
-            { "date": "2026-05-15", "price": 620 },
-            { "date": "2026-06-13", "price": 599 }
+            {
+                "date": "2026-04-15",
+                "price": 649
+            },
+            {
+                "date": "2026-05-15",
+                "price": 620
+            },
+            {
+                "date": "2026-06-13",
+                "price": 599
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -4120,9 +4543,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1695 },
-            { "date": "2026-05-15", "price": 1695 },
-            { "date": "2026-06-13", "price": 1695 }
+            {
+                "date": "2026-04-15",
+                "price": 1695
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1695
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1695
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4139,9 +4571,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 150 },
-            { "date": "2026-05-15", "price": 135 },
-            { "date": "2026-06-13", "price": 125 }
+            {
+                "date": "2026-04-15",
+                "price": 150
+            },
+            {
+                "date": "2026-05-15",
+                "price": 135
+            },
+            {
+                "date": "2026-06-13",
+                "price": 125
+            }
         ],
         "price_change": {
             "amount": -25,
@@ -4158,9 +4599,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 180 },
-            { "date": "2026-05-15", "price": 180 },
-            { "date": "2026-06-13", "price": 180 }
+            {
+                "date": "2026-04-15",
+                "price": 180
+            },
+            {
+                "date": "2026-05-15",
+                "price": 180
+            },
+            {
+                "date": "2026-06-13",
+                "price": 180
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4177,9 +4627,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 2999 },
-            { "date": "2026-05-15", "price": 2699 },
-            { "date": "2026-06-13", "price": 2499 }
+            {
+                "date": "2026-04-15",
+                "price": 2999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2699
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2499
+            }
         ],
         "price_change": {
             "amount": -500,
@@ -4196,9 +4655,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 449 },
-            { "date": "2026-05-15", "price": 475 },
-            { "date": "2026-06-13", "price": 499 }
+            {
+                "date": "2026-04-15",
+                "price": 449
+            },
+            {
+                "date": "2026-05-15",
+                "price": 475
+            },
+            {
+                "date": "2026-06-13",
+                "price": 499
+            }
         ],
         "price_change": {
             "amount": 50,
@@ -4215,9 +4683,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 160 },
-            { "date": "2026-05-15", "price": 160 },
-            { "date": "2026-06-13", "price": 160 }
+            {
+                "date": "2026-04-15",
+                "price": 160
+            },
+            {
+                "date": "2026-05-15",
+                "price": 160
+            },
+            {
+                "date": "2026-06-13",
+                "price": 160
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4234,9 +4711,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 399 },
-            { "date": "2026-05-15", "price": 410 },
-            { "date": "2026-06-13", "price": 415 }
+            {
+                "date": "2026-04-15",
+                "price": 399
+            },
+            {
+                "date": "2026-05-15",
+                "price": 410
+            },
+            {
+                "date": "2026-06-13",
+                "price": 415
+            }
         ],
         "price_change": {
             "amount": 16,
@@ -4253,9 +4739,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 299 },
-            { "date": "2026-05-15", "price": 310 },
-            { "date": "2026-06-13", "price": 320 }
+            {
+                "date": "2026-04-15",
+                "price": 299
+            },
+            {
+                "date": "2026-05-15",
+                "price": 310
+            },
+            {
+                "date": "2026-06-13",
+                "price": 320
+            }
         ],
         "price_change": {
             "amount": 21,
@@ -4272,9 +4767,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 149 },
-            { "date": "2026-05-15", "price": 149 },
-            { "date": "2026-06-13", "price": 149 }
+            {
+                "date": "2026-04-15",
+                "price": 149
+            },
+            {
+                "date": "2026-05-15",
+                "price": 149
+            },
+            {
+                "date": "2026-06-13",
+                "price": 149
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4291,9 +4795,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1999 },
-            { "date": "2026-05-15", "price": 1949 },
-            { "date": "2026-06-13", "price": 1899 }
+            {
+                "date": "2026-04-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1899
+            }
         ],
         "price_change": {
             "amount": -100,
@@ -4310,9 +4823,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 899 },
-            { "date": "2026-05-15", "price": 949 },
-            { "date": "2026-06-13", "price": 999 }
+            {
+                "date": "2026-04-15",
+                "price": 899
+            },
+            {
+                "date": "2026-05-15",
+                "price": 949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 999
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -4329,9 +4851,18 @@
         "delivery_days": 3,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 499 },
-            { "date": "2026-05-15", "price": 499 },
-            { "date": "2026-06-13", "price": 499 }
+            {
+                "date": "2026-04-15",
+                "price": 499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 499
+            },
+            {
+                "date": "2026-06-13",
+                "price": 499
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4348,9 +4879,18 @@
         "delivery_days": 1,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 4999 },
-            { "date": "2026-05-15", "price": 4699 },
-            { "date": "2026-06-13", "price": 4499 }
+            {
+                "date": "2026-04-15",
+                "price": 4999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4699
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4499
+            }
         ],
         "price_change": {
             "amount": -500,
@@ -4367,9 +4907,18 @@
         "delivery_days": 2,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 4999 },
-            { "date": "2026-05-15", "price": 4999 },
-            { "date": "2026-06-13", "price": 4999 }
+            {
+                "date": "2026-04-15",
+                "price": 4999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4999
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4386,9 +4935,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1999 },
-            { "date": "2026-05-15", "price": 1899 },
-            { "date": "2026-06-13", "price": 1799 }
+            {
+                "date": "2026-04-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1899
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1799
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4405,9 +4963,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1199 },
-            { "date": "2026-05-15", "price": 1249 },
-            { "date": "2026-06-13", "price": 1299 }
+            {
+                "date": "2026-04-15",
+                "price": 1199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1249
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1299
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -4424,9 +4991,18 @@
         "delivery_days": 2,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1799 },
-            { "date": "2026-05-15", "price": 1699 },
-            { "date": "2026-06-13", "price": 1599 }
+            {
+                "date": "2026-04-15",
+                "price": 1799
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1699
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1599
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4443,9 +5019,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 449 },
-            { "date": "2026-05-15", "price": 449 },
-            { "date": "2026-06-13", "price": 449 }
+            {
+                "date": "2026-04-15",
+                "price": 449
+            },
+            {
+                "date": "2026-05-15",
+                "price": 449
+            },
+            {
+                "date": "2026-06-13",
+                "price": 449
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4462,9 +5047,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 220 },
-            { "date": "2026-05-15", "price": 235 },
-            { "date": "2026-06-13", "price": 249 }
+            {
+                "date": "2026-04-15",
+                "price": 220
+            },
+            {
+                "date": "2026-05-15",
+                "price": 235
+            },
+            {
+                "date": "2026-06-13",
+                "price": 249
+            }
         ],
         "price_change": {
             "amount": 29,
@@ -4481,9 +5075,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1699 },
-            { "date": "2026-05-15", "price": 1599 },
-            { "date": "2026-06-13", "price": 1499 }
+            {
+                "date": "2026-04-15",
+                "price": 1699
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1599
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1499
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4500,9 +5103,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1295 },
-            { "date": "2026-05-15", "price": 1295 },
-            { "date": "2026-06-13", "price": 1295 }
+            {
+                "date": "2026-04-15",
+                "price": 1295
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1295
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1295
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4519,9 +5131,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1050 },
-            { "date": "2026-05-15", "price": 1100 },
-            { "date": "2026-06-13", "price": 1150 }
+            {
+                "date": "2026-04-15",
+                "price": 1050
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1100
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1150
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -4538,9 +5159,18 @@
         "delivery_days": 3,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 449 },
-            { "date": "2026-05-15", "price": 420 },
-            { "date": "2026-06-13", "price": 399 }
+            {
+                "date": "2026-04-15",
+                "price": 449
+            },
+            {
+                "date": "2026-05-15",
+                "price": 420
+            },
+            {
+                "date": "2026-06-13",
+                "price": 399
+            }
         ],
         "price_change": {
             "amount": -50,
@@ -4557,9 +5187,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 999 },
-            { "date": "2026-05-15", "price": 949 },
-            { "date": "2026-06-13", "price": 899 }
+            {
+                "date": "2026-04-15",
+                "price": 999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 899
+            }
         ],
         "price_change": {
             "amount": -100,
@@ -4576,9 +5215,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1249 },
-            { "date": "2026-05-15", "price": 1249 },
-            { "date": "2026-06-13", "price": 1249 }
+            {
+                "date": "2026-04-15",
+                "price": 1249
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1249
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1249
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4595,9 +5243,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1699 },
-            { "date": "2026-05-15", "price": 1599 },
-            { "date": "2026-06-13", "price": 1499 }
+            {
+                "date": "2026-04-15",
+                "price": 1699
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1599
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1499
+            }
         ],
         "price_change": {
             "amount": -200,
@@ -4614,9 +5271,18 @@
         "delivery_days": 4,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 699 },
-            { "date": "2026-05-15", "price": 749 },
-            { "date": "2026-06-13", "price": 799 }
+            {
+                "date": "2026-04-15",
+                "price": 699
+            },
+            {
+                "date": "2026-05-15",
+                "price": 749
+            },
+            {
+                "date": "2026-06-13",
+                "price": 799
+            }
         ],
         "price_change": {
             "amount": 100,
@@ -4633,9 +5299,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1199 },
-            { "date": "2026-05-15", "price": 1149 },
-            { "date": "2026-06-13", "price": 1099 }
+            {
+                "date": "2026-04-15",
+                "price": 1199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1149
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1099
+            }
         ],
         "price_change": {
             "amount": -100,
@@ -4652,9 +5327,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1425 },
-            { "date": "2026-05-15", "price": 1425 },
-            { "date": "2026-06-13", "price": 1425 }
+            {
+                "date": "2026-04-15",
+                "price": 1425
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1425
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1425
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4671,9 +5355,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3499 },
-            { "date": "2026-05-15", "price": 3299 },
-            { "date": "2026-06-13", "price": 3199 }
+            {
+                "date": "2026-04-15",
+                "price": 3499
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3299
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3199
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -4690,9 +5383,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 155 },
-            { "date": "2026-05-15", "price": 165 },
-            { "date": "2026-06-13", "price": 175 }
+            {
+                "date": "2026-04-15",
+                "price": 155
+            },
+            {
+                "date": "2026-05-15",
+                "price": 165
+            },
+            {
+                "date": "2026-06-13",
+                "price": 175
+            }
         ],
         "price_change": {
             "amount": 20,
@@ -4709,9 +5411,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 110 },
-            { "date": "2026-05-15", "price": 110 },
-            { "date": "2026-06-13", "price": 110 }
+            {
+                "date": "2026-04-15",
+                "price": 110
+            },
+            {
+                "date": "2026-05-15",
+                "price": 110
+            },
+            {
+                "date": "2026-06-13",
+                "price": 110
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4728,9 +5439,18 @@
         "delivery_days": 2,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3199 },
-            { "date": "2026-05-15", "price": 2999 },
-            { "date": "2026-06-13", "price": 2899 }
+            {
+                "date": "2026-04-15",
+                "price": 3199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2999
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2899
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -4747,9 +5467,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 360 },
-            { "date": "2026-05-15", "price": 360 },
-            { "date": "2026-06-13", "price": 360 }
+            {
+                "date": "2026-04-15",
+                "price": 360
+            },
+            {
+                "date": "2026-05-15",
+                "price": 360
+            },
+            {
+                "date": "2026-06-13",
+                "price": 360
+            }
         ],
         "price_change": {
             "amount": 0,
@@ -4766,9 +5495,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 250 },
-            { "date": "2026-05-15", "price": 245 },
-            { "date": "2026-06-13", "price": 240 }
+            {
+                "date": "2026-04-15",
+                "price": 250
+            },
+            {
+                "date": "2026-05-15",
+                "price": 245
+            },
+            {
+                "date": "2026-06-13",
+                "price": 240
+            }
         ],
         "price_change": {
             "amount": -10,
@@ -4785,9 +5523,18 @@
         "delivery_days": 3,
         "stock_status": "Low Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 1999 },
-            { "date": "2026-05-15", "price": 1949 },
-            { "date": "2026-06-13", "price": 1899 }
+            {
+                "date": "2026-04-15",
+                "price": 1999
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1949
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1899
+            }
         ],
         "price_change": {
             "amount": -100,
@@ -4804,9 +5551,18 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 3299 },
-            { "date": "2026-05-15", "price": 3149 },
-            { "date": "2026-06-13", "price": 2999 }
+            {
+                "date": "2026-04-15",
+                "price": 3299
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3149
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2999
+            }
         ],
         "price_change": {
             "amount": -300,
@@ -4823,15 +5579,1424 @@
         "delivery_days": 1,
         "stock_status": "In Stock",
         "price_history": [
-            { "date": "2026-04-15", "price": 199 },
-            { "date": "2026-05-15", "price": 210 },
-            { "date": "2026-06-13", "price": 220 }
+            {
+                "date": "2026-04-15",
+                "price": 199
+            },
+            {
+                "date": "2026-05-15",
+                "price": 210
+            },
+            {
+                "date": "2026-06-13",
+                "price": 220
+            }
         ],
         "price_change": {
             "amount": 21,
             "percent": 10.6,
             "duration_days": 59,
             "trend": "increasing"
+        }
+    },
+    {
+        "id": 201,
+        "price": 2802,
+        "inventory_count": 154,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2452
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2897
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2802
+            }
+        ],
+        "price_change": {
+            "amount": 350,
+            "percent": 14.3,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 202,
+        "price": 3145,
+        "inventory_count": 596,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2909
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2898
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3145
+            }
+        ],
+        "price_change": {
+            "amount": 236,
+            "percent": 8.1,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 203,
+        "price": 3575,
+        "inventory_count": 71,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3728
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3270
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3575
+            }
+        ],
+        "price_change": {
+            "amount": -153,
+            "percent": -4.1,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 204,
+        "price": 4782,
+        "inventory_count": 126,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5650
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4993
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4782
+            }
+        ],
+        "price_change": {
+            "amount": -868,
+            "percent": -15.4,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 205,
+        "price": 3399,
+        "inventory_count": 50,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3551
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3172
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3399
+            }
+        ],
+        "price_change": {
+            "amount": -152,
+            "percent": -4.3,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 206,
+        "price": 3583,
+        "inventory_count": 147,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3761
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3726
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3583
+            }
+        ],
+        "price_change": {
+            "amount": -178,
+            "percent": -4.7,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 207,
+        "price": 5736,
+        "inventory_count": 185,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 6022
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5431
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5736
+            }
+        ],
+        "price_change": {
+            "amount": -286,
+            "percent": -4.7,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 208,
+        "price": 948,
+        "inventory_count": 560,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 825
+            },
+            {
+                "date": "2026-05-15",
+                "price": 902
+            },
+            {
+                "date": "2026-06-13",
+                "price": 948
+            }
+        ],
+        "price_change": {
+            "amount": 123,
+            "percent": 14.9,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 209,
+        "price": 5723,
+        "inventory_count": 544,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5797
+            },
+            {
+                "date": "2026-05-15",
+                "price": 6471
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5723
+            }
+        ],
+        "price_change": {
+            "amount": -74,
+            "percent": -1.3,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 210,
+        "price": 3112,
+        "inventory_count": 306,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3406
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2990
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3112
+            }
+        ],
+        "price_change": {
+            "amount": -294,
+            "percent": -8.6,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 211,
+        "price": 4855,
+        "inventory_count": 307,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5613
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5254
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4855
+            }
+        ],
+        "price_change": {
+            "amount": -758,
+            "percent": -13.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 212,
+        "price": 2508,
+        "inventory_count": 74,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2498
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2731
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2508
+            }
+        ],
+        "price_change": {
+            "amount": 10,
+            "percent": 0.4,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 213,
+        "price": 1395,
+        "inventory_count": 500,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1655
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1282
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1395
+            }
+        ],
+        "price_change": {
+            "amount": -260,
+            "percent": -15.7,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 214,
+        "price": 4721,
+        "inventory_count": 586,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5161
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4950
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4721
+            }
+        ],
+        "price_change": {
+            "amount": -440,
+            "percent": -8.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 215,
+        "price": 4900,
+        "inventory_count": 467,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5785
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4990
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4900
+            }
+        ],
+        "price_change": {
+            "amount": -885,
+            "percent": -15.3,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 216,
+        "price": 5590,
+        "inventory_count": 66,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 6017
+            },
+            {
+                "date": "2026-05-15",
+                "price": 6418
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5590
+            }
+        ],
+        "price_change": {
+            "amount": -427,
+            "percent": -7.1,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 217,
+        "price": 3800,
+        "inventory_count": 291,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3260
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3858
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3800
+            }
+        ],
+        "price_change": {
+            "amount": 540,
+            "percent": 16.6,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 218,
+        "price": 1526,
+        "inventory_count": 119,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 1,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1413
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1483
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1526
+            }
+        ],
+        "price_change": {
+            "amount": 113,
+            "percent": 8.0,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 219,
+        "price": 2178,
+        "inventory_count": 407,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1912
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2204
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2178
+            }
+        ],
+        "price_change": {
+            "amount": 266,
+            "percent": 13.9,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 220,
+        "price": 4651,
+        "inventory_count": 284,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5359
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4509
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4651
+            }
+        ],
+        "price_change": {
+            "amount": -708,
+            "percent": -13.2,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 221,
+        "price": 3552,
+        "inventory_count": 367,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3206
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3353
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3552
+            }
+        ],
+        "price_change": {
+            "amount": 346,
+            "percent": 10.8,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 222,
+        "price": 2050,
+        "inventory_count": 238,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2338
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1938
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2050
+            }
+        ],
+        "price_change": {
+            "amount": -288,
+            "percent": -12.3,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 223,
+        "price": 2459,
+        "inventory_count": 4,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 4,
+        "stock_status": "Low Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2550
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2587
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2459
+            }
+        ],
+        "price_change": {
+            "amount": -91,
+            "percent": -3.6,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 224,
+        "price": 2760,
+        "inventory_count": 128,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2978
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2994
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2760
+            }
+        ],
+        "price_change": {
+            "amount": -218,
+            "percent": -7.3,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 225,
+        "price": 3890,
+        "inventory_count": 572,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3849
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3601
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3890
+            }
+        ],
+        "price_change": {
+            "amount": 41,
+            "percent": 1.1,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 226,
+        "price": 5346,
+        "inventory_count": 410,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4670
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5090
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5346
+            }
+        ],
+        "price_change": {
+            "amount": 676,
+            "percent": 14.5,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 227,
+        "price": 1479,
+        "inventory_count": 112,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1284
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1331
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1479
+            }
+        ],
+        "price_change": {
+            "amount": 195,
+            "percent": 15.2,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 228,
+        "price": 1389,
+        "inventory_count": 549,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1479
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1274
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1389
+            }
+        ],
+        "price_change": {
+            "amount": -90,
+            "percent": -6.1,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 229,
+        "price": 1853,
+        "inventory_count": 385,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2194
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1946
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1853
+            }
+        ],
+        "price_change": {
+            "amount": -341,
+            "percent": -15.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 230,
+        "price": 4034,
+        "inventory_count": 125,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4831
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4100
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4034
+            }
+        ],
+        "price_change": {
+            "amount": -797,
+            "percent": -16.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 231,
+        "price": 4113,
+        "inventory_count": 319,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3643
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4054
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4113
+            }
+        ],
+        "price_change": {
+            "amount": 470,
+            "percent": 12.9,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 232,
+        "price": 2318,
+        "inventory_count": 490,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1989
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2637
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2318
+            }
+        ],
+        "price_change": {
+            "amount": 329,
+            "percent": 16.5,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 233,
+        "price": 4477,
+        "inventory_count": 370,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5237
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4877
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4477
+            }
+        ],
+        "price_change": {
+            "amount": -760,
+            "percent": -14.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 234,
+        "price": 2591,
+        "inventory_count": 93,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2534
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2440
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2591
+            }
+        ],
+        "price_change": {
+            "amount": 57,
+            "percent": 2.2,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 235,
+        "price": 1975,
+        "inventory_count": 545,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1906
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1887
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1975
+            }
+        ],
+        "price_change": {
+            "amount": 69,
+            "percent": 3.6,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 236,
+        "price": 1748,
+        "inventory_count": 245,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1608
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1788
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1748
+            }
+        ],
+        "price_change": {
+            "amount": 140,
+            "percent": 8.7,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 237,
+        "price": 387,
+        "inventory_count": 28,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 364
+            },
+            {
+                "date": "2026-05-15",
+                "price": 415
+            },
+            {
+                "date": "2026-06-13",
+                "price": 387
+            }
+        ],
+        "price_change": {
+            "amount": 23,
+            "percent": 6.3,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 238,
+        "price": 2970,
+        "inventory_count": 457,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 3,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2608
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2748
+            },
+            {
+                "date": "2026-06-13",
+                "price": 2970
+            }
+        ],
+        "price_change": {
+            "amount": 362,
+            "percent": 13.9,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 239,
+        "price": 4000,
+        "inventory_count": 201,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4075
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4585
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4000
+            }
+        ],
+        "price_change": {
+            "amount": -75,
+            "percent": -1.8,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 240,
+        "price": 5149,
+        "inventory_count": 1,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 3,
+        "stock_status": "Low Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5817
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4743
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5149
+            }
+        ],
+        "price_change": {
+            "amount": -668,
+            "percent": -11.5,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 241,
+        "price": 5561,
+        "inventory_count": 122,
+        "inventory_location": "Delhi Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5657
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5253
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5561
+            }
+        ],
+        "price_change": {
+            "amount": -96,
+            "percent": -1.7,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 242,
+        "price": 5358,
+        "inventory_count": 340,
+        "inventory_location": "Faridabad Warehouse",
+        "delivery_days": 4,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5422
+            },
+            {
+                "date": "2026-05-15",
+                "price": 5817
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5358
+            }
+        ],
+        "price_change": {
+            "amount": -64,
+            "percent": -1.2,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 243,
+        "price": 845,
+        "inventory_count": 162,
+        "inventory_location": "Noida Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 726
+            },
+            {
+                "date": "2026-05-15",
+                "price": 885
+            },
+            {
+                "date": "2026-06-13",
+                "price": 845
+            }
+        ],
+        "price_change": {
+            "amount": 119,
+            "percent": 16.4,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 244,
+        "price": 3962,
+        "inventory_count": 149,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4727
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4216
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3962
+            }
+        ],
+        "price_change": {
+            "amount": -765,
+            "percent": -16.2,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 245,
+        "price": 3020,
+        "inventory_count": 159,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 2705
+            },
+            {
+                "date": "2026-05-15",
+                "price": 2728
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3020
+            }
+        ],
+        "price_change": {
+            "amount": 315,
+            "percent": 11.6,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 246,
+        "price": 5472,
+        "inventory_count": 105,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 5482
+            },
+            {
+                "date": "2026-05-15",
+                "price": 6117
+            },
+            {
+                "date": "2026-06-13",
+                "price": 5472
+            }
+        ],
+        "price_change": {
+            "amount": -10,
+            "percent": -0.2,
+            "duration_days": 59,
+            "trend": "decreasing"
+        }
+    },
+    {
+        "id": 247,
+        "price": 1878,
+        "inventory_count": 28,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 1788
+            },
+            {
+                "date": "2026-05-15",
+                "price": 1803
+            },
+            {
+                "date": "2026-06-13",
+                "price": 1878
+            }
+        ],
+        "price_change": {
+            "amount": 90,
+            "percent": 5.0,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 248,
+        "price": 4954,
+        "inventory_count": 333,
+        "inventory_location": "Gurgaon Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4937
+            },
+            {
+                "date": "2026-05-15",
+                "price": 4620
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4954
+            }
+        ],
+        "price_change": {
+            "amount": 17,
+            "percent": 0.3,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 249,
+        "price": 3048,
+        "inventory_count": 469,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 5,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 3039
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3442
+            },
+            {
+                "date": "2026-06-13",
+                "price": 3048
+            }
+        ],
+        "price_change": {
+            "amount": 9,
+            "percent": 0.3,
+            "duration_days": 59,
+            "trend": "increasing"
+        }
+    },
+    {
+        "id": 250,
+        "price": 4259,
+        "inventory_count": 133,
+        "inventory_location": "Mumbai Warehouse",
+        "delivery_days": 2,
+        "stock_status": "In Stock",
+        "price_history": [
+            {
+                "date": "2026-04-15",
+                "price": 4400
+            },
+            {
+                "date": "2026-05-15",
+                "price": 3853
+            },
+            {
+                "date": "2026-06-13",
+                "price": 4259
+            }
+        ],
+        "price_change": {
+            "amount": -141,
+            "percent": -3.2,
+            "duration_days": 59,
+            "trend": "decreasing"
         }
     }
 ]
